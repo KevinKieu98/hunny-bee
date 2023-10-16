@@ -3,7 +3,7 @@
         {% if section.settings.collection != blank %}
             {%- assign products = collections[section.settings.collection].products -%}
             {% if products.size > 0 %}
-                <div class="home_product_list grid">
+                <div class="home_product_list">
                     {% for product in products limit: 3 %}
                         {% render 'card-product',
                             card_product: product,

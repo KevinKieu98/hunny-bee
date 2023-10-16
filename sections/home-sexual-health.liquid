@@ -1,8 +1,13 @@
 <div class="{{ section.class }}">
     <div class="home_sexual_health">
-        {% if section.settings.image_bg_section != blank %}
-            <img src="{{ section.settings.image_bg_section | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_bg_section.width }}"
-                height="{{ section.settings.image_bg_section.height }}" class="block w-full h-full image_bg_section">
+        {% if section.settings.image_bg_section_desk != blank %}
+            <img src="{{ section.settings.image_bg_section_desk | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_bg_section_desk.width }}"
+                height="{{ section.settings.image_bg_section_desk.height }}" class="block w-full h-full image_desktop image_bg_section_desk">
+        {% endif %}
+
+        {% if section.settings.image_bg_section_mobile != blank %}
+            <img src="{{ section.settings.image_bg_section_mobile | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_bg_section_mobile.width }}"
+                height="{{ section.settings.image_bg_section_mobile.height }}" class="block w-full h-full image_mobile image_bg_section_mobile">
         {% endif %}
 
         <div class="container">
@@ -36,18 +41,13 @@
         "settings": [
             {
                 "type": "image_picker",
-                "id": "image_bg_section",
-                "label": "Image Background"
+                "id": "image_bg_section_desk",
+                "label": "Image Background Desktop"
             },
             {
                 "type": "image_picker",
-                "id": "image_right_desktop",
-                "label": "Image Right Desktop"
-            },
-            {
-                "type": "image_picker",
-                "id": "image_right_mobile",
-                "label": "Image Right Mobile"
+                "id": "image_bg_section_mobile",
+                "label": "Image Background Mobile"
             }
         ],
         "blocks": [

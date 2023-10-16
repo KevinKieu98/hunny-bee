@@ -255,4 +255,25 @@ a.button:focus,
 }
 
 
+.image_mobile {
+    display: none;
+}
+
+@media all and (max-width: 989px) {
+    .page-width, .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .image_mobile {
+        display: block;
+    }
+
+    .image_desktop {
+        display: none;
+    }
+}
+
 

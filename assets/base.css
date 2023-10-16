@@ -2133,8 +2133,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .utility-bar__grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: 'announcements';
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 'announcements social-icons';
 }
 
 .utility-bar__grid .list-social {
@@ -2142,12 +2142,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
   align-content: center;
   margin-left: -1.2rem;
   grid-area: social-icons;
-}
-
-@media screen and (max-width: 989px) {
-  .utility-bar .utility-bar__grid .list-social {
-    display: none;
-  }
 }
 
 .utility-bar .list-social__item .icon {
