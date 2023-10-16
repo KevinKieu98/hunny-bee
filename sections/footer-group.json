@@ -66,9 +66,12 @@
       ],
       "settings": {
         "logo_footer": "shopify:\/\/shop_images\/BW_1.png",
+        "email_footer": "help@hunnybee.net.au",
+        "your_seft": "Pleased with yourself",
         "text_info_company": "Information Company",
         "text_explore": "Explore",
         "text_support": "Support",
+        "title_logo": "Secure Payment Options",
         "color_scheme": "background-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
