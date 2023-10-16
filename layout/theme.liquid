@@ -34,6 +34,9 @@
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{ 'jquery-3.3.1.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'hnb-custom.js' | asset_url }}" defer="defer"></script>
 
     {{ content_for_header }}
 
@@ -238,6 +241,9 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'hnb-styleguide.css' | asset_url | stylesheet_tag }}
+    {{ 'hnb-home.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -268,7 +274,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient template-{{ request.page_type | handle }} {% if request.page_type == 'page' %} {{ template | replace: '.', '-' }} {% endif %} {{ page_class }} {% if template.name == "cart" %} template-cart {% endif %} {{ page.handle | prepend: "page-" }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>

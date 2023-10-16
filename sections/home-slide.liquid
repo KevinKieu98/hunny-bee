@@ -1,0 +1,41 @@
+<div class="{{ section.class }}">
+    <div class="container full">
+        {% if section.blocks.size > 0 %}
+            <div class="home_list_images">
+                {% for block in section.blocks %}
+                    <div class="image_item">
+                        {% if block.settings.image != blank %}
+                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="" loading="lazy" width="{{ block.settings.image.width }}"
+                                height="{{ block.settings.image.height }}" class="block w-full h-full">
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Home Slide",
+        "class": "home-slide",
+        "blocks": [
+            {
+                "type": "image",
+                "name": "Image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Home Slide"
+            }
+        ]
+    }
+{% endschema %}

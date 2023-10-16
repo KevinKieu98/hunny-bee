@@ -1,0 +1,90 @@
+<div class="{{ section.class }}">
+    <div class="home_sexual_health">
+        {% if section.settings.image_bg_section != blank %}
+            <img src="{{ section.settings.image_bg_section | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_bg_section.width }}"
+                height="{{ section.settings.image_bg_section.height }}" class="block w-full h-full image_bg_section">
+        {% endif %}
+
+        <div class="container">
+            <div class="left">
+                {% if section.blocks.size > 0 %}
+                    {% for block in section.blocks %}
+                        <div class="text_item">
+                            {% if block.settings.title != blank %}
+                                <h3>{{ block.settings.title }}</h3>
+                            {% endif %}
+    
+                            {% if block.settings.description != blank %}
+                                <p>{{ block.settings.description }}</p>
+                            {% endif %}
+    
+                            {% if block.settings.text_link != blank and block.settings.url_link != blank %}
+                                <a href="{{ block.settings.url_link }}" class="btn w-fit">{{ block.settings.text_link }}</a>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Home Sexual Health",
+        "class": "home-sexual-health",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_bg_section",
+                "label": "Image Background"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_right_desktop",
+                "label": "Image Right Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_right_mobile",
+                "label": "Image Right Mobile"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text",
+                "name": "Text",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Sexual Health"
+                    },
+                    {
+                        "type": "text",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "Q&A With Dr D-MBBS"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text_link",
+                        "label": "Text Link",
+                        "default": "Click for Sexual Health Q&A"
+                    },
+                    {
+                        "type": "url",
+                        "id": "url_link",
+                        "label": "Url Link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Home Sexual Health"
+            }
+        ]
+    }
+{% endschema %}

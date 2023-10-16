@@ -1,0 +1,96 @@
+<div class="{{ section.class }}">
+    <div class="container full">
+        {% if section.settings.banner_image_bg_desk != blank %}
+            <img src="{{ section.settings.banner_image_bg_desk | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.banner_image_bg_desk.width }}"
+                height="{{ section.settings.banner_image_bg_desk.height }}" class="block w-full h-full">
+        {% else %}
+            {{ 'lifestyle-2' | placeholder_svg_tag }}
+        {% endif %}
+
+        {% if section.settings.banner_image_bg_mobile != blank %}
+            <img src="{{ section.settings.banner_image_bg_mobile | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.banner_image_bg_mobile.width }}"
+                height="{{ section.settings.banner_image_bg_mobile.height }}" class="block w-full h-full">
+        {% endif %}
+
+        <div class="banner_text">
+            <div class="banner_text_image">
+                {% if section.settings.banner_image_left != blank %}
+                    <img src="{{ section.settings.banner_image_left | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.banner_image_left.width }}"
+                        height="{{ section.settings.banner_image_left.height }}" class="block w-full h-full">
+                {% else %}
+                    {{ 'lifestyle-2' | placeholder_svg_tag }}
+                {% endif %}
+            </div>
+
+            <div class="banner_text__content">
+                {% if section.settings.banner_text_1 != blank %}
+                    <h4>{{ section.settings.banner_text_1 }}</h4>
+                {% endif %}
+
+                {% if section.settings.banner_text_2 != blank %}
+                    <h3>{{ section.settings.banner_text_2 }}</h3>
+                {% endif %}
+
+                {% if section.settings.text_link != blank and section.settings.url_link != blank %}
+                    <a href="/collections" class="btn">Shop now</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Home Banner",
+        "class": "home-banner",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "banner_image_bg_desk",
+                "label": "Banner Image Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_image_bg_mobile",
+                "label": "Banner Image Mobile"
+            },
+            {
+                "type": "header",
+                "content": "Banner Content"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_image_left",
+                "label": "Banner Image Left"
+            },
+            {
+                "type": "text",
+                "id": "banner_text_1",
+                "label": "Banner Text 1",
+                "default": "Pleased with "
+            },
+            {
+                "type": "text",
+                "id": "banner_text_2",
+                "label": "Banner Text 2",
+                "default": "yourself"
+            },
+            {
+                "type": "text",
+                "id": "text_link",
+                "label": "Text Link",
+                "default": "Shop now"
+            },
+            {
+                "type": "url",
+                "id": "url_link",
+                "label": "Url Link"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Home Banner"
+            }
+        ]
+    }
+{% endschema %}

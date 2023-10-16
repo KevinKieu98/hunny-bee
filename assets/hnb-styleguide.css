@@ -1,0 +1,258 @@
+:root {
+    --black: #1B1B1B;
+    --secondary-3: #FFD9CD;
+    --white: #FFFFFF;
+    --rose: #FFD8CC;
+}
+
+/* AvertaStdCY Font */
+@font-face {
+    font-family: 'AvertaStdCY';
+    src: url('Averta-Extrathin.otf') format('opentype'), url('Averta-Extrathin.otf') format('opentype');
+    font-weight: 250;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvertaStdCY';
+    src: url('Averta-Regular.ttf') format('opentype'), url('Averta-Regular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvertaStdCY';
+    src: url('Averta-Semibold.otf') format('opentype'), url('Averta-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvertaStdCY';
+    src: url('Averta-Bold.otf') format('opentype'), url('Averta-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvertaStdCY';
+    src: url('Averta-Black.otf') format('opentype'), url('Averta-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Common */
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* fix iPhone landscape view blows up font sizes */
+body {
+    -webkit-text-size-adjust: none;
+}
+
+.page-width,
+.container {
+    max-width: 1600px;
+    padding-left: 80px;
+    padding-right: 80px;
+    position: relative;
+    margin: auto;
+}
+
+.page-width.full,
+.container.full {
+    max-width: 100%;
+    padding: 0;
+}
+
+.main-content {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+body {
+    color: var(--black);
+    font-weight: 400;
+    font-family: "AvertaStdCY";
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+p,
+a {
+    font-family: "AvertaStdCY";
+    color: var(--black);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+a {
+    outline: none;
+}
+
+a:hover,
+a:not([disabled]):hover {
+    text-decoration: underline;
+}
+
+h1,
+.h1 {
+    font-family: "AvertaStdCY";
+    color: var(--black);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0;
+}
+
+h2,
+.h2 {
+    font-family: "AvertaStdCY";
+    color: var(--black);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0;
+}
+
+h3,
+.h3 {
+    font-family: "AvertaStdCY";
+    color: var(--black);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+h4,
+.h4 {
+    font-family: "AvertaStdCY";
+    color: var(--black);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+h5,
+.h5 {
+    font-family: "AvertaStdCY";
+    color: var(--black);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+button,
+a.btn,
+a.button,
+.btn,
+.btn-secondary,
+.btn--secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    min-width: 132px;
+    background: var(--black);
+    color: var(--secondary-3);
+    font-family: "AvertaStdCY";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+button:hover,
+a.btn:hover,
+a.button:hover,
+.btn:hover,
+.btn-secondary:hover,
+.btn--secondary:hover,
+button:not([disabled]):hover,
+a.btn:not([disabled]):hover,
+a.button:not([disabled]):hover,
+.btn:not([disabled]):hover,
+.btn-secondary:not([disabled]):hover,
+.btn--secondary:not([disabled]):hover {
+    background: #1b1b1be8;
+    text-decoration: none;
+}
+
+button:focus,
+a.btn:focus,
+a.button:focus,
+.btn:focus,
+.btn-secondary:focus,
+.btn--secondary:focus {
+    background: #1b1b1be8;
+    text-decoration: none;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+
+

@@ -1,0 +1,91 @@
+<div class="{{ section.class }}">
+    {% if section.settings.image_bg_section != blank %}
+        <img src="{{ section.settings.image_bg_section | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_bg_section.width }}"
+            height="{{ section.settings.image_bg_section.height }}" class="block w-full h-full image_bg_section">
+    {% endif %}
+    <div class="container">
+        <div class="home_about_us grid">
+            <div class="left">
+                {% if section.settings.image_left != blank %}
+                    <img src="{{ section.settings.image_left | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_left.width }}"
+                        height="{{ section.settings.image_left.height }}" class="block w-full h-full">
+                {% endif %}
+            </div>
+
+            <div class="right">
+                {% if section.settings.image_right != blank %}
+                    <img src="{{ section.settings.image_right | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_right.width }}"
+                        height="{{ section.settings.image_right.height }}" class="block w-full h-full">
+                {% endif %}
+
+                {% if section.settings.title != blank %}
+                    <div class="about_us_title">
+                        <h2>{{ section.settings.title }}</h2>
+                    </div>
+                {% endif %}
+
+                {% if section.settings.description != blank %}
+                    <div class="about_us_description">
+                        {{ section.settings.description }}
+                    </div>
+                {% endif %}
+
+                {% if section.settings.text_link != blank and section.settings.url_link != blank %}
+                    <a href="{{ section.settings.url_link }}" class="btn">{{ section.settings.text_link }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Home About Us",
+        "class": "home-about-us",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_bg_section",
+                "label": "Image Background"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_left",
+                "label": "Image Banner"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_right",
+                "label": "Image Logo Right"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "About Us"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "label": "Description",
+                "default": "<p>We’re totally buzzed about the holistic benefits of self-intimacy. It’s our mission to remove the stigma and celebrate this normal, natural, essential form of self-care.</p>"
+            },
+            {
+                "type": "text",
+                "id": "text_link",
+                "label": "Text Link",
+                "default": "Read more"
+            },
+            {
+                "type": "url",
+                "id": "url_link",
+                "label": "Url Link"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Home About Us"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,37 @@
+<div class="{{ section.class }}">
+    <div class="container full">
+        {% if section.settings.collection != blank %}
+            {%- assign products = collections[section.settings.collection].products -%}
+            {% if products.size > 0 %}
+                <div class="home_product_list grid">
+                    {% for product in products limit: 3 %}
+                        {% render 'card-product',
+                            card_product: product,
+                            section_id: section.id,
+                            current_page: 'home_page'
+                        %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Home Product List",
+        "class": "home-product-list",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Choose Collection"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Home Product List"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,60 @@
+<div class="{{ section.class }}">
+    <div class="container">
+        <div class="home_loved_by">
+            {% if section.settings.title != blank %}
+                <h2>{{ section.settings.title }}</h2>
+            {% endif %}
+
+            {% if section.blocks.size > 0 %}
+                <div class="list_loved_by">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'image' %}
+                                <div class="love_by_item">
+                                    {% if block.settings.image != blank %}
+                                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="" loading="lazy" width="{{ block.settings.image.width }}"
+                                            height="{{ block.settings.image.height }}" class="block w-full h-full">
+                                    {% else %}
+                                        {{ 'lifestyle-2' | placeholder_svg_tag }}
+                                    {% endif %}
+                                </div>
+                        {% endcase %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Home Loved",
+        "class": "home-loved",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Loved by"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name": "Logo Image",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Home Loved"
+            }
+        ]
+    }
+{% endschema %}

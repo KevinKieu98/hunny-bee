@@ -4,7 +4,71 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "eab99528-4d91-4efa-acad-2f7c432f1958": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Amex_Card_1.png"
+          }
+        },
+        "37071bc8-3d4a-4027-acfa-9258e05a7bf3": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Frame_427319000.png"
+          }
+        },
+        "4aa4acc8-c560-4b9d-bc2b-87f421c5fe57": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Frame_427319001.png"
+          }
+        },
+        "ba4f4a26-ea20-406c-b454-51cda284b86b": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Frame_427319002.png"
+          }
+        },
+        "f0639860-5c10-4625-b7d8-a56351eba969": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Frame_427319003.png"
+          }
+        },
+        "ef4991cd-73b7-46ab-9388-ba5a4a389bd9": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/image_24.png"
+          }
+        },
+        "265873c4-aa77-4cfc-95a8-5103a58a50de": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Frame_427319005.png"
+          }
+        },
+        "6fb76b2e-d977-43e2-bab5-b23ac35293b4": {
+          "type": "image_logo",
+          "settings": {
+            "image_logo": "shopify:\/\/shop_images\/Frame_427319006.png"
+          }
+        }
+      },
+      "block_order": [
+        "eab99528-4d91-4efa-acad-2f7c432f1958",
+        "37071bc8-3d4a-4027-acfa-9258e05a7bf3",
+        "4aa4acc8-c560-4b9d-bc2b-87f421c5fe57",
+        "ba4f4a26-ea20-406c-b454-51cda284b86b",
+        "f0639860-5c10-4625-b7d8-a56351eba969",
+        "ef4991cd-73b7-46ab-9388-ba5a4a389bd9",
+        "265873c4-aa77-4cfc-95a8-5103a58a50de",
+        "6fb76b2e-d977-43e2-bab5-b23ac35293b4"
+      ],
       "settings": {
+        "logo_footer": "shopify:\/\/shop_images\/BW_1.png",
+        "text_info_company": "Information Company",
+        "text_explore": "Explore",
+        "text_support": "Support",
         "color_scheme": "background-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
@@ -15,8 +79,8 @@
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 80
       }
     }
   },
