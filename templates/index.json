@@ -20,9 +20,6 @@
     "c9b808b6-b5a7-455e-8a75-a3a6212d85a4": {
       "type": "home-about-us",
       "settings": {
-        "image_bg_section": "shopify:\/\/shop_images\/Frame_427318994.png",
-        "image_left": "shopify:\/\/shop_images\/zxcd_1_1.png",
-        "image_right": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_2.png",
         "title": "About Us",
         "description": "<p>We’re totally buzzed about the holistic benefits of self-intimacy. It’s our mission to remove the stigma and celebrate this normal, natural, essential form of self-care.<\/p><p>Our brand and the community we’re creating is all about building your self-confidence, giving you a greater understanding and appreciation of your body, and helping you feel sexy in your own skin.<\/p><p>Our goal is to enrich the lives of our hunnybee community and to partner with charities and causes to generously give back.We want you to be, pleased with yourself...<\/p>",
         "text_link": "Read more",
@@ -35,49 +32,41 @@
         "8a922c55-1e42-4b67-865e-1e038301d977": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_4.png"
           }
         },
         "724c34e8-d057-4e8e-9d20-49c962767604": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_5.png"
           }
         },
         "5ebc4378-c119-4420-b3b0-27c8b7546350": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_6.png"
           }
         },
         "4705ec52-4a4d-403d-bb43-a0cab478d4cc": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_7.png"
           }
         },
         "fb66b5fa-4f9a-4ba8-b0d2-03eb477a73ad": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_15_1.png"
           }
         },
         "378a1bce-a4d5-40b6-b551-0a305dff571e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_16_1.png"
           }
         },
         "613b6fb0-55a1-4fc5-b0b2-2d9511832f87": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_17_1.png"
           }
         },
         "d17eb50c-a33c-46ac-bf19-e9dcfbade398": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_18_1.png"
           }
         }
       },
@@ -122,7 +111,6 @@
         "7f1a39f6-84bf-44a8-a287-c83bb291d089"
       ],
       "settings": {
-        "image_bg_section": "shopify:\/\/shop_images\/Frame_44.png"
       }
     },
     "7e5c6b4e-c0fc-4882-8d12-54ba5aca9355": {
@@ -131,25 +119,21 @@
         "b13310fa-b430-4339-9fb1-b0f5fa9a4edf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_11.png"
           }
         },
         "9c5ea5fe-90c4-4a3d-9ab8-b1c2191ff281": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_1.png"
           }
         },
         "d313156c-9053-413f-9a9a-99c60254cf35": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_9.png"
           }
         },
         "418b1e46-0d00-4e58-975d-c2ce7854355c": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_1.png"
           }
         }
       },
