@@ -4,6 +4,7 @@
       "type": "home-banner",
       "settings": {
         "banner_image_bg_desk": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
+        "banner_image_bg_mobile": "shopify:\/\/shop_images\/Frame_427318992_2.png",
         "banner_image_left": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
         "banner_text_1": "Pleased with",
         "banner_text_2": "yourself",
@@ -35,49 +36,57 @@
         "8a922c55-1e42-4b67-865e-1e038301d977": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_4.png"
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_4.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_8.png"
           }
         },
         "724c34e8-d057-4e8e-9d20-49c962767604": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_5.png"
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_5.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_9.png"
           }
         },
         "5ebc4378-c119-4420-b3b0-27c8b7546350": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_6.png"
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_6.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_10.png"
           }
         },
         "4705ec52-4a4d-403d-bb43-a0cab478d4cc": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_7.png"
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_7.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_11.png"
           }
         },
         "fb66b5fa-4f9a-4ba8-b0d2-03eb477a73ad": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_15_1.png"
+            "image_desktop": "shopify:\/\/shop_images\/image_15_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_15_2.png"
           }
         },
         "378a1bce-a4d5-40b6-b551-0a305dff571e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_16_1.png"
+            "image_desktop": "shopify:\/\/shop_images\/image_16_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_16_2.png"
           }
         },
         "613b6fb0-55a1-4fc5-b0b2-2d9511832f87": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_17_1.png"
+            "image_desktop": "shopify:\/\/shop_images\/image_17_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_17_2.png"
           }
         },
         "d17eb50c-a33c-46ac-bf19-e9dcfbade398": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_18_1.png"
+            "image_desktop": "shopify:\/\/shop_images\/image_18_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_18_2.png"
           }
         }
       },
@@ -122,7 +131,8 @@
         "7f1a39f6-84bf-44a8-a287-c83bb291d089"
       ],
       "settings": {
-        "image_bg_section": "shopify:\/\/shop_images\/Frame_44.png"
+        "image_bg_section_desk": "shopify:\/\/shop_images\/Frame_44.png",
+        "image_bg_section_mobile": "shopify:\/\/shop_images\/Frame_427319274.png"
       }
     },
     "7e5c6b4e-c0fc-4882-8d12-54ba5aca9355": {
