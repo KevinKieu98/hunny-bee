@@ -2,14 +2,14 @@
     <div class="container full">
         {% if section.settings.banner_image_bg_desk != blank %}
             <img src="{{ section.settings.banner_image_bg_desk | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.banner_image_bg_desk.width }}"
-                height="{{ section.settings.banner_image_bg_desk.height }}" class="block w-full h-full">
+                height="{{ section.settings.banner_image_bg_desk.height }}" class="block w-full h-full image_desktop ">
         {% else %}
             {{ 'lifestyle-2' | placeholder_svg_tag }}
         {% endif %}
 
         {% if section.settings.banner_image_bg_mobile != blank %}
             <img src="{{ section.settings.banner_image_bg_mobile | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.banner_image_bg_mobile.width }}"
-                height="{{ section.settings.banner_image_bg_mobile.height }}" class="block w-full h-full">
+                height="{{ section.settings.banner_image_bg_mobile.height }}" class="block w-full h-full image_mobile">
         {% endif %}
 
         <div class="banner_text">

@@ -2133,7 +2133,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .utility-bar__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 4fr 1fr;
   grid-template-areas: 'announcements social-icons';
 }
 

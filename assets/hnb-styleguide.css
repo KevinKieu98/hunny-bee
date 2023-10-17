@@ -259,6 +259,36 @@ a.button:focus,
     display: none;
 }
 
+.slick-dotted .slick-dots {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 16px;
+}
+
+.slick-dotted .slick-dots li {
+    list-style: none;
+}
+
+.slick-dotted .slick-dots li button {
+    background: #E8E8E8;
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    padding: 0;
+    min-width: unset;
+    font-size: 0;
+    border: 0;
+}
+
+.slick-dotted .slick-dots .slick-active button {
+    width: 32px;
+    background: #FF876C;
+}
+
 @media all and (max-width: 989px) {
     .page-width, .container {
         padding-left: 16px;
