@@ -179,6 +179,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     font-weight: 400;
     line-height: normal;
     text-align: left;
+    margin: 0;
 }
 
 .product-card-wrapper .card__heading .full-unstyled-link {
@@ -681,7 +682,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 #menu-drawer .menu-drawer__inner-container {
     padding: 0 16px;
     padding-top: 24px;
-    height: calc(100% - 50px);
+    height: calc(100% - 55px);
 }
 
 .menu-drawer__navigation-container .menu-drawer__navigation {
@@ -786,6 +787,23 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     height: 52px;
 }
 
+@media screen and (max-width: 1200px) {
+    body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .section-header .header-wrapper .header--middle-left {
+        padding-left: 24px;
+        padding-right: 24px;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .home_about_us .right {
+        padding-left: 0;
+    }
+}
+
 @media screen and (max-width: 989px) {
     .header__search.is_desktop {
         display: none;
@@ -797,8 +815,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .section-header .header-wrapper .header--middle-left {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 14px 16px;
     }
 
     .announcement-bar,
@@ -841,6 +858,11 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 @media screen and (max-width: 767px) {
     .announcement-bar__message.h5 {
         text-align: left;
+        line-height: 17px;
+    }
+
+    .announcement-bar-section .utility-bar__grid .list-social {
+        gap: 16px;
     }
 
     .announcement-bar-section .utility-bar {
@@ -865,6 +887,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     .home-banner .banner_text {
         max-width: 228px;
         top: 40px;
+        left: 49%;
     }
 
     .home-banner .banner_text_image {
@@ -872,7 +895,13 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .product-card-wrapper .card__information .card__heading.h5 {
+        font-size: 18px;
         text-align: center;
+    }
+
+    .home_about_us .right img {
+        width: 66px;
+        height: 64px;
     }
 
     .home_about_us .right .about_us_title h2 {
@@ -886,11 +915,29 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .home_about_us .about_us_description p {
+        line-height: 20px;
         margin-bottom: 24px;
     }
 
     .home_about_us .right a.btn {
+        text-transform: none;
         margin-top: 24px;
+    }
+
+    .home-product-list {
+        margin-top: 16px;
+    }
+
+    .product-card-wrapper .card .card__inner.ratio::before {
+        padding-bottom: 112.6%;
+    }
+
+    .product-card-wrapper .card-information {
+        margin-top: 22px;
+    }
+
+    .home-loved {
+        margin-top: 32px;
     }
 
     .home_loved_by h2 {
@@ -899,6 +946,8 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .list_loved_by {
+        column-gap: 0;
+        row-gap: 48px;
         margin-top: 24px;
     }
 
@@ -925,18 +974,23 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .home_sexual_health .container .left {
-        padding-top: 40px;
-        max-width: 276px;
+        padding-top: 34px;
+        max-width: 268px;
         margin: 0 auto;
     }
 
     .home_sexual_health .text_item {
-        margin-bottom: 48px;
+        margin-bottom: 43px;
     }
 
     .home_sexual_health .text_item h3 {
         font-size: 32px;
         font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .home_sexual_health .text_item p {
+        margin-top: 4px;
     }
 
     .footer .footer__content-top {
@@ -970,13 +1024,55 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 
     .list_image_logo {
         margin: 0 auto;
-        margin-top: 24px;
+        margin-top: 22px;
         max-width: 224px;
         flex-wrap: wrap;
     }
 
     .footer_content {
-        row-gap: 40px;
+        margin-top: 38px;
+        row-gap: 36px;
+    }
+
+    .footer_content h4 {
+        letter-spacing: 1.1px;
+    }
+
+    .footer_content .link_items li {
+        margin-bottom: 12px;
+    }
+
+    .footer_content .link_items a {
+        letter-spacing: 0.4px;
+    }
+
+    .newsletter_box .socials {
+        padding-right: 10px;
+    }
+
+    .footer-block--newsletter .field__input {
+        height: 49px;
+    }
+
+    .footer-block--newsletter .field__input::placeholder,
+    .footer-block--newsletter .field__label {
+        top: 45%;
+    }
+
+    .footer-block--newsletter .newsletter-form__button {
+        top: 45%;
+    }
+
+    .newsletter_box .your_seft {
+        margin-top: 21px;
+    }
+
+    .footer-block--newsletter .newsletter-form__field-wrapper {
+        padding-right: 10px;
+    }
+
+    .footer__content-bottom-wrapper h4 {
+        font-size: 18px;
     }
     
     .shopify-section-group-footer-group .footer {
