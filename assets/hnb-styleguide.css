@@ -289,6 +289,23 @@ a.button:focus,
     background: #FF876C;
 }
 
+@media all and (max-width: 1200px) {
+    .page-width, .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .section-header .header-wrapper .header--middle-left {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
+        padding-left: 24px;
+        padding-right: 24px; 
+    }
+}
+
 @media all and (max-width: 989px) {
     .page-width, .container {
         padding-left: 16px;

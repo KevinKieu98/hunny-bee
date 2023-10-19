@@ -1,0 +1,139 @@
+.thumbnail_slider_custom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.thumbnail_slider_custom .thumbnail-list {
+    gap: 8px;
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.thumbnail_slider_custom .thumbnail-list__item {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.thumbnail_slider_custom .thumbnail-list__item .thumbnail {
+    border: 0;
+    box-shadow: none;
+}
+
+.thumbnail_slider_custom .thumbnail-list__item img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    width: 36px;
+    height: 36px;
+}
+
+.slider_mobile_gutter_custom .product__media-item {
+    width: 100%;
+    max-width: 100%;
+}
+
+.slider_mobile_gutter_custom .product__media-item .product-media-container.constrain-height.media-fit-contain {
+    width: 100%;
+}
+
+.product__media-toggle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: unset;
+}
+
+.product__modal-opener--image .product__media-toggle:hover {
+    background: unset;
+}
+
+.product__title {
+    margin: 0;
+    word-break: unset;
+}
+
+.product__title h1 {
+    color: var(--black);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.product__info-container .product_pice {
+    margin: 0;
+    margin-top: 8px;
+}
+
+.product_pice span {
+    color: var(--black);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.payment_afterpay p {
+    margin: 0;
+    text-align: left;
+}
+
+.product-form__input {
+    margin: 0;
+}
+
+.product__info-container fieldset.product-form__input .form__label {
+    color: var(--black);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.product__info-container .product-form__input input[type=radio] + label.color-swatch {
+    padding: 3px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0;
+    border: 0;
+    position: relative;
+}
+
+.product__info-container .product-form__input input[type=radio]:checked+label.color-swatch::before {
+    content: '';
+    width: 38px;
+    height: 38px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.product__info-container .product-form__input label.color-swatch span {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
