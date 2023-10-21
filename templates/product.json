@@ -48,6 +48,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "6bc8d43b-bee8-41ce-bd24-50132a0ca696": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -58,7 +63,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "6bc8d43b-bee8-41ce-bd24-50132a0ca696"
       ],
       "settings": {
         "enable_sticky_info": true,
