@@ -1,0 +1,281 @@
+<div class="{{ section.class }}">
+    <div class="box_section_product_tabs">
+        <div class="container">
+            <div class="desktop">
+                <div class="tabs_title flex">
+                    <h3 data-target-content="box_product_description" class="tab_title active">Product description</h3>
+                    <h3 data-target-content="box_product_shipping" class="tab_title">Shipping & return</h3>
+                    <h3 data-target-content="box_product_reviews" class="tab_title">Product reviews</h3>
+                </div>
+    
+                <div class="tabs_content">
+                    <div class="tab_content_item box_product_description">
+                        <div class="box_description_image">
+                            {% if section.settings.image_description != blank %}
+                                <img src="{{ section.settings.image_description | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_description.width }}"
+                                    height="{{ section.settings.image_description.height }}" class="block w-full h-full">
+                            {% else %}
+                                <img
+                                    src="{{ product.media[0].src | img_url: 'master' }}"
+                                    sizes=""
+                                    alt=""
+                                    class="w-full h-full block"
+                                    loading="lazy"
+                                    width="{{ product.media[0].width }}"
+                                    height="{{ product.media[0].height }}"
+                                >
+                            {% endif %}
+                        </div>
+                        <div class="box_description_items">
+                            {% if section.blocks.size > 0 %}
+                                {% for block in section.blocks %}
+                                    <div class="content_item description">
+                                        <h5>{{ block.settings.title_description }}</h5>
+        
+                                        <div class="content_item_description">
+                                            {{ block.settings.content_description }}
+                                        </div>
+                                    </div>
+    
+                                    <div class="content_item features">
+                                        <h5>{{ block.settings.title_features }}</h5>
+        
+                                        <div class="content_item_description">
+                                            {{ block.settings.content_features }}
+                                        </div>
+                                    </div>
+    
+                                    <div class="content_item specifications">
+                                        <h5>{{ block.settings.title_specifications }}</h5>
+        
+                                        <div class="content_item_description">
+                                            {{ block.settings.content_specifications }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+    
+                    <div class="tab_content_item box_product_shipping">
+                        {% if product.metafields.accentuate.returns_policy %}
+                            <div>
+                                {% if product.metafields.accentuate.title_return_policy %}
+                                    <h5>{{ product.metafields.accentuate.title_return_policy }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.returns_policy }}  
+                            </div>
+    
+                            <div>
+                                {% if product.metafields.accentuate.title_warranty %}
+                                    <h5>{{ product.metafields.accentuate.title_warranty }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.warranty }}
+                            </div>
+    
+                            <div>
+                                {% if product.metafields.accentuate.title_shipping %}
+                                    <h5>{{ product.metafields.accentuate.title_shipping }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.shipping }}
+                            </div>
+                        {% endif %}
+                    </div>
+    
+                    <div class="tab_content_item box_product_reviews">
+                        reviews
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile">
+                <accordion-controller
+                    class="accordion block w-full ">
+                    <h4
+                        class="summary">
+                        <span class="heading ">
+                            Description
+                        </span>
+                        <div class="chevron-arrow flex">
+                            <span class="flex open w-full">{% render 'icon_arrow_down' %}
+                            </span>
+                            <span class="close w-full hidden">{% render 'icon_arrow_up' %}
+                            </span>
+                        </div>
+                    </h4>
+                    <div class="details animation_common overflow-hidden ">
+                        <div class="">
+                            <div class="box_description_items">
+                                {% if section.blocks.size > 0 %}
+                                    {% for block in section.blocks %}
+                                        <div class="content_item description">
+                                            <div class="content_item_description">
+                                                {{ block.settings.content_description }}
+                                            </div>
+                                        </div>
+        
+                                        <div class="content_item features">
+                                            <h5>{{ block.settings.title_features }}</h5>
+            
+                                            <div class="content_item_description">
+                                                {{ block.settings.content_features }}
+                                            </div>
+                                        </div>
+        
+                                        <div class="content_item specifications">
+                                            <h5>{{ block.settings.title_specifications }}</h5>
+            
+                                            <div class="content_item_description">
+                                                {{ block.settings.content_specifications }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </accordion-controller>
+
+                <accordion-controller
+                    class="accordion block w-full ">
+                    <h4
+                        class="summary">
+                        <span class="heading ">
+                            Shipping & return
+                        </span>
+                        <div class="chevron-arrow flex">
+                            <span class="flex open w-full">{% render 'icon_arrow_down' %}
+                            </span>
+                            <span class="close w-full hidden">{% render 'icon_arrow_up' %}
+                            </span>
+                        </div>
+                    </h4>
+                    <div class="details animation_common overflow-hidden ">
+                        {% if product.metafields.accentuate.returns_policy %}
+                            <div>
+                                {% if product.metafields.accentuate.title_return_policy %}
+                                    <h5>{{ product.metafields.accentuate.title_return_policy }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.returns_policy }}  
+                            </div>
+    
+                            <div>
+                                {% if product.metafields.accentuate.title_warranty %}
+                                    <h5>{{ product.metafields.accentuate.title_warranty }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.warranty }}
+                            </div>
+    
+                            <div>
+                                {% if product.metafields.accentuate.title_shipping %}
+                                    <h5>{{ product.metafields.accentuate.title_shipping }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.shipping }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </accordion-controller>
+
+                <accordion-controller
+                    class="accordion block w-full ">
+                    <h4
+                        class="summary">
+                        <span class="heading ">
+                            Product reviews
+                        </span>
+                        <div class="chevron-arrow flex">
+                            <span class="flex open w-full">{% render 'icon_arrow_down' %}
+                            </span>
+                            <span class="close w-full hidden">{% render 'icon_arrow_up' %}
+                            </span>
+                        </div>
+                    </h4>
+                    <div class="details animation_common overflow-hidden ">
+                        Product reviews
+                    </div>
+                </accordion-controller>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Product Tabs",
+        "class": "product-tap",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_description",
+                "label": "Image"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "product_description",
+                "name": "Description",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Description"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title_description",
+                        "label": "Title Description",
+                        "default": "Description"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "content_description",
+                        "label": "Content Description",
+                        "default": "<p></p>"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Features"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title_features",
+                        "label": "Title Features",
+                        "default": "Features"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "content_features",
+                        "label": "Content Features",
+                        "default": "<p></p>"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Description"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title_specifications",
+                        "label": "Title Specifications",
+                        "default": "Specifications"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "content_specifications",
+                        "label": "Content Specifications",
+                        "default": "<p></p>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Tabs"
+            }
+        ]
+    }
+{% endschema %}

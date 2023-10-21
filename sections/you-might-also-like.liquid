@@ -1,0 +1,115 @@
+<div class="{{ section.class }} section_you_also_like section-{{ section.id }}-padding">
+    <div class="container full">
+        {% if section.settings.heading != blank %}
+            <h3>{{ section.settings.heading }}</h3>
+        {% endif %}
+
+        {% if section.settings.collection != blank %}
+            {%- assign products = collections[section.settings.collection].products -%}
+            {%- assign limitProduct = section.settings.limit_product -%}
+            {% if products.size > 0 %}
+                <div class="product_also_like">
+                    {% for product in products limit: limitProduct %}
+                        {% render 'card-product',
+                            card_product: product,
+                            section_id: section.id,
+                            current_page: 'home_page'
+                        %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+<style>
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.space_top_desk }}px;
+        padding-bottom: {{ section.settings.space_bot_desktop }}px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .section-{{ section.id }}-padding {
+            padding-top: {{ section.settings.space_top_mobile }}px;
+            padding-bottom: {{ section.settings.space_bot_mobile }}px;
+        }
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "Product Also Like",
+        "class": "product-also-like",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Choose Collection"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "You might also like"
+            },
+            {
+                "type": "range",
+                "id": "limit_product",
+                "min": 1,
+                "max": 10,
+                "step": 1,
+                "label": "Limit product",
+                "default": 4
+            },
+            {
+                "type": "header",
+                "content": "Spacing"
+            },
+            {
+                "type": "range",
+                "id": "space_top_desk",
+                "min": 40,
+                "max": 80,
+                "step": 2,
+                "unit": "px",
+                "label": "Space Top Desktop",
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "space_bot_desktop",
+                "min": 40,
+                "max": 80,
+                "step": 2,
+                "unit": "px",
+                "label": "Space Bottom Desktop",
+                "default": 40
+            },
+            {
+                "type": "range",
+                "id": "space_top_mobile",
+                "min": 20,
+                "max": 40,
+                "step": 2,
+                "unit": "px",
+                "label": "Space Top Mobile",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "space_bot_mobile",
+                "min": 20,
+                "max": 40,
+                "step": 2,
+                "unit": "px",
+                "label": "Space Bottom Mobile",
+                "default": 20
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Also Like"
+            }
+        ]
+    }
+{% endschema %}

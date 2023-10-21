@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "body"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -31,34 +24,30 @@
           "settings": {
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "dab61499-ecf6-484d-a771-42364fbcb79f": {
+          "type": "image_logo",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "icon_image_logo_1": "shopify:\/\/shop_images\/image_37_1.png",
+            "icon_image_logo_2": "shopify:\/\/shop_images\/image_38_1.png",
+            "icon_image_logo_3": "shopify:\/\/shop_images\/image_39.png"
           }
         },
-        "description": {
-          "type": "description",
+        "cbce8cf7-094f-43e8-97df-0df43e9e6e64": {
+          "type": "inventory",
           "settings": {
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": false
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "description",
-        "share"
+        "dab61499-ecf6-484d-a771-42364fbcb79f",
+        "cbce8cf7-094f-43e8-97df-0df43e9e6e64"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -71,12 +60,50 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top_desk": 40,
+        "padding_bottom_desk": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "show_dynamic_checkout": true,
+        "show_gift_card_recipient": true
+      }
+    },
+    "d77227ba-9689-4a8c-95c5-23efed7e400b": {
+      "type": "product-tabs-information",
+      "blocks": {
+        "d9224ce6-d7da-4956-bf08-12ae5618aa24": {
+          "type": "product_description",
+          "settings": {
+            "title_description": "Description",
+            "content_description": "<p>Prepare to be blown away by the incredible sensations of Eleanor. From the moment it touches your skin, you'll feel weak in the knees and eager for more. Its powerful dual stimulation points and warming function will send waves of warmth through your entire body, leaving you gasping for breath in the best way possible. And when you think you can't handle any more, you'll realise you needed this kind of intensity.<\/p>",
+            "title_features": "Features",
+            "content_features": "<ul><li>Super lux velvety soft silicone<\/li><li>10 levels of suction for all intensities<\/li><li>Designed for comfort<\/li><li>Quick usb re charge<\/li><li>Waterproof<\/li><li>Free of phthalates and Latexclit sucking stimulation<\/li><li>Endometriosis friendly<\/li><\/ul>",
+            "title_specifications": "Specifications",
+            "content_specifications": "<ul><li>Function Modes - 10 Levels of suction<\/li><li>Run time - 80 Mins<\/li><li>Charge Time - 120 Mins<\/li><li>Charging method - Aux<\/li><li>Waterproof Rating - IPX6<\/li><li>Charging - 5v<\/li><li>Product weight - 68.5g<\/li><li>Product Size - 110*39*38mm<\/li><li>Charging cable included<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "d9224ce6-d7da-4956-bf08-12ae5618aa24"
+      ],
+      "settings": {
+      }
+    },
+    "7dd791e3-a4a6-48f6-892b-d6da8137fdbc": {
+      "type": "you-might-also-like",
+      "settings": {
+        "collection": "frontpage",
+        "heading": "You might also like",
+        "limit_product": 10,
+        "space_top_desk": 40,
+        "space_bot_desktop": 40,
+        "space_top_mobile": 24,
+        "space_bot_mobile": 20
       }
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -92,10 +119,54 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "abd5f8f3-9b60-4f93-a8f3-90fd6aafa51d": {
+      "type": "section-why-hunnybe",
+      "blocks": {
+        "3a540eeb-35e6-4e77-ad2c-9e75caff8994": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/free-delivery.png",
+            "title": "Free Shipping",
+            "description": "Get complimentary ground shipping on every order. Don’t love it? Send it back, on us"
+          }
+        },
+        "14bdf602-e81a-4390-8769-240199ce9e50": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/package-box.png",
+            "title": "Discreet Packaging",
+            "description": "Companies that offer discreet packaging prioritize customer confidentiality"
+          }
+        },
+        "094d92f2-d6e5-4256-bd5b-8dfb54f3de7a": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/credit-card.png",
+            "title": "Secure checkout",
+            "description": "Payment gateways act as intermediaries between the customer, the merchant"
+          }
+        }
+      },
+      "block_order": [
+        "3a540eeb-35e6-4e77-ad2c-9e75caff8994",
+        "14bdf602-e81a-4390-8769-240199ce9e50",
+        "094d92f2-d6e5-4256-bd5b-8dfb54f3de7a"
+      ],
+      "settings": {
+        "heading": "Why Hunnybee?",
+        "space_top_desk": 40,
+        "space_bot_desktop": 80,
+        "space_top_mobile": 20,
+        "space_bot_mobile": 40
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "d77227ba-9689-4a8c-95c5-23efed7e400b",
+    "7dd791e3-a4a6-48f6-892b-d6da8137fdbc",
+    "related-products",
+    "abd5f8f3-9b60-4f93-a8f3-90fd6aafa51d"
   ]
 }

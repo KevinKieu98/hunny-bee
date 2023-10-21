@@ -42,7 +42,7 @@ slider-component.slider-component-full-width {
   visibility: hidden;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 767px) {
   .slider.slider--mobile {
     position: relative;
     flex-wrap: inherit;
@@ -52,6 +52,7 @@ slider-component.slider-component-full-width {
     scroll-padding-left: 1.5rem;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
+    width: 100%;
   }
 
   /* Fix to show some space at the end of our sliders in all browsers */

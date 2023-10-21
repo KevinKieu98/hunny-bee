@@ -1,0 +1,20 @@
+{%- if title != blank and content != blank -%}
+    <accordion-controller
+        class="accordion block w-full lg:px-0 px-4 {% unless isGiftCard %} border-b border-b-border-default last:border-b-0 {% else %} accordion-giftcard relative before:md:content-[''] before:md:w-px before:md:h-full before:md:block before:md:bg-border-default before:md:absolute before:md:-left-px before:md:top-0{% endunless %} pt-6 pb-5">
+        <h4
+            class="summary leading-tiny flex items-center justify-between w-full text-10 tracking-wide font-normal text-grey-900 cursor-pointer h-4 mb-0 duration-300 transition-all ease-in-out">
+            <span class="heading font-medium md:text-base md:leading-6 text-sm text-grey-900">
+                {{ title }}
+            </span>
+            <div class="chevron-arrow flex items-center">
+                <span class="flex justify-center items-center open text-primary-input w-full h-5">{% render 'icon_plus_acc' %}
+                </span>
+                <span class="justify-center items-center close text-primary-input w-full hidden">{% render 'icon_minus_acc' %}
+                </span>
+            </div>
+        </h4>
+        <div class="details text-grey-900 font-normal text-11 leading-5 {{ class }} overflow-hidden  duration-300 transition-all ease-in-out ">
+            <div class="pt-3">{{ content }}</div>
+        </div>
+    </accordion-controller>
+{%- endif -%}

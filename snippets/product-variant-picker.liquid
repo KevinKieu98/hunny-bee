@@ -23,8 +23,10 @@
     >
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
-          <legend class="form__label">{{ option.name }}: {{ option.selected_value }}</legend>
-          {% render 'product-variant-options', product: product, option: option, block: block %}
+          <p class="form__label">{{ option.name }}: {{ option.selected_value }}</p>
+          <div class="product-form__input_variants">
+            {% render 'product-variant-options', product: product, option: option, block: block %}
+          </div>
         </fieldset>
       {%- endfor -%}
       <script type="application/json">
