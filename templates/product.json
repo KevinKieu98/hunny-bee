@@ -39,11 +39,6 @@
             "inventory_threshold": 10,
             "show_inventory_quantity": false
           }
-        },
-        "6bc8d43b-bee8-41ce-bd24-50132a0ca696": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -86,10 +81,16 @@
             "title_specifications": "Specifications",
             "content_specifications": "<ul><li>Function Modes - 10 Levels of suction<\/li><li>Run time - 80 Mins<\/li><li>Charge Time - 120 Mins<\/li><li>Charging method - Aux<\/li><li>Waterproof Rating - IPX6<\/li><li>Charging - 5v<\/li><li>Product weight - 68.5g<\/li><li>Product Size - 110*39*38mm<\/li><li>Charging cable included<\/li><\/ul>"
           }
+        },
+        "7215579f-2ebf-46f2-bf02-c67cedc72473": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "d9224ce6-d7da-4956-bf08-12ae5618aa24"
+        "d9224ce6-d7da-4956-bf08-12ae5618aa24",
+        "7215579f-2ebf-46f2-bf02-c67cedc72473"
       ],
       "settings": {
       }
