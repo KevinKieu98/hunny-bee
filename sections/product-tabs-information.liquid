@@ -190,7 +190,7 @@
                 </accordion-controller>
 
                 <accordion-controller
-                    class="accordion block w-full ">
+                    class="accordion block w-full box_product_reviews">
                     <h4
                         class="summary">
                         <span class="heading ">
@@ -203,8 +203,15 @@
                             </span>
                         </div>
                     </h4>
-                    <div class="details animation_common overflow-hidden ">
-                        {{ 'products.product.product_reviews_app' | t }}
+                    <div class="details animation_common overflow-hidden">
+                        {% if section.blocks.size > 0 %}
+                            {% for block in section.blocks %}
+                                {% case block.type %}
+                                    {% when '@app' %}
+                                        {% render block %}
+                                {% endcase %}
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </accordion-controller>
             </div>
