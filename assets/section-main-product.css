@@ -89,6 +89,12 @@
   }
 }
 
+@media screen and (min-width: 1441px) {
+  .product--large:not(.product--no-media) .product__media-wrapper {
+    max-width: 100%;
+  }
+}
+
 /* Dynamic checkout */
 
 .shopify-payment-button__button {
