@@ -338,6 +338,10 @@ a.button:focus,
         padding-left: 24px;
         padding-right: 24px; 
     }
+
+    .product.product--large:not(.product--no-media) .product__info-wrapper {
+        padding-right: 0;
+    }
 }
 
 @media all and (max-width: 989px) {

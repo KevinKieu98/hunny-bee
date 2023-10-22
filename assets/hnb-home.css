@@ -47,7 +47,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 }
 
 .section-header .header-wrapper .header--middle-left {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 13px 80px;
 }
 

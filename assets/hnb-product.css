@@ -663,6 +663,28 @@ quantity-input .quantity__button svg {
 
 .box_product_reviews .details {
     margin-top: 24px;
+    overflow-y: auto;
+}
+
+.product {
+    /* padding: 0 80px;
+    max-width: 1600px;
+    margin: 0 auto; */
+}
+
+@media screen and (min-width: 1441px) {
+    .product {
+        padding: 0 80px;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -672,6 +694,13 @@ quantity-input .quantity__button svg {
 
     .box_description_items {
         width: calc(100% - 328px);
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .product {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
@@ -696,7 +725,6 @@ quantity-input .quantity__button svg {
     }
 
     .product__info-container {
-        padding: 0 16px;
         padding-top: 16px;
         display: block;
     }
