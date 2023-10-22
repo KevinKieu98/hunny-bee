@@ -185,8 +185,18 @@
                 </span>
               </p>
             {%- endif -%}
+              {% comment %} {% if current_page == 'home_page' %}
+                <div class="price__regular"><span class="visually-hidden visually-hidden--inline">Regular price</span>
+                  <span class="price-item price-item--regular">
+                    {{ card_product.price | money }}
+                  </span>
+                </div>
+              {% else %}
+                {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+              {% endif %} {% endcomment %}
 
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+              {% render 'price', product: card_product, price_class: '', show_compare_at_price: true, show_regular_price: show_regular_price %}
+            
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class="card__information-volume-pricing-note">
                 <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
