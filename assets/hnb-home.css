@@ -787,6 +787,27 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     height: 52px;
 }
 
+.modal__close-button.link:hover {
+    color: var(--white);
+}
+
+.search-modal__content .search__input.field__input {
+    border: 1px solid var(--black);
+    outline: none;
+    box-shadow: none;
+}
+
+.search-modal__content .field::before,
+.search-modal__content .field::after {
+    display: none;
+}
+
+.search-modal__content .search__button {
+    min-width: unset;
+    width: 44px;
+    height: 44px;
+}
+
 @media screen and (max-width: 1200px) {
     body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
         padding-left: 24px;
