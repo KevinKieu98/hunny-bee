@@ -3,9 +3,9 @@
         <div class="container">
             <div class="desktop">
                 <div class="tabs_title flex">
-                    <h3 data-target-content="box_product_description" class="tab_title active">Product description</h3>
-                    <h3 data-target-content="box_product_shipping" class="tab_title">Shipping & return</h3>
-                    <h3 data-target-content="box_product_reviews" class="tab_title">Product reviews</h3>
+                    <h3 data-target-content="box_product_description" class="tab_title active">{{ 'products.product.product_description' | t }}</h3>
+                    <h3 data-target-content="box_product_shipping" class="tab_title">{{ 'products.product.product_shipping_return' | t }}</h3>
+                    <h3 data-target-content="box_product_reviews" class="tab_title">{{ 'products.product.product_reviews' | t }}</h3>
                 </div>
     
                 <div class="tabs_content">
@@ -86,7 +86,14 @@
                     </div>
     
                     <div class="tab_content_item box_product_reviews">
-                        reviews
+                        {% if section.blocks.size > 0 %}
+                            {% for block in section.blocks %}
+                                {% case block.type %}
+                                    {% when '@app' %}
+                                        {% render block %}
+                                {% endcase %}
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -144,7 +151,7 @@
                     <h4
                         class="summary">
                         <span class="heading ">
-                            Shipping & return
+                            {{ 'products.product.product_shipping_return' | t }}
                         </span>
                         <div class="chevron-arrow flex">
                             <span class="flex open w-full">{% render 'icon_arrow_down' %}
@@ -187,7 +194,7 @@
                     <h4
                         class="summary">
                         <span class="heading ">
-                            Product reviews
+                            {{ 'products.product.product_reviews' | t }}
                         </span>
                         <div class="chevron-arrow flex">
                             <span class="flex open w-full">{% render 'icon_arrow_down' %}
@@ -197,7 +204,7 @@
                         </div>
                     </h4>
                     <div class="details animation_common overflow-hidden ">
-                        Product reviews
+                        {{ 'products.product.product_reviews_app' | t }}
                     </div>
                 </accordion-controller>
             </div>
@@ -270,6 +277,9 @@
                         "default": "<p></p>"
                     }
                 ]
+            },
+            {
+                "type": "@app"
             }
         ],
         "presets": [
