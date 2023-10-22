@@ -20,7 +20,11 @@
 
 .price .price-item {
   display: inline-block;
-  margin: 0 1rem 0 0;
+  margin: 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .price__regular .price-item--regular {
@@ -74,9 +78,9 @@
 }
 
 .price--on-sale .price__sale {
-  display: initial;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .price--center {
@@ -86,8 +90,11 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.3rem;
+  color: var(--grey4);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .unit-price {
@@ -98,4 +105,12 @@
   margin-top: 0.2rem;
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
+}
+
+@media screen and (max-width: 767px) {
+  .price--on-sale .price-item--regular,
+  .price .price-item {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
