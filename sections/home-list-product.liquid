@@ -1,5 +1,5 @@
-<div class="{{ section.class }}">
-    <div class="container full">
+<div id="home_product_list" class="{{ section.class }}">
+    <div class="container">
         {% if section.settings.collection != blank %}
             {%- assign products = collections[section.settings.collection].products -%}
             {% if products.size > 0 %}

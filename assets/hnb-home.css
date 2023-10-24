@@ -143,8 +143,8 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 }
 
 .home-product-list .home_product_list  {
-    padding-left: 12px;
-    padding-right: 12px;
+    /* padding-left: 12px;
+    padding-right: 12px; */
 }
 
 .home-product-list .home_product_list .slick-slide {
