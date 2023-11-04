@@ -1,0 +1,62 @@
+<div class="{{ section.class }}">
+    <div class="container">
+        {% if section.blocks.size > 0 %}
+            <div class="section_refund_policy">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'text' %}
+                            <div class="refund_policy_items">
+                                {% if block.settings.item_title != blank %}
+                                    <h3>{{ block.settings.item_title }}</h3>
+                                {% endif %}
+                                
+                                {% if block.settings.item_content != blank %}
+                                    <div class="refund_policy_items__content">
+                                        {{ block.settings.item_content }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                    {% endcase %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Refund Policy Content",
+        "class": "refund-policy-content",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Refund Policy Customize"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text",
+                "name": "Item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "item_title",
+                        "label": "Title",
+                        "default": "Home"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "item_content",
+                        "label": "Content",
+                        "default": "<p></p>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Refund Policy Content"
+            }
+        ]
+    }
+{% endschema %}
