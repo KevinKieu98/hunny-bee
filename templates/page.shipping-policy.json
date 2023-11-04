@@ -1,14 +1,24 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-page",
-            "settings": {
-                "padding_top": 28,
-                "padding_bottom": 28
-            }
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_banner_desk": "shopify:\/\/shop_images\/rm456-010_1_3.png",
+        "image_banner_mobile": "shopify:\/\/shop_images\/rm456-010_1_2.png",
+        "heading_title": ""
+      }
     },
-    "order": [
-        "main"
-    ]
+    "9d68e365-33ee-4dd5-b763-81869162b5de": {
+      "type": "shipping-policy",
+      "settings": {
+        "content": "<p>Hey there, lovely customer! Welcome to hunnybee's shipping policy, where we'll make sure your goodies are delivered with a smile.Firstly, let's talk about the perks - we offer free shipping Australia wide! And if you're feeling fancy and spend $150 or more, you'll also enjoy free express shipping. Woohoo, party time!<\/p><p>Our speedy bees will buzz off from our Sydney distribution centre within 1-2 business days and your order should arrive within 2-4 business days with express post. For orders under $150, our flat rate for express post is only $10. We know, we're pretty sweet.If you're a world traveler and need your hunnybee fix delivered overseas, no worries! Shipping costs will be calculated at checkout and delivery times vary by region. We'll make sure to get your package to you, no matter where you are.<\/p><p>But remember, it's super important to triple check the shipping address you provide us with. We wouldn't want your goodies to end up in the wrong hands! And don't worry about nosy neighbors, we'll keep it discreet with no labels or descriptions.Now, we'll be honest with you, we can't control everything in transit. If your package is delayed, lost or damaged, we'll do our best to help you track it down. Just give us an email at <a href=\"mailto:help@hunnybee.net.au\" target=\"_blank\" title=\"mailto:help@hunnybee.net.au\">help@hunnybee.net.au<\/a> and we'll send out our trusty bee team to investigate.Oh no, it's the dreaded return policy talk! But don't worry, hunnybee's got your back and we'll make it as fun as possible.<\/p><p>Sometimes, packages end up taking a detour and end up back with us. It could be for a variety of reasons, like someone forgot to pay their fees or taxes, or maybe the postie got lost and delivered to the wrong address. If this happens, don't fret! Just shoot us an email at <a href=\"mailto:help@hunnybee.net.au\" target=\"_blank\" title=\"mailto:help@hunnybee.net.au\">help@hunnybee.net.au<\/a> and we'll sort out a redelivery for you. However, please note that you might have to pay for shipping again. Darn those pesky posties!<\/p><p>We want to make sure you get your goodies safe and sound, so please make sure your address details are correct. We can't be held responsible for packages that go missing because they got lost in transit, so make sure you're keeping a keen eye out for your special delivery.If your order seems to be taking longer than expected to arrive, don't panic! Just reach out to our lovely customer service team at <a href=\"mailto:help@hunnybee.net.au\" target=\"_blank\" title=\"mailto:help@hunnybee.net.au\">help@hunnybee.net.au<\/a> and we'll do everything in our power to track it down. But please keep in mind, different regions have different time frames for when we can consider a package lost in transit.<\/p><p>If your package is officially declared lost in transit, we'll organise a new delivery for you.<\/p><p>See, we've got your back!Thanks for choosing hunnybee, where we'll make sure your shipping experience is as sweet as honey!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9d68e365-33ee-4dd5-b763-81869162b5de"
+  ]
 }
