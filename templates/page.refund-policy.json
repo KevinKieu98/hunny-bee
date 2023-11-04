@@ -1,14 +1,59 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-page",
-            "settings": {
-                "padding_top": 28,
-                "padding_bottom": 28
-            }
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_banner_desk": "shopify:\/\/shop_images\/rm456-010_1_3.png",
+        "image_banner_mobile": "shopify:\/\/shop_images\/rm456-010_1_2.png",
+        "heading_title": ""
+      }
     },
-    "order": [
-        "main"
-    ]
+    "282597f4-4519-42d4-933c-c87a6f4479ca": {
+      "type": "section-refund-policy",
+      "blocks": {
+        "d70ad4a2-6b46-4247-ba90-6bfb3261b250": {
+          "type": "text",
+          "settings": {
+            "item_title": "Refund Policy",
+            "item_content": "<ul><li>We offer a 60 day Returns Policy. If you change your mind on the item purchased, we will provide a store credit. Simply follow the instructions below to get your return request actioned. Please note; for a store credit to be eligible, all sexual wellness items must be returned un-opened, undamaged and all seals intact. Due to health and safety issues, if an item has been opened or used, unfortunately we cannot provide a refund - all sales are final (This is inclusive and not limited to vibrators, clit stimulators etc).<\/li><\/ul>"
+          }
+        },
+        "62dd9a1b-76d3-488a-be31-08a955d98683": {
+          "type": "text",
+          "settings": {
+            "item_title": "Sale items",
+            "item_content": "<ul><li>Items bought on sale or with the use of discount code will be refunded at the price paid after discount<\/li><li>Shipping returns is at the cost of the customer and is deducted from the refund. Shipping is charged at a flat rate of $9.50<\/li><\/ul>"
+          }
+        },
+        "55ea5375-32b5-4459-81c7-b119bee9f9e5": {
+          "type": "text",
+          "settings": {
+            "item_title": "Warranty Policy",
+            "item_content": "<ul><li>All of our products are backed by a 1 year warranty. If something goes wrong we will replace the item up to 12 months from purchase date. Simply follow the instructions below to get your warranty request actioned. Note only water based lubricant is to be used with our products. Use of synthetic or oil based will void the warranty.<\/li><li>This warranty does not cover damage caused by misuse, tampering, unreasonable use, or service performed by unauthorised service agencies<\/li><\/ul>"
+          }
+        },
+        "3ac62ae1-94a9-4939-b035-71b2dcb2025b": {
+          "type": "text",
+          "settings": {
+            "item_title": "",
+            "item_content": "<p>Please email your returns request to <a href=\"mailto:help@hunnybee.net.au\" target=\"_blank\" title=\"mailto:help@hunnybee.net.au\">help@hunnybee.net.au<\/a> along with your invoice number. If item is faulty please send some photos or and videos of the faulty product with a short description so our team can assess.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d70ad4a2-6b46-4247-ba90-6bfb3261b250",
+        "62dd9a1b-76d3-488a-be31-08a955d98683",
+        "55ea5375-32b5-4459-81c7-b119bee9f9e5",
+        "3ac62ae1-94a9-4939-b035-71b2dcb2025b"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "282597f4-4519-42d4-933c-c87a6f4479ca"
+  ]
 }
