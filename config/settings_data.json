@@ -118,6 +118,8 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_2_de2f4fda-dcb2-4377-b7e2-f5d61bb7c72d.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
     "checkout_input_background_color_mode": "white",
     "sections": {
       "main-password-header": {
