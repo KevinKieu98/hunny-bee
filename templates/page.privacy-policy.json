@@ -1,14 +1,115 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-page",
-            "settings": {
-                "padding_top": 28,
-                "padding_bottom": 28
-            }
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_banner_desk": "shopify:\/\/shop_images\/rm456-010_1_3.png",
+        "image_banner_mobile": "shopify:\/\/shop_images\/rm456-010_1_2.png",
+        "heading_title": ""
+      }
     },
-    "order": [
-        "main"
-    ]
+    "2ac5e2ce-2d23-4c07-94aa-97975a515a0f": {
+      "type": "section-privacy-policy",
+      "blocks": {
+        "f79d6e4b-957c-4e15-83f4-d6658caa4c8b": {
+          "type": "text",
+          "settings": {
+            "item_title": "",
+            "item_content": "<p>This Privacy Policy applies to all personal information collected by Hunnybee Pty Ltd via the website located at hunnybee.net.au\/ hunnybee.au<\/p>"
+          }
+        },
+        "9d672896-c16b-4c7e-9d72-e81249d0628e": {
+          "type": "text",
+          "settings": {
+            "item_title": "1. What is \"personal information\"?",
+            "item_content": "<ul><li>The Privacy Act 1988 (Cth) currently defines \"personal information\" as meaning information or an opinion about an identified individual or an individual who is reasonably identifiable:<\/li><li>whether the information or opinion is true or not; and<\/li><li>whether the information or opinion is recorded in a material form or not.<\/li><li>If the information does not disclose your identity or enable your identity to be ascertained, it will in most cases not be classified as \"personal information\" and will not be subject to this privacy policy.<\/li><\/ul>"
+          }
+        },
+        "686c519f-f93f-4288-9f7e-ad2253e82c93": {
+          "type": "text",
+          "settings": {
+            "item_title": "2. What information do we collect?",
+            "item_content": "<ul><li>The kind of personal information that we collect from you will depend on how you use the website. The personal information which we collect and hold about you may include: Name, Email Address & Payment Data.<\/li><\/ul>"
+          }
+        },
+        "7f835b39-14ff-43d8-8baf-2d3f46a44c0e": {
+          "type": "text",
+          "settings": {
+            "item_title": "3. How we collect your personal information",
+            "item_content": "<ul><li>We may collect personal information from you whenever you input such information into the website.<\/li><li>We also collect cookies from your computer which enable us to tell when you use the website and also to help customise your website experience. As a general rule, however, it is not possible to identify you personally from our use of cookies.<\/li><\/ul>"
+          }
+        },
+        "0959e448-9ad0-4356-968e-8f443785ce79": {
+          "type": "text",
+          "settings": {
+            "item_title": "4. Purpose of collection",
+            "item_content": "<ul><li>The purpose for which we collect personal information is to provide you with the best service experience possible on the website.<\/li><li>We customarily disclose personal information only to our service providers who assist us in operating the website. Your personal information may also be exposed from time to time to maintenance and support personnel acting in the normal course of their duties.<\/li><li>By using our website, you consent to the receipt of direct marketing material. We will only use your personal information for this purpose if we have collected such<\/li><\/ul>"
+          }
+        },
+        "72df3d38-44f6-47b3-94cf-b1e0346fd6a8": {
+          "type": "text",
+          "settings": {
+            "item_title": "5. Access and correction",
+            "item_content": "<ul><li>Australian Privacy Principle 12 permits you to obtain access to the personal information we hold about you in certain circumstances, and Australian Privacy Principle 13 allows you to correct inaccurate personal information subject to certain exceptions. If you would like to obtain such access, please contact us as set out below.<\/li><\/ul>"
+          }
+        },
+        "a459eeba-ef1a-4283-bf67-3432dd1e1d7b": {
+          "type": "text",
+          "settings": {
+            "item_title": "6. Complaint procedure",
+            "item_content": "<ul><li>If you have a complaint concerning the manner in which we maintain the privacy of your personal information, please contact us as set out below. All complaints will be considered by The Privacy Officer and we may seek further information from you to clarify your concerns. If we agree that your complaint is well founded, we will, in consultation with you, take appropriate steps to rectify the problem. If you remain dissatisfied with the outcome, you may refer the matter to the Office of the Australian Information Commissioner.<\/li><\/ul>"
+          }
+        },
+        "3b7bb0b8-8768-4e1e-9d42-ff8b74e1fc93": {
+          "type": "text",
+          "settings": {
+            "item_title": "7. Overseas transfer",
+            "item_content": "<ul><li>Your personal information will not be disclosed to recipients outside Australia unless you expressly request us to do so. If you request us to transfer your personal information to an overseas recipient, the overseas recipient will not be required to comply with the Australian Privacy Principles and we will not be liable for any mishandling of your information in such circumstances.<\/li><\/ul>"
+          }
+        },
+        "a5e2bbb9-afcd-4d2f-9126-30fd78404847": {
+          "type": "text",
+          "settings": {
+            "item_title": "8. GDPR",
+            "item_content": "<ul><li>In some circumstances, the European Union General Data Protection Regulation (GDPR) provides additional protection to individuals located in Europe. The fact that you may be located in Europe does not, however, on its own entitle you to protection under the GDPR. Our website does not specifically target customers located in the European Union and we do not monitor the behaviour of individuals in the European Union, and accordingly the GDPR does not apply.<\/li><\/ul>"
+          }
+        },
+        "c96c6c92-9567-4751-b9cc-e4483702233a": {
+          "type": "text",
+          "settings": {
+            "item_title": "9. How to contact us about privacy",
+            "item_content": "<ul><li>If you have any queries, or if you seek access to your personal information, or if you have a complaint about our privacy practices, you can contact us through: <a href=\"mailto:help@hunnybee.net.au\" target=\"_blank\" title=\"mailto:help@hunnybee.net.au\">help@hunnybee.net.au<\/a><\/li><\/ul>"
+          }
+        },
+        "fdbeaf8d-bb33-4bb1-bb94-ceef487ab6d9": {
+          "type": "text",
+          "settings": {
+            "item_title": "",
+            "item_content": "<p>This policy was last updated on 26th. November 2022<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f79d6e4b-957c-4e15-83f4-d6658caa4c8b",
+        "9d672896-c16b-4c7e-9d72-e81249d0628e",
+        "686c519f-f93f-4288-9f7e-ad2253e82c93",
+        "7f835b39-14ff-43d8-8baf-2d3f46a44c0e",
+        "0959e448-9ad0-4356-968e-8f443785ce79",
+        "72df3d38-44f6-47b3-94cf-b1e0346fd6a8",
+        "a459eeba-ef1a-4283-bf67-3432dd1e1d7b",
+        "3b7bb0b8-8768-4e1e-9d42-ff8b74e1fc93",
+        "a5e2bbb9-afcd-4d2f-9126-30fd78404847",
+        "c96c6c92-9567-4751-b9cc-e4483702233a",
+        "fdbeaf8d-bb33-4bb1-bb94-ceef487ab6d9"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2ac5e2ce-2d23-4c07-94aa-97975a515a0f"
+  ]
 }

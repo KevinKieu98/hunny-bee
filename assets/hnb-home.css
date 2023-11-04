@@ -1124,7 +1124,6 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     width: 100%;
     text-align: center;
     padding: 0 16px;
-    max-width: 365px;
 }
 
 .page_content {
@@ -1151,6 +1150,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     .template_page_banner .main-page-title {
         font-size: 32px;
         line-height: 40px;
+        max-width: 365px;
     }
 
     .page_content {
@@ -1399,5 +1399,96 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     .guide_toys_items__content p {
         font-size: 16px;
         line-height: 28px;
+    }
+}
+
+/* Privacy Policy */
+.section_privacy_policy {
+    padding: 40px 0;
+}
+
+.privacy_policy_items {
+    margin-bottom: 40px;
+}
+
+.privacy_policy_items:last-child {
+    margin-bottom: 0;
+}
+
+.privacy_policy_items h3 {
+    color: var(--black);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.privacy_policy_items ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.privacy_policy_items ul li,
+.privacy_policy_items ul li a {
+    color: var(--black);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.privacy_policy_items ul li::marker {
+    font-size: 12px;
+}
+
+.privacy_policy_items ul li a {
+    text-decoration: underline;
+}
+
+.privacy_policy_items__content p {
+    color: var(--black);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+}
+
+.privacy_policy_items:last-child .privacy_policy_items__content p {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+    .section_privacy_policy {
+        padding: 24px 0;
+        padding-bottom: 32px;
+    }
+
+    .privacy_policy_items {
+        margin-bottom: 32px;
+    }
+
+    .privacy_policy_items h3 {
+        font-size: 20px;
+    }
+
+    .privacy_policy_items ul li,
+    .privacy_policy_items ul li a {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .privacy_policy_items__content p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .privacy_policy_items:last-child .privacy_policy_items__content p {
+        font-size: 16px;
     }
 }
