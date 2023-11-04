@@ -1,14 +1,51 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-page",
-            "settings": {
-                "padding_top": 28,
-                "padding_bottom": 28
-            }
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "image_banner_desk": "shopify:\/\/shop_images\/rm456-010_1_3.png",
+        "image_banner_mobile": "shopify:\/\/shop_images\/rm456-010_1_2.png",
+        "heading_title": ""
+      }
     },
-    "order": [
-        "main"
-    ]
+    "7174d1bb-9573-4c04-9d13-13634235e7be": {
+      "type": "section-guide-sex-toys",
+      "blocks": {
+        "faae4c02-293b-4966-abb6-6339844fbb32": {
+          "type": "text",
+          "settings": {
+            "item_title": "Buying Sex Toys Online in Australia: A Guide",
+            "item_content": "<ul><li>With the rise of technology, it's now easier than ever to buy sex toys from hunnybee online in Australia using your phone, tablet or desktop. Online shopping for Adult toys provides a discreet, convenient, and affordable way to purchase sex toys, with a wide range of products available to suit all budgets and preferences. Whether you're a seasoned sex toy user or a beginner, buying sex toys online can be an enjoyable and educational experience. In this article, we'll take a closer look at the benefits of buying sex toys from hunnybee online, the types of products available, and some tips to help you make the right purchase.<\/li><\/ul>"
+          }
+        },
+        "08f3e9c1-e902-4eb4-b646-f4c891573ae5": {
+          "type": "text",
+          "settings": {
+            "item_title": "Benefits of Buying Sex Toys from hunnybee Online in Australia",
+            "item_content": "<ul><li>There are a number of benefits to buying sex toys from hunnybee online in Australia, including:<\/li><li>Convenience: Shopping online at hunnybee allows you to purchase sex toys from the comfort of your own home, without having to worry about visiting a physical store. You can browse products and make purchases at any time, and your items will be delivered discreetly directly to your door.<\/li><li>Discretion: Online shopping at hunnybee provides a discreet way to purchase sex toys, without having to worry about other people seeing what you're buying. You can shop in the privacy of your own home, and your purchases will be delivered in discreet packaging.<\/li><li>Range of products: Hunnybee's adult toy store offer a tailored range of products. This means you have a less overwhelming purchase experience so you can find the perfect toy to suit your needs quicker. Whether it be a vibrator, clit sucker or a rabbit vibrator<\/li><\/ul>"
+          }
+        },
+        "2f8f4294-4716-435f-a8b9-92a9c2ad85d5": {
+          "type": "text",
+          "settings": {
+            "item_title": "Types of Sex Toys Available Online at hunnybee",
+            "item_content": "<ul><li>Vibrators: From simple bullet vibrators to more advanced wand vibrators, there's a vibrator out there to suit everyone's needs. You can find a range of shapes, and sizes, to suit different levels of experience and comfort.<\/li><li>Dildos: Vibrating Dildos are phallic-shaped toys designed for penetration, either solo or with a partner. Our materials are high quality silicone with the added lifelike feel<\/li><li>Anal toys: A select few of Hunnybee's toys have the ability for anal penetration with majority complimenting external anal stimulation<\/li><li>Clit stimulators: We have a selection of stand alone clit suckers or products with clit suckers an added feature to your overall orgasm.<\/li><li>You can shop our whole range of adult sex toys in our online adult toy store, in Australia. Dont forget we ship world wide.<\/li><li>Our Adult toy store is designed to create community, safety to explore your body and explore your sexual wellbeing. Hunnybee's adult toy store has been built for ease of education and purchase. Our adult toy store has been created to keep it simple and easy to learn about the product and the journey it can take you on we are more than just an adult store<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faae4c02-293b-4966-abb6-6339844fbb32",
+        "08f3e9c1-e902-4eb4-b646-f4c891573ae5",
+        "2f8f4294-4716-435f-a8b9-92a9c2ad85d5"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7174d1bb-9573-4c04-9d13-13634235e7be"
+  ]
 }
