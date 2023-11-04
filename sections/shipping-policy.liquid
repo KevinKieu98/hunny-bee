@@ -1,0 +1,29 @@
+<div class="{{ section.class }}">
+    <div class="container">
+        {% if section.settings.content != blank %}
+            <div class="page_content">
+                {{ section.settings.content }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Shipping Policy Content",
+        "class": "shipping-policy-content",
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "content",
+                "label": "Content",
+                "default": "<p></p>"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Shipping Policy Content"
+            }
+        ]
+    }
+{% endschema %}

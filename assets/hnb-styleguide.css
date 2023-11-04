@@ -44,6 +44,14 @@
     font-style: normal;
 }
 
+/* SpringDEMO Font */
+@font-face {
+    font-family: 'FontspringDemoTheseasons';
+    src: url('Fontspring-demo-theseasons.otf') format('opentype'), url('Fontspring-demo-theseasons.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* Common */
 .block {
     display: block;

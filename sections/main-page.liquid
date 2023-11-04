@@ -14,12 +14,27 @@
   }
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    {{ page.content }}
+<div class="page-width page-width--narrow section-{{ section.id }}-padding full">
+  <div class="template_page_banner">
+    {% if section.settings.image_banner_desk != blank %}
+      <img src="{{ section.settings.image_banner_desk | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_banner_desk.width }}"
+        height="{{ section.settings.image_banner_desk.height }}" class="image_banner_page block w-full h-full desktop">
+    {% endif %}
+
+    {% if section.settings.image_banner_mobile != blank %}
+      <img src="{{ section.settings.image_banner_mobile | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_banner_mobile.width }}"
+        height="{{ section.settings.image_banner_mobile.height }}" class="image_banner_page block w-full h-full mobile">
+    {% endif %}
+
+    {% if section.settings.heading_title != blank %}
+      <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ section.settings.heading_title | escape }}
+      </h1>
+    {% else %}
+      <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+    {% endif %}
   </div>
 </div>
 
@@ -52,6 +67,25 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Banner Customize"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_banner_desk",
+      "label": "Image Banner Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_banner_mobile",
+      "label": "Image Banner Mobile"
+    },
+    {
+      "type": "text",
+      "id": "heading_title",
+      "label": "Heading Title"
     }
   ]
 }

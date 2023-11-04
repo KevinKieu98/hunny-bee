@@ -1101,3 +1101,59 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
         padding-bottom: 80px;
     }
 }
+
+
+/* CMS Page */
+.template_page_banner {
+    position: relative;
+}
+
+.template_page_banner .main-page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'FontspringDemoTheseasons';
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    color: var(--black);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.page_content {
+    margin: 40px 0;
+}
+
+.page_content p,
+.page_content a {
+    color: var(--black);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.page_content p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .template_page_banner .main-page-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .page_content {
+        margin: 24px 0;
+        margin-bottom: 32px;
+    }
+}
