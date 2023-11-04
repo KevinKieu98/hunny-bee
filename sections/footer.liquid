@@ -51,8 +51,10 @@
       <div class="footer__content-top page-width">
         <div class="footer_logo">
           {% if section.settings.logo_footer != blank %}
-            <img src="{{ section.settings.logo_footer | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.logo_footer.width }}"
+            <a href="/">
+              <img src="{{ section.settings.logo_footer | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.logo_footer.width }}"
               height="{{ section.settings.logo_footer.height }}" class="block w-full h-full">
+            </a>
           {% endif %}
         </div>
 

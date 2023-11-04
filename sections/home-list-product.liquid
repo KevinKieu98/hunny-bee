@@ -1,5 +1,26 @@
 <div id="home_product_list" class="{{ section.class }}">
     <div class="container">
+        {% if section.settings.show_box_heading %}
+            <div class="home_product_list_heading">
+                <div class="box_heading_image">
+                    {% if section.settings.image_logo != blank %}
+                        <img src="{{ section.settings.image_logo | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_logo.width }}"
+                            height="{{ section.settings.image_logo.height }}" style="width: 80px; height: 80px" class="block w-full h-full">
+                    {% endif %}
+                </div>
+
+                <div class="box_heading_text">
+                    {% if section.settings.heading != blank %}
+                        <h3>{{ section.settings.heading }}</h3>
+                    {% endif %}
+                    
+                    {% if section.settings.sub_text != blank %}
+                        <p>{{ section.settings.sub_text }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+
         {% if section.settings.collection != blank %}
             {%- assign products = collections[section.settings.collection].products -%}
             {% if products.size > 0 %}
@@ -23,6 +44,37 @@
         "name": "Home Product List",
         "class": "home-product-list",
         "settings": [
+            {
+                "type": "header",
+                "content": "Box Heading"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_box_heading",
+                "label": "Display Box Heading",
+                "default": false
+            },
+            {
+                "type": "image_picker",
+                "id": "image_logo",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Title",
+                "default": "Similar products"
+            },
+            {
+                "type": "textarea",
+                "id": "sub_text",
+                "label": "Sub Text",
+                "default": "Lorem ipsum dolor sit amet"
+            },
+            {
+                "type": "header",
+                "content": "Content Customize"
+            },
             {
                 "type": "collection",
                 "id": "collection",

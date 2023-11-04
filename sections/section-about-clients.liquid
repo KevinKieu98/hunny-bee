@@ -1,0 +1,124 @@
+<div class="{{ section.class }}">
+    <div class="about_us_client">
+        <div class="container">
+            <div class="box_line_section">
+                <span></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="22" viewBox="0 0 42 22" fill="none">
+                    <circle cx="31" cy="11" r="10" stroke="#E6AC44" stroke-width="2"/>
+                    <path d="M0 11H22" stroke="#E6AC44" stroke-width="2"/>
+                    <path d="M4 17V11" stroke="#E6AC44" stroke-width="2"/>
+                    <path d="M11 17V11" stroke="#E6AC44" stroke-width="2"/>
+                </svg>
+                <span></span>
+            </div>
+
+            <div class="box_heading">
+                {% if section.settings.section_title != blank %}
+                    <h2>{{ section.settings.section_title }}</h2>
+                {% endif %}
+            </div>
+
+            <div class="box_content">
+                {% if section.blocks.size > 0 %}
+                    <div class="feedback_items">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'feedback' %}
+                                <div class="feedback_item">
+                                    {% if block.settings.title != blank %}
+                                        <h3>{{ block.settings.title }}</h3>
+                                    {% endif %}
+
+                                    {% if block.settings.description != blank %}
+                                        <div class="feedback_item__description">
+                                            {{ block.settings.description }}
+                                        </div>
+                                    {% endif %}
+
+                                    <div class="feedback_item_person">
+                                        <div class="feedback_item_person__avatar">
+                                            {% if block.settings.person_avatar != blank %}
+                                                <img src="{{ block.settings.person_avatar | image_url }}" alt="" loading="lazy" width="{{ block.settings.person_avatar.width }}"
+                                                    height="{{ block.settings.person_avatar.height }}" style="width: 40px; height: 40px" class="block w-full h-full">
+                                            {% endif %}
+                                        </div>
+                                        
+                                        <div class="feedback_item_person__info">
+                                            {% if block.settings.person_name %}
+                                                <h4>{{ block.settings.person_name }}</h4>
+                                            {% endif %}
+
+                                            {% if block.settings.person_type != blank %}
+                                                <p>{{ block.settings.person_type }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                        {% endcase %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "About Client",
+        "class": "about-client",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Section Customize"
+            },
+            {
+                "type": "text",
+                "id": "section_title",
+                "label": "Heading Title",
+                "default": "Clients about us"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "feedback",
+                "name": "Feedback",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Time of your life"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "description",
+                        "label": "Description",
+                        "default": "This product is absolutely incredible."
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "person_avatar",
+                        "label": "Avatar"
+                    },
+                    {
+                        "type": "text",
+                        "id": "person_name",
+                        "label": "Person Name",
+                        "default": "Sophia Moore"
+                    },
+                    {
+                        "type": "text",
+                        "id": "person_type",
+                        "label": "Person Type",
+                        "default": "Verified Reviewer"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "About Client"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,69 @@
+<div class="{{ section.class }} relative">
+    <div class="container">
+        <div class="section_about_text_image">
+            <div class="left">
+                {% if section.settings.section_title != blank %}
+                    <h2>
+                        {{ section.settings.section_title }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32" fill="none">
+                            <path d="M14 0L17.0557 10.7073L27.8564 8L20.1115 16L27.8564 24L17.0557 21.2927L14 32L10.9443 21.2927L0.143594 24L7.88854 16L0.143594 8L10.9443 10.7073L14 0Z" fill="#E6AC44"/>
+                        </svg>
+                    </h2> 
+                {% endif %}
+                <div class="sub_text">
+                    {% if section.settings.section_sub_text != blank %}
+                        {{ section.settings.section_sub_text }}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="right">
+                {% if section.settings.section_image_desk != blank %}
+                    <img src="{{ section.settings.section_image_desk | image_url }}" alt="" loading="lazy" width="{{ section.settings.section_image_desk.width }}"
+                        height="{{ section.settings.section_image_desk.height }}" class="block w-full h-full desktop ">
+                {% endif %}
+
+                {% if section.settings.section_image_mobile != blank %}
+                    <img src="{{ section.settings.section_image_mobile | image_url }}" alt="" loading="lazy" width="{{ section.settings.section_image_mobile.width }}"
+                        height="{{ section.settings.section_image_mobile.height }}" class="block w-full h-full mobile">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "About Text with Image",
+        "class": "section-about-text-image",
+        "settings": [
+            {
+                "type": "text",
+                "id": "section_title",
+                "label": "Title",
+                "default": "Our Mission"
+            },
+            {
+                "type": "richtext",
+                "id": "section_sub_text",
+                "label": "Description",
+                "default": "<p></p>"
+            },
+            {
+                "type": "image_picker",
+                "id": "section_image_desk",
+                "label": "Image Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "section_image_mobile",
+                "label": "Image Mobile"
+            }
+        ],
+        "presets": [
+            {
+                "name": "About Text Image"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,14 +1,227 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-page",
-            "settings": {
-                "padding_top": 28,
-                "padding_bottom": 28
-            }
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "heading_title": ""
+      }
     },
-    "order": [
-        "main"
-    ]
+    "e3a269f6-98b1-4f68-8827-43780c58f089": {
+      "type": "section-about-text-image",
+      "settings": {
+        "section_title": "Our Mission",
+        "section_sub_text": "<p>We want you to be pleased with yourself...<\/p><p>At Hunnybee we’re totally buzzed about the holistic benefits of self-intimacy. It’s our mission to remove the stigma and celebrate this normal, natural, essential form of self-care.<\/p><p>Our brand and the community we’re creating is all about building your self-confidence, giving you a greater understanding and appreciation of your body, and helping you feel sexy in your own skin.<\/p><p>Our goal is to enrich the lives of our Hunnybee community and to partner charities and causes to generously give back.<\/p><p>Our aim is to create awareness that personal intimacy, sexual health and mental health all go hand in hand<\/p>",
+        "section_image_desk": "shopify:\/\/shop_images\/Frame_427319132_1.png",
+        "section_image_mobile": "shopify:\/\/shop_images\/Frame_427319132_2_1.png"
+      }
+    },
+    "284957b9-2787-42ce-ac80-aaba78282af9": {
+      "type": "section-about-list-block",
+      "blocks": {
+        "2d118669-8034-44d8-871a-77d7a053c954": {
+          "type": "image-text",
+          "settings": {
+            "image_position": false,
+            "block_image": "shopify:\/\/shop_images\/Frame_427319257_1.png",
+            "block_image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
+            "block_title": "The Hunnybee difference",
+            "block_description": "<p>All standard Australia wide shipping is free of charge and come in a discreet black box. Our Vibrators (personal intimacy aids) come in boxes with our vibrant colours and no signs of what's inside. Our clients have told us they are the best quality intimacy aids they have ever had!<\/p><p>We aim to create awareness with all things sexual wellbeing, sexual health and mental health. We believe personally and relationally its important to have a great and fulfilling sex life, becoming the most confident version of you.<\/p><p>Helping our customers become more aware of their bodies, sexual health, mental health and improve communication with friends, in and out of the bedroom makes us, pleased with ourselves...<\/p>",
+            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png"
+          }
+        },
+        "e633f03b-75be-4837-8107-954a5e54e51c": {
+          "type": "image-text",
+          "settings": {
+            "image_position": true,
+            "block_image": "shopify:\/\/shop_images\/Frame_427319256_1.png",
+            "block_image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
+            "block_title": "Buying vibrators online",
+            "block_description": "<p>Shop for hunnybee vibrators online with confidence and convenience. Our selection of high-quality personal pleasure devices includes traditional and innovative designs, all made with body-safe materials. Browse our collection of waterproof & rechargeable vibrators and clit suckers. Never steal the batteries from your remote again. We offer discreet and reliable delivery, so you can enjoy your new toy in the privacy of your own home. Whether you're seeking solo pleasure or enhancing intimate moments with a partner, our vibrators provide the ultimate in personal satisfaction. Shop now and experience the thrill of pleasure at your fingertips.<\/p>",
+            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png",
+            "block_image_bg_right_default": "shopify:\/\/shop_images\/Vector_59_1.png"
+          }
+        },
+        "58d1f859-15d6-49c8-ba13-8117c4974b37": {
+          "type": "image-text",
+          "settings": {
+            "image_position": false,
+            "block_image": "shopify:\/\/shop_images\/Frame_427319255_1.png",
+            "block_image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
+            "block_title": "What is a vibrator?",
+            "block_description": "<p>A hunnybee vibrator is a sex toy designed to provide sexual stimulation and pleasure through vibration. They come in various shapes, sizes, and types and can be used for solo play or during intimate moments with a partner. Some common styles include traditional phallic-shaped vibrators, wand vibrators, rabbit vibrators, bullet vibrators, and many others. They are powered by rechargeable batteries, and have multiple vibration modes and adjustable speed. hunnybee vibrators are made from high quality body safe silicone and can be used for external or internal stimulation.<\/p>",
+            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png"
+          }
+        },
+        "ae5c16f5-3262-4333-b38d-ca8812bcfae1": {
+          "type": "image-text",
+          "settings": {
+            "image_position": true,
+            "block_image": "shopify:\/\/shop_images\/Frame_427319258_1.png",
+            "block_image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
+            "block_title": "What is a clit sucker?",
+            "block_description": "<p>A hunnybee clit sucker, also known as a clitoral sucker or clitoral stimulator, is a type of sex toy designed specifically for the stimulation of the clitoris. It works by creating a suction effect over the clitoris, which can provide intense sensations and even orgasm.Our clit suckers have adjustable suction and vibration levels, and can be used for solo play or during intimate moments with a partner. Our clit suckers are made from high quality body safe silicone. Our clit suckers are also waterproof and rechargeable, making them easy to use in various environments.<\/p>",
+            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png",
+            "block_image_bg_right_default": "shopify:\/\/shop_images\/Vector_59_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "2d118669-8034-44d8-871a-77d7a053c954",
+        "e633f03b-75be-4837-8107-954a5e54e51c",
+        "58d1f859-15d6-49c8-ba13-8117c4974b37",
+        "ae5c16f5-3262-4333-b38d-ca8812bcfae1"
+      ],
+      "settings": {
+      }
+    },
+    "70754c45-d15f-41e8-9417-e1c96a87930e": {
+      "type": "section-about-clients",
+      "blocks": {
+        "0e49d0fa-f3da-4ee5-b5fb-0373174df183": {
+          "type": "feedback",
+          "settings": {
+            "title": "“Time of your life”",
+            "description": "This product is absolutely incredible. I've never ever cum like that in my life and to continually cum that many times one after another was unreal. You have to take the little sucker off for you to stop coming. It was the best feeling I've ever had in my life. You literally nailed that product",
+            "person_avatar": "shopify:\/\/shop_images\/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction-removebg_1.png",
+            "person_name": "Sophia Moore",
+            "person_type": "Verified Reviewer"
+          }
+        },
+        "ca8140cf-7b03-49fd-8c38-cc67e5c1d731": {
+          "type": "feedback",
+          "settings": {
+            "title": "“Great quality”",
+            "description": "Thank you Hunnybee team!! I was very unsure on what to buy due to issues I was having. Messaged the team and they were fab, extremely caring and helpful.. Lets just say their recommendation was perfect and I'm having the best O's again",
+            "person_avatar": "shopify:\/\/shop_images\/portrait-cheerful-handsome-man-keeps-hands-together-smiles-broadly-dressed-elegant-shirt-3-removebg_1.png",
+            "person_name": "Repeat C",
+            "person_type": "Verified Buyer"
+          }
+        },
+        "1dd04309-0ffa-4462-8686-c5fbfa682b01": {
+          "type": "feedback",
+          "settings": {
+            "title": "“Product guidance was fab”",
+            "description": "repare to indulge in the luxurious delight of the softest, most delicate silicone you've ever laid hands on! This incredible clit sucker sets a new standard for quality and will leave you in utter ecstasy. It's a game-changer, my friend",
+            "person_avatar": "shopify:\/\/shop_images\/handsome-young-businessman-with-crossed-arms-smiling-confident-2-removebg_1.png",
+            "person_name": "Josh L",
+            "person_type": "Verified Reviewer"
+          }
+        },
+        "cab45248-d4e0-4e42-a6e7-f096eb2bac31": {
+          "type": "feedback",
+          "settings": {
+            "title": "Time of your life",
+            "description": "repare to indulge in the luxurious delight of the softest, most delicate silicone you've ever laid hands on! This incredible clit sucker sets a new standard for quality and will leave you in utter ecstasy. It's a game-changer, my friend",
+            "person_avatar": "shopify:\/\/shop_images\/portrait-cheerful-handsome-man-keeps-hands-together-smiles-broadly-dressed-elegant-shirt-3-removebg_1.png",
+            "person_name": "Sophia Moore",
+            "person_type": "Verified Reviewer"
+          }
+        }
+      },
+      "block_order": [
+        "0e49d0fa-f3da-4ee5-b5fb-0373174df183",
+        "ca8140cf-7b03-49fd-8c38-cc67e5c1d731",
+        "1dd04309-0ffa-4462-8686-c5fbfa682b01",
+        "cab45248-d4e0-4e42-a6e7-f096eb2bac31"
+      ],
+      "settings": {
+        "section_title": "Clients about us"
+      }
+    },
+    "84b3aaf5-ce14-4a82-8db3-43634649e855": {
+      "type": "home-list-product",
+      "settings": {
+        "show_box_heading": true,
+        "image_logo": "shopify:\/\/shop_images\/Star_7.png",
+        "heading": "Similar products",
+        "sub_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "collection": "frontpage"
+      }
+    },
+    "d7cc6c7e-d847-4bf4-889a-7ba911e36f0e": {
+      "type": "home-love-by",
+      "blocks": {
+        "2bd20d15-329d-4c40-964d-baad934283ff": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_4.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_8.png"
+          }
+        },
+        "7e46d37a-554f-4cd3-a392-825ee2f8326d": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_5.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_9.png"
+          }
+        },
+        "e2993166-c497-45a7-9e70-62a2fdfdbdf5": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_6.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_10.png"
+          }
+        },
+        "c207c64f-841a-4867-8772-95229c9a54da": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Layer_1_7.png",
+            "image_mobile": "shopify:\/\/shop_images\/Layer_1_11.png"
+          }
+        },
+        "cabdcfe5-46a5-46b2-8b9f-700c8c0b62de": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/image_15_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_15_2.png"
+          }
+        },
+        "32f33bc1-f72a-4446-bddb-efaf092fe7f6": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/image_16_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_16_2.png"
+          }
+        },
+        "59d38688-b125-4f18-a85b-f1d180d5de83": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/image_17_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_17_2.png"
+          }
+        },
+        "fc0ca614-20d6-4eea-a822-38dbf0f9e7c4": {
+          "type": "image",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/image_18_1.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_18_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "2bd20d15-329d-4c40-964d-baad934283ff",
+        "7e46d37a-554f-4cd3-a392-825ee2f8326d",
+        "e2993166-c497-45a7-9e70-62a2fdfdbdf5",
+        "c207c64f-841a-4867-8772-95229c9a54da",
+        "cabdcfe5-46a5-46b2-8b9f-700c8c0b62de",
+        "32f33bc1-f72a-4446-bddb-efaf092fe7f6",
+        "59d38688-b125-4f18-a85b-f1d180d5de83",
+        "fc0ca614-20d6-4eea-a822-38dbf0f9e7c4"
+      ],
+      "settings": {
+        "title": "Loved by"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e3a269f6-98b1-4f68-8827-43780c58f089",
+    "284957b9-2787-42ce-ac80-aaba78282af9",
+    "70754c45-d15f-41e8-9417-e1c96a87930e",
+    "84b3aaf5-ce14-4a82-8db3-43634649e855",
+    "d7cc6c7e-d847-4bf4-889a-7ba911e36f0e"
+  ]
 }

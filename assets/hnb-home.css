@@ -1,3 +1,7 @@
+.header-wrapper--border-bottom {
+    border: 0;
+}
+
 .announcement-bar__message.h5 {
     font-size: 14px;
     font-style: normal;
@@ -142,17 +146,50 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     margin-top: 24px;
 }
 
-.home-product-list .home_product_list  {
-    /* padding-left: 12px;
-    padding-right: 12px; */
-}
-
 .home-product-list .home_product_list .slick-slide {
-    padding: 0 12px;
+    margin: 0 12px;
 }
 
-.home-product-list .slick-track {
-    /* margin-left: -12px; */
+.home-product-list .slick-list {
+    margin: 0 -24px;
+}
+
+.home-product-list .home_product_list_heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 56px;
+}
+
+.box_heading_image {
+    flex-shrink: 0;
+}
+
+.box_heading_text {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.box_heading_text p {
+    max-width: 540px;
+    text-align: left;
+    color: var(--black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+}
+
+.home_product_list_heading .box_heading_text h3 {
+    margin: 0;
+    color: var(--black);
+    font-family: 'FontspringDemoTheseasons';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .product-card-wrapper .card .card__inner {
@@ -852,6 +889,37 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
         padding: 0;
     }
 
+    .home-product-list .home_product_list_heading {
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+    }
+
+    .home-product-list .box_heading_image {
+        width: 100%;
+    }
+
+    .home-product-list .box_heading_image img {
+        margin: 0 auto;
+    }
+
+    .home-product-list .box_heading_text {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .home_product_list_heading .box_heading_text h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .box_heading_text p {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .home_about_us {
         grid-template-columns: 1fr;
         padding-top: 33px;
@@ -874,6 +942,8 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     .love_by_item {
         margin: 0 auto;
     }
+
+    
 }
 
 @media screen and (max-width: 767px) {
@@ -1099,492 +1169,5 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     .shopify-section-group-footer-group .footer {
         padding-top: 40px;
         padding-bottom: 80px;
-    }
-}
-
-
-/* CMS Page */
-.template_page_banner {
-    position: relative;
-}
-
-.template_page_banner .main-page-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'FontspringDemoTheseasons';
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-    color: var(--black);
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0 16px;
-}
-
-.page_content {
-    margin: 40px 0;
-}
-
-.page_content p,
-.page_content a {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    margin-bottom: 16px;
-    text-align: left;
-}
-
-.page_content p:last-child {
-    margin-bottom: 0;
-}
-
-@media screen and (max-width: 767px) {
-    .template_page_banner .main-page-title {
-        font-size: 32px;
-        line-height: 40px;
-        max-width: 365px;
-    }
-
-    .page_content {
-        margin: 24px 0;
-        margin-bottom: 32px;
-    }
-}
-
-/* Sitemap */
-.sitemap-content {
-    padding-top: 80px;
-}
-
-.sitemap-content:last-child {
-    padding-top: 40px;
-    padding-bottom: 80px;
-}
-
-.sitemap_items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.sitemap_item h3 {
-    color: var(--black);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
-}
-
-.sitemap_item .sitemap_item__content {
-    margin-top: 16px;
-}
-
-.sitemap_item .sitemap_item__content p {
-    margin: 0;
-    text-align: left;
-}
-
-.sitemap_item .sitemap_item__content p a,
-.sitemap_item .sitemap_item__content p {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: unset;
-    display: block;
-    width: 100%;
-    text-align: left;
-}
-
-.sitemap_item .sitemap_item__content p a:hover {
-    text-decoration: underline;
-}
-
-@media screen and (max-width: 767px) {
-    .sitemap-content {
-        padding-top: 24px;
-    }
-    
-    .sitemap-content:last-child {
-        padding-top: 32px;
-        padding-bottom: 32px;
-    }
-
-    .sitemap_items {
-        row-gap: 32px;
-        column-gap: 0;
-    }
-
-    .sitemap_item h3 {
-        font-size: 20px;
-    }
-    
-    .sitemap_item .sitemap_item__content p a,
-    .sitemap_item .sitemap_item__content p {
-        font-size: 16px; 
-    }
-}
-
-/* Refund Policy */
-.section_refund_policy {
-    padding: 40px 0;
-}
-
-.refund_policy_items {
-    margin-bottom: 40px;
-}
-
-.refund_policy_items:last-child {
-    margin-bottom: 0;
-}
-
-.refund_policy_items h3 {
-    color: var(--black);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    margin-bottom: 24px;
-}
-
-.refund_policy_items ul {
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-}
-
-.refund_policy_items ul li,
-.refund_policy_items ul li a {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-.refund_policy_items ul li::marker {
-    font-size: 12px;
-}
-
-.refund_policy_items ul li a {
-    text-decoration: underline;
-}
-
-.refund_policy_items__content p {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    text-align: left;
-}
-
-@media screen and (max-width: 767px) {
-    .section_refund_policy {
-        padding: 24px 0;
-    }
-
-    .refund_policy_items {
-        margin-bottom: 32px;
-    }
-
-    .refund_policy_items h3 {
-        font-size: 20px;
-    }
-
-    .refund_policy_items ul li,
-    .refund_policy_items ul li a {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .refund_policy_items__content p {
-        font-size: 16px;
-        line-height: 28px;
-    }
-}
-
-/* Guide Toys Online */
-.section_toys_online {
-    padding: 40px 0;
-}
-
-.guide_toys_items {
-    margin-bottom: 40px;
-}
-
-.guide_toys_items:last-child {
-    margin-bottom: 0;
-}
-
-.guide_toys_items h3 {
-    color: var(--black);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    margin-bottom: 24px;
-}
-
-.guide_toys_items ul {
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-}
-
-.guide_toys_items ul li,
-.guide_toys_items ul li a {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-.guide_toys_items ul li::marker {
-    font-size: 12px;
-}
-
-.guide_toys_items ul li a {
-    text-decoration: underline;
-}
-
-.guide_toys_items__content p {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    text-align: left;
-}
-
-@media screen and (max-width: 767px) {
-    .section_toys_online {
-        padding: 24px 0;
-    }
-
-    .guide_toys_items {
-        margin-bottom: 32px;
-    }
-
-    .guide_toys_items h3 {
-        font-size: 20px;
-    }
-
-    .guide_toys_items ul li,
-    .guide_toys_items ul li a {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .guide_toys_items__content p {
-        font-size: 16px;
-        line-height: 28px;
-    }
-}
-
-/* Privacy Policy */
-.section_privacy_policy {
-    padding: 40px 0;
-}
-
-.privacy_policy_items {
-    margin-bottom: 40px;
-}
-
-.privacy_policy_items:last-child {
-    margin-bottom: 0;
-}
-
-.privacy_policy_items h3 {
-    color: var(--black);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    margin-bottom: 24px;
-}
-
-.privacy_policy_items ul {
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-}
-
-.privacy_policy_items ul li,
-.privacy_policy_items ul li a {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-.privacy_policy_items ul li::marker {
-    font-size: 12px;
-}
-
-.privacy_policy_items ul li a {
-    text-decoration: underline;
-}
-
-.privacy_policy_items__content p {
-    color: var(--black);
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0;
-    text-align: left;
-}
-
-.privacy_policy_items:last-child .privacy_policy_items__content p {
-    font-size: 18px;
-}
-
-@media screen and (max-width: 767px) {
-    .section_privacy_policy {
-        padding: 24px 0;
-        padding-bottom: 32px;
-    }
-
-    .privacy_policy_items {
-        margin-bottom: 32px;
-    }
-
-    .privacy_policy_items h3 {
-        font-size: 20px;
-    }
-
-    .privacy_policy_items ul li,
-    .privacy_policy_items ul li a {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .privacy_policy_items__content p {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .privacy_policy_items:last-child .privacy_policy_items__content p {
-        font-size: 16px;
-    }
-}
-
-/* Term Conditions */
-.section_term_conditions {
-    padding: 40px 0;
-}
-
-.term_conditions_items {
-    margin-bottom: 40px;
-}
-
-.term_conditions_items:last-child {
-    margin-bottom: 0;
-}
-
-.term_conditions_items h3 {
-    color: var(--black);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    margin-bottom: 24px;
-}
-
-.term_conditions_items ul {
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-}
-
-.term_conditions_items ul li,
-.term_conditions_items ul li a {
-    color: var(--black);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin: 0;
-    padding: 0;
-}
-
-.term_conditions_items ul li::marker {
-    font-size: 12px;
-}
-
-.term_conditions_items ul li a {
-    text-decoration: underline;
-}
-
-.term_conditions_items__content p {
-    color: var(--black);
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 24px;
-    text-align: left;
-}
-
-.term_conditions_items__content p:last-child {
-    margin-bottom: 0;
-}
-
-.term_conditions_items:last-child .term_conditions_items__content p {
-    font-size: 18px;
-}
-
-@media screen and (max-width: 767px) {
-    .section_term_conditions {
-        padding: 24px 0;
-        padding-bottom: 32px;
-    }
-
-    .term_conditions_items {
-        margin-bottom: 32px;
-    }
-
-    .term_conditions_items h3 {
-        font-size: 20px;
-    }
-
-    .term_conditions_items ul li,
-    .term_conditions_items ul li a {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .term_conditions_items__content p {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .term_conditions_items:last-child .term_conditions_items__content p {
-        font-size: 16px;
     }
 }

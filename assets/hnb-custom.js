@@ -222,4 +222,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
             document.querySelector('#home_product_list').scrollIntoView({ behavior: 'smooth', block: 'end'})
         })
     }
-});
+
+    const elmAboutFeedback = $('.feedback_items')
+    if(elmAboutFeedback) {
+        elmAboutFeedback.slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: false,
+            nextArrow: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
+                    }
+                }
+            ]
+        })
+    }
+})
