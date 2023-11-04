@@ -117,6 +117,8 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "checkout_header_image": "shopify:\/\/shop_images\/Frame_427319132.png",
+    "checkout_input_background_color_mode": "white",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
