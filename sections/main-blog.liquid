@@ -16,32 +16,87 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
+{%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
+{% assign param = blank %}
+
+{%- for i in (1..1) -%}
+  {%- unless page_url contains "?" -%}{% break %}{%- endunless -%}
+  {%- assign query_string = page_url | split:'?' | last -%}
+  {%- assign qry_parts= query_string | split:'&' -%}
+
+  {%- for part in qry_parts -%}
+    {%- assign key_and_value = part | split:'=' -%}
+    {%- if key_and_value.size > 1 -%}
+      {% if key_and_value[0] == 'param' %}
+        {% assign param = key_and_value[1] %}
+      {% endif %}
+      {% if key_and_value[0] == 'tag' %}
+        {% assign param = key_and_value[1] %}
+      {% endif %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+{%- paginate blog.articles by section.settings.post_limit -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} hidden">
       {{ blog.title | escape }}
     </h1>
 
+    {% assign blogTags = blog.metafields.custom.blog_tags.value %}
+    {% if blogTags.size > 0 %}
+      <div class="blog_tags">
+        {% for item in blogTags %}
+          {% assign tagHandle = item | handleize %}
+          <a href="?tag={{ tagHandle }}">{{ item }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div
-          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
+      {% if param != blank %}
+        {%- for article in blog.articles -%}
+          {% if article.tags contains param %}
+            <div
+              class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+                {%- render 'article-card',
+                  article: article,
+                  media_height: section.settings.image_height,
+                  media_aspect_ratio: article.image.aspect_ratio,
+                  show_image: section.settings.show_image,
+                  show_date: section.settings.show_date,
+                  show_author: section.settings.show_author,
+                  show_excerpt: true
+                -%}
+            </div>
           {% endif %}
-        >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
-        </div>
-      {%- endfor -%}
+        {%- endfor -%}
+      {% else %}
+        {%- for article in blog.articles -%}
+          <div
+            class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {%- render 'article-card',
+              article: article,
+              media_height: section.settings.image_height,
+              media_aspect_ratio: article.image.aspect_ratio,
+              show_image: section.settings.show_image,
+              show_date: section.settings.show_date,
+              show_author: section.settings.show_author,
+              show_excerpt: true
+            -%}
+          </div>
+        {%- endfor -%}
+      {% endif %}
     </div>
 
     {%- if paginate.pages > 1 -%}
@@ -76,6 +131,15 @@
       "default": "collage",
       "label": "t:sections.main-blog.settings.layout.label",
       "info": "t:sections.main-blog.settings.layout.info"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 3,
+      "max": 9,
+      "step": 1,
+      "default": 9,
+      "label": "t:sections.featured-blog.settings.post_limit.label"
     },
     {
       "type": "checkbox",

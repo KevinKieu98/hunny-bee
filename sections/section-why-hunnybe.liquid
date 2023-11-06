@@ -10,7 +10,7 @@
                     <div class="why_items">
                         {% for block in section.blocks %}
                             <div class="why_item">
-                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="" loading="lazy" width="{{ block.settings.image.width }}"
+                                <img src="{{ block.settings.image | image_url }}" alt="" loading="lazy" width="{{ block.settings.image.width }}"
                                     height="{{ block.settings.image.height }}" class="block w-fit">
 
                                 <h5>{{ block.settings.title }}</h5>

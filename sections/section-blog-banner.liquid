@@ -1,0 +1,88 @@
+<div class="{{ section.class }} relative">
+    {% if section.settings.bg_image != blank %}
+        <img src="{{ section.settings.bg_image | image_url }}" alt="" loading="lazy" width="{{ section.settings.bg_image.width }}"
+            height="{{ section.settings.bg_image.height }}" class="block w-full h-full blog_image_bg">
+    {% endif %}
+    <div class="container">
+        <div class="blog_banner">
+            <div class="blog_banner_left">
+                <div class="blog_banner_left__logo">
+                    {% if section.settings.image_logo != blank %}
+                        <img src="{{ section.settings.image_logo | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_logo.width }}"
+                            height="{{ section.settings.image_logo.height }}" style="width: 151px; height: 140px;" class="block w-full h-full">
+                    {% endif %}
+                </div>
+
+                <div class="blog_banner_left__text">
+                    {% if section.settings.text_1 != blank %}
+                        <h3>{{ section.settings.text_1 }}</h3>
+                    {% endif %}
+
+                    {% if section.settings.text_2 != blank %}
+                        <h4>{{ section.settings.text_2 }}</h4>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="blog_banner_right">
+                {% if section.settings.image_right != blank %}
+                    <img src="{{ section.settings.image_right | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_right.width }}"
+                        height="{{ section.settings.image_right.height }}" class="block w-full h-full">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Blog Banner",
+        "class": "blog-banner",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Background"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Background Image"
+            },
+            {
+                "type": "header",
+                "content": "Banner Left"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_logo",
+                "label": "Image Logo"
+            },
+            {
+                "type": "text",
+                "id": "text_1",
+                "label": "Text 1",
+                "default": "Sex"
+            },
+            {
+                "type": "text",
+                "id": "text_2",
+                "label": "Text 2",
+                "default": "is self-care"
+            },
+            {
+                "type": "header",
+                "content": "Banner Right"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_right",
+                "label": "Image"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Blog Banner"
+            }
+        ]
+    }
+{% endschema %}

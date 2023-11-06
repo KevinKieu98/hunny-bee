@@ -1,0 +1,179 @@
+<div class="{{ section.class }}">
+    <div class="container">
+        <div class="block_content">
+            <div class="block_content_menu">
+                <div class="block__menu">
+                    <ul class="menu">
+                        {% for link in section.settings.menu.links %}
+                          <li class="menu-link">
+                            <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                </div>
+
+                {% if section.settings.sub_text_menu != blank %}
+                    <div class="block__subtextmenu">
+                        {{ section.settings.sub_text_menu }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="block_content_list_items">
+                <div class="block_content_list">
+                    {% if section.blocks.size > 0 %}
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {% when 'image-text' %}
+                                    <div class="block_item_blog">
+                                        {% if block.settings.block_text_top != blank %}
+                                            <div class="block_item_blog_text_top flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                                    <path d="M10.7031 0.0976562L12.9949 8.12815L21.0954 6.09766L15.2867 12.0977L21.0954 18.0977L12.9949 16.0672L10.7031 24.0977L8.41133 16.0672L0.310821 18.0977L6.11953 12.0977L0.310821 6.09766L8.41133 8.12815L10.7031 0.0976562Z" fill="#E6AC44"/>
+                                                </svg>
+                                                <h3>{{ block.settings.block_text_top }}</h3>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                                    <path d="M10.7031 0.0976562L12.9949 8.12815L21.0954 6.09766L15.2867 12.0977L21.0954 18.0977L12.9949 16.0672L10.7031 24.0977L8.41133 16.0672L0.310821 18.0977L6.11953 12.0977L0.310821 6.09766L8.41133 8.12815L10.7031 0.0976562Z" fill="#E6AC44"/>
+                                                </svg>
+                                            </div>
+                                        {% endif %}
+                                        
+                                        {% if section.settings.image_border != blank %}
+                                            <img src="{{ section.settings.image_border | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_border.width }}"
+                                                height="{{ section.settings.image_border.height }}" class="block w-full h-full block_image_border">
+                                        {% endif %}
+
+                                        {% if block.settings.block_image != blank %}
+                                            <div class="block_item_blog__image">
+                                                <img src="{{ block.settings.block_image | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image.width }}"
+                                                    height="{{ block.settings.block_image.height }}" class="block w-full h-full">
+                                            </div>
+                                        {% endif %}
+
+                                        {% if block.settings.block_title != blank %}
+                                            <div class="block_item_blog__title">
+                                                <h3>{{ block.settings.block_title }}</h3>
+
+                                                <svg width="106" height="1" viewBox="0 0 106 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line y1="0.5" x2="106" y2="0.5" stroke="#1B1B1B"/>
+                                                </svg>  
+                                            </div>
+                                        {% endif %}
+
+                                        {% if block.settings.block_description != blank %}
+                                            <div class="block_item_blog__description">
+                                                {{ block.settings.block_description }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                            {% endcase %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                {% if section.settings.display_button %}
+                    <div class="block_content_button">
+                        <a href="{{ section.settings.url_button }}" class="btn btn-primary w-fit">{{ section.settings.text_button }}</a>
+                    </div>
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Blog Content",
+        "class": "blog-content",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Blog Menu"
+            },
+            {
+                "type": "checkbox",
+                "id": "display_menu",
+                "label": "Display Menu",
+                "default": true
+            },
+            {
+                "type": "link_list",
+                "id": "menu",
+                "label": "Choose Menu"
+            },
+            {
+                "type": "textarea",
+                "id": "sub_text_menu",
+                "label": "Sub Text Menu",
+                "default": "We sat down with Dr D, to talk all things Sexual Health."
+            },
+            {
+                "type": "header",
+                "content": "Button"
+            },
+            {
+                "type": "checkbox",
+                "id": "display_button",
+                "label": "Display Button",
+                "default": true
+            },
+            {
+                "type": "text",
+                "id": "text_button",
+                "label": "Text Button",
+                "default": "Shop Now"
+            },
+            {
+                "type": "url",
+                "id": "url_button",
+                "label": "Url Button"
+            },
+            {
+                "type": "header",
+                "content": "List Items"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_border",
+                "label": "Image Border Item"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "image-text",
+                "name": "Image Text",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "block_text_top",
+                        "label": "Block Text Top",
+                        "default": "Dr D / MBBS"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "block_image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_title",
+                        "label": "Title",
+                        "default": "What are the most common Stis in Australia?"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "block_description",
+                        "label": "Description",
+                        "default": "<p></p>"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Blog Content"
+            }
+        ]
+    }
+{% endschema %}

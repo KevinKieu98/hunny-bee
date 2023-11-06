@@ -1,8 +1,8 @@
 .blog-articles {
   display: grid;
   grid-gap: 1rem;
-  column-gap: var(--grid-mobile-horizontal-spacing);
-  row-gap: var(--grid-mobile-vertical-spacing);
+  column-gap: 0;
+  row-gap: 0;
 }
 
 .blog-articles .card-wrapper {
@@ -11,9 +11,9 @@
 
 @media screen and (min-width: 750px) {
   .blog-articles {
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--grid-desktop-horizontal-spacing);
-    row-gap: var(--grid-desktop-vertical-spacing);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    row-gap: 40px;
   }
 
   .blog-articles--collage > *:nth-child(3n + 1),
