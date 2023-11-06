@@ -1,19 +1,108 @@
 {
   "sections": {
+    "27f0805f-5bdc-4639-91d5-ca45e550fd5d": {
+      "type": "section-blog-banner",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/image_32_1.png",
+        "image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3_ed6124fc-0b3d-43e8-a682-c5113bcf521f.png",
+        "text_1": "Sex",
+        "text_2": "is self-care",
+        "image_right": "shopify:\/\/shop_images\/Group_35593_1.png"
+      }
+    },
+    "ab894ff5-d50e-4fa6-9661-e78ef14031ae": {
+      "type": "section-blog-content",
+      "blocks": {
+        "ebdc6909-e43a-4976-8a75-a6c2c43696ff": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS.png",
+            "block_title": "What are the most common Stis in Australia?",
+            "block_description": "<p>Chlamydia is statistically the most common STI in Australia, particularly in young people between 15 and 25 years of age. Chlamydia infection can lead to pelvis inflammatory disease, a common cause of infertility, ectopic pregnancy, and Pelvic pain. It is therefore they have an STD as soon as possible as well as encouraging the practice of safe sex to reduce the risk of infection in the first place<\/p>"
+          }
+        },
+        "21010f96-9199-445e-ac3f-d23c2caedec6": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_1.png",
+            "block_title": "Are there any Sti’s that aren’t as well known but are common?",
+            "block_description": "<p>Another STI which is currently being studied to understand more about its significance is Mycoplasma genitalium.<\/p><p>The symptoms are similar to chlamydia however it is much less common and only tested for if patients remains symptomatic when the standard STI screen is negative.<\/p>"
+          }
+        },
+        "03e05359-8b1b-49ec-828b-0c31d08bad7a": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_2.png",
+            "block_title": "What advice would you give someone who may have symptoms, but is nervous embarrassed about seeing a GP or Sexual Health specialist?",
+            "block_description": "<p>You should never feel embarrassed about asking a doctor for a sexual health cheek up. We definitely see it as a positive when people proactively look after their health! It is also worth knowing that dedicated sexual health clinics are completely separate from your GP and any record of discussions, testing and treatment is kept confidential within the sexual health clinic records. It does not enter your regular GP health records.<\/p>"
+          }
+        },
+        "486f9a07-1449-47ad-b251-b76cdd878c02": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/Layer_1.png",
+            "block_title": "What are common symptoms of an STI?",
+            "block_description": "<p>Some of many symptoms can include vaginal or penile discharge, burning when urinating, ulcers or rashes, bleeding after intercourse or irregular bleeding (bleeding outside of your body period), worsening pelvic pain or pain on intercourse and testicular pain. Less commonly known symptoms include rectal pain or disturbance, conjuncticitis and joint pains.<\/p>"
+          }
+        },
+        "3524531a-5706-403f-a5a1-c0d7ab100770": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/Layer_1_1.png",
+            "block_title": "When seeing a GP for a “full” Sti check what isn’t covered that the patient isnt aware of?",
+            "block_description": "<p>A full standard STI check currently consists of a blood test to check for HIV, syphilis and hepatitis C&B (if not already known to be immune from vaccination) In addition a urine sample sometimes called an FVU (first void urine) or a vaginal swab is also needed to test for chlamydia and gonorrhoea.<\/p>"
+          }
+        },
+        "38e4be44-3bf9-4671-8990-41300e968b68": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_3.png",
+            "block_title": "What about herpes and the stigma around it?",
+            "block_description": "<p>Doctors do not routinely screen for herpes in patients without symptoms. This is due to a number of reasons. Past exposure to the herpes type (HSV1) and type 2 (HSV 2) and the presence of antibodies is fairly common in the general population. The presence of antibodies to HSV does not mean a person is infectious at will not develop a single ulcer in their entire lifetime. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ebdc6909-e43a-4976-8a75-a6c2c43696ff",
+        "21010f96-9199-445e-ac3f-d23c2caedec6",
+        "03e05359-8b1b-49ec-828b-0c31d08bad7a",
+        "486f9a07-1449-47ad-b251-b76cdd878c02",
+        "3524531a-5706-403f-a5a1-c0d7ab100770",
+        "38e4be44-3bf9-4671-8990-41300e968b68"
+      ],
+      "settings": {
+        "display_menu": true,
+        "menu": "blog-menu",
+        "sub_text_menu": "We sat down with Dr D, to talk all things Sexual Health.\n\nThey have been a medical Doctor for 15 years with extensive experience in both mental and sexual health",
+        "display_button": true,
+        "text_button": "Shop Now",
+        "url_button": "#",
+        "image_border": "shopify:\/\/shop_images\/Vector_59_d7b1a682-482f-467a-8034-c939a819ac5c.png"
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage",
+        "layout": "grid",
+        "post_limit": 9,
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
+        "show_author": true,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "27f0805f-5bdc-4639-91d5-ca45e550fd5d",
+    "ab894ff5-d50e-4fa6-9661-e78ef14031ae",
     "main"
   ]
 }
