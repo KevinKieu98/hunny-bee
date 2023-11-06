@@ -15,6 +15,9 @@
     "df4b5245-aa84-4435-879c-186e117cf7db": {
       "type": "home-list-product",
       "settings": {
+        "show_box_heading": false,
+        "heading": "Similar products",
+        "sub_text": "Lorem ipsum dolor sit amet",
         "collection": "frontpage"
       }
     },
@@ -113,7 +116,7 @@
             "title": "Sexual Health",
             "description": "Q&A With Dr D-MBBS",
             "text_link": "Click for Sexual Health Q&A",
-            "url_link": "#"
+            "url_link": "shopify:\/\/blogs\/sexual-health"
           }
         },
         "7f1a39f6-84bf-44a8-a287-c83bb291d089": {
@@ -122,7 +125,7 @@
             "title": "Mental Health",
             "description": "Q&A With Dr D-MBBS",
             "text_link": "Click for Sexual Health Q&A",
-            "url_link": "#"
+            "url_link": "shopify:\/\/blogs\/mental-health"
           }
         }
       },
