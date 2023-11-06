@@ -20,7 +20,58 @@
             </div>
 
             <div class="block_content_list_items">
-                <div class="block_content_list">
+                <div class="block_content_list desktop">
+                    {% if section.blocks.size > 0 %}
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {% when 'image-text' %}
+                                    <div class="block_item_blog">
+                                        {% if block.settings.block_text_top != blank %}
+                                            <div class="block_item_blog_text_top flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                                    <path d="M10.7031 0.0976562L12.9949 8.12815L21.0954 6.09766L15.2867 12.0977L21.0954 18.0977L12.9949 16.0672L10.7031 24.0977L8.41133 16.0672L0.310821 18.0977L6.11953 12.0977L0.310821 6.09766L8.41133 8.12815L10.7031 0.0976562Z" fill="#E6AC44"/>
+                                                </svg>
+                                                <h3>{{ block.settings.block_text_top }}</h3>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
+                                                    <path d="M10.7031 0.0976562L12.9949 8.12815L21.0954 6.09766L15.2867 12.0977L21.0954 18.0977L12.9949 16.0672L10.7031 24.0977L8.41133 16.0672L0.310821 18.0977L6.11953 12.0977L0.310821 6.09766L8.41133 8.12815L10.7031 0.0976562Z" fill="#E6AC44"/>
+                                                </svg>
+                                            </div>
+                                        {% endif %}
+                                        
+                                        {% if section.settings.image_border != blank %}
+                                            <img src="{{ section.settings.image_border | image_url }}" alt="" loading="lazy" width="{{ section.settings.image_border.width }}"
+                                                height="{{ section.settings.image_border.height }}" class="block w-full h-full block_image_border">
+                                        {% endif %}
+
+                                        {% if block.settings.block_image != blank %}
+                                            <div class="block_item_blog__image">
+                                                <img src="{{ block.settings.block_image | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image.width }}"
+                                                    height="{{ block.settings.block_image.height }}" class="block w-full h-full">
+                                            </div>
+                                        {% endif %}
+
+                                        {% if block.settings.block_title != blank %}
+                                            <div class="block_item_blog__title">
+                                                <h3>{{ block.settings.block_title }}</h3>
+
+                                                <svg width="106" height="1" viewBox="0 0 106 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line y1="0.5" x2="106" y2="0.5" stroke="#1B1B1B"/>
+                                                </svg>  
+                                            </div>
+                                        {% endif %}
+
+                                        {% if block.settings.block_description != blank %}
+                                            <div class="block_item_blog__description">
+                                                {{ block.settings.block_description }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                            {% endcase %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="block_content_list mobile">
                     {% if section.blocks.size > 0 %}
                         {% for block in section.blocks %}
                             {% case block.type %}
@@ -77,7 +128,7 @@
                     </div>
                 {% endif %}
             </div>
-            
+
         </div>
     </div>
 </div>

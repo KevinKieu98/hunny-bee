@@ -1,6 +1,12 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+{% assign image_bg_blog = 'image_bg_blogpost.png' | asset_url %}
+
+<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting" style="background-image:url('{{ image_bg_blog }}')"​​​​​​>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -48,15 +54,29 @@
           {{ block.shopify_attributes }}
         >
           <h1
-            class="article-template__title"
+            class="article-template__title flex"
             itemprop="headline"
           >
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+              <path d="M11 0L13.2918 8.03049L21.3923 6L15.5836 12L21.3923 18L13.2918 15.9695L11 24L8.7082 15.9695L0.607696 18L6.41641 12L0.607696 6L8.7082 8.03049L11 0Z" fill="#E6AC44"/>
+            </svg>
             {{ article.title | escape }}
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+              <path d="M11 0L13.2918 8.03049L21.3923 6L15.5836 12L21.3923 18L13.2918 15.9695L11 24L8.7082 15.9695L0.607696 18L6.41641 12L0.607696 6L8.7082 8.03049L11 0Z" fill="#E6AC44"/>
+            </svg>
           </h1>
+
           {%- if block.settings.blog_show_date -%}
-            <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
-              {{- article.published_at | time_tag: format: 'date' -}}
-            </span>
+            <div class="blog_post__date">
+              <span class="caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
+                {{- article.published_at | time_tag: format: 'date' -}}
+              </span>
+  
+              {% if article.metafields.custom.read_time != blank %}
+                <span>{{ article.metafields.custom.read_time }}</span>
+              {% endif %}
+            </div>
           {%- endif -%}
           {%- if block.settings.blog_show_author -%}
             <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -75,23 +95,77 @@
         </div>
 
       {%- when 'share' -%}
+        {%- liquid
+          if template contains 'product'
+            assign share_permalink = product.url
+            assign share_image = product.featured_image
+          elsif template contains 'collection'
+            assign share_permalink = collection.url
+          elsif template == 'cart'
+            assign share_permalink = cart.url
+          elsif template contains 'page'
+            assign share_permalink = page.url
+          elsif template contains 'blog'
+            assign share_permalink = blog.url
+          elsif template contains 'article'
+            assign share_permalink = article.url
+          endif
+        -%}
+
         <div
-          class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {{ block.shopify_attributes }}
-        >
-          {% assign share_url = request.origin | append: article.url %}
-          {% render 'share-button', block: block, share_link: share_url %}
+          class="container article-template__social-sharing {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ 'blogs.article.share' | t }}
+          <div class="option option_facebook">
+            <a class="no-underline" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" target="_blank">
+              {% render 'icon-facebook-sharing' %}
+              Share
+            </a>
+          </div>
+
+          <div class="option option_twitter">
+            <a class="no-underline"
+              href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}"
+              target="_blank">
+              {% render 'icon-twitter-sharing' %}
+              Tweet
+            </a>
+          </div>
         </div>
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
-    </a>
+  <div class="container">
+    <div class="section_post_recent">
+      <div class="recent_content blog-articles"></div>
+    </div>
+
+    <div class="flex article_next_prev_article">
+      {% if blog.previous_article %}
+        <a href="{{ blog.previous_article }}" class="link btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="16" viewBox="0 0 27 16" fill="none">
+            <path d="M26.1953 8.06055H1.19531" stroke="#FFD9CD" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 15L1 8L8 1" stroke="#FFD9CD" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          {{ 'blogs.article.previous_article' | t }}
+        </a>
+      {% else %}
+        <a href="{{ blog.url }}" class="link btn btn-primary">{{ 'blogs.article.back_to_articles' | t }}</a>
+      {% endif %}
+      {% if blog.next_article %}
+        <a href="{{ blog.next_article }}" class="link btn btn-primary">
+          {{ 'blogs.article.next_article' | t }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="16" viewBox="0 0 27 16" fill="none">
+            <path d="M0.804688 8.06055H25.8047" stroke="#FFD9CD" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 15L26 8L19 1" stroke="#FFD9CD" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {% else %}
+        <a href="{{ blog.url }}" class="link btn btn-primary">{{ 'blogs.article.go_to_all_articles' | t }}</a>
+      {% endif %}
+    </div>
   </div>
-  {%- if blog.comments_enabled? -%}
+
+  {% comment %} {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div
         id="comments"
@@ -274,7 +348,7 @@
         {% endform %}
       </div>
     </div>
-  {%- endif -%}
+  {%- endif -%} {% endcomment %}
 </article>
 
 <script type="application/ld+json">
@@ -306,6 +380,96 @@
       "name": {{ shop.name | json }}
     }
   }
+</script>
+
+<script>
+  function setLocalStorageRecentPost() {
+    const postDataPdp = {{ article | json }}
+    const postData = {
+      ...postDataPdp,
+      'blogHandle': "{{ blog.handle }}"
+    }
+    const postsArr = []
+    let jsonResp,
+        jsonRespArr,
+        jsonRespString
+
+    postsArr.push(postData)
+
+    const recentPost = 'recent_post_hunny_bee'
+    const currentPostTitle = postData.title
+    const postDataString = JSON.stringify(postsArr)
+    const localData = localStorage.getItem(recentPost)
+    if(localData === '' || localData === null) {
+      localStorage.setItem(recentPost, postDataString)
+    }
+
+    const oldPostData = localStorage.getItem(recentPost)
+    jsonResp = JSON.parse(oldPostData)
+    jsonResp = jsonResp.filter(post => {
+      return post.handle !== postData.handle
+    })
+
+    jsonRespArr = jsonResp.concat(postsArr)
+    jsonRespArr = JSON.stringify(jsonRespArr)
+    localStorage.setItem(recentPost, jsonRespArr)
+  }
+
+  setLocalStorageRecentPost()
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    function setRecenPost() {
+      const recentPosts = JSON.parse(localStorage.getItem('recent_post_hunny_bee')).reverse()
+      const elmBoxContent = document.querySelector('.recent_content')
+      const blogHandle = "{{ blog.handle }}"
+
+      if (recentPosts.length > 0) {
+        recentPosts.forEach((item, index) => {
+          if(index > 2) return
+          
+          const date = new Date(item.published_at);
+          const replaceHandle = '/blogs/' + item.blogHandle + '/' + item.handle
+          const blogPostTimeRead = "{{ article.metafields.custom.read_time }}"
+
+          const postItem =`
+          <div class="blog-articles__article article scroll-trigger animate--slide-in" data-cascade="" style="--animation-order: 1;">
+            <div class="article-card-wrapper card-wrapper">
+                <div class="card article-card card--standard article-card__image--medium card--media" style="--ratio-percent: 96.4241676942047%;">
+                  <div class="card__inner  color-background-2 gradient ratio" style="--ratio-percent: 96.4241676942047%;">
+                    <a href="${replaceHandle}">
+                        <div class="article-card__image-wrapper card__media">
+                          <div class="article-card__image media media--hover-effect">
+                            <img src="${item?.image?.src}" alt="${item?.image?.alt}" class="motion-reduce" loading="lazy" width="${item?.image?.width}" height="${item?.image?.height}">
+                          </div>
+                        </div>
+                      </a></div>
+                  <div class="card__content">
+                    <div class="card__information">
+                      <div class="card__information__date">
+                        <p><time datetime="${moment(date).format('MMMM, D Y')}">${moment(date).format('MMMM, D Y')}</time></p>
+                        <p>${blogPostTimeRead}</p>
+                      </div>
+                      
+                      <h3 class="card__heading h2">
+                        <a href="${replaceHandle}" class="full-unstyled-link">
+                          ${item?.title}
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div></div>
+          `
+
+          elmBoxContent.innerHTML += postItem
+        });
+      } else {
+        document.querySelector('.section_post_recent').classList.add('hidden')
+      }
+    }
+
+    setRecenPost()
+  })
 </script>
 
 {% schema %}

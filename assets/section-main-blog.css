@@ -2,7 +2,7 @@
   display: grid;
   grid-gap: 1rem;
   column-gap: 0;
-  row-gap: 0;
+  row-gap: 40px;
 }
 
 .blog-articles .card-wrapper {
@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 750px) {
   .blog-articles {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
     row-gap: 40px;
   }
@@ -57,5 +57,9 @@
   .blog-articles--collage > *:nth-child(3n + 1) .article-card__image--large .ratio::before,
   .blog-articles--collage > *:nth-child(3n + 2):last-child .article-card__image--large .ratio::before {
     padding-bottom: 82.5rem;
+  }
+
+  .blog-articles {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

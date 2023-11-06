@@ -246,6 +246,7 @@
     {{ 'hnb-home.css' | asset_url | stylesheet_tag }}
     {{ 'hnb-product.css' | asset_url | stylesheet_tag }}
     {{ 'hnb-cms-page.css' | asset_url | stylesheet_tag }}
+    {{ 'hnb-blog.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -274,6 +275,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
   </head>
 
   <body class="gradient template-{{ request.page_type | handle }} {% if request.page_type == 'page' %} {{ template | replace: '.', '-' }} {% endif %} {{ page_class }} {% if template.name == "cart" %} template-cart {% endif %} {{ page.handle | prepend: "page-" }}">

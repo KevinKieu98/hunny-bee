@@ -257,4 +257,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
             ]
         })
     }
+
+    const elmBlogContent = $('.block_content_list.mobile')
+    if(elmBlogContent) {
+        elmBlogContent.slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: false,
+            nextArrow: false,
+            dots: true
+        })
+    }
 })
