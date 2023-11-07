@@ -214,15 +214,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     customElements.define('accordion-controller', Accordion);
 
-    const elmShopMenu = document.querySelector('#HeaderMenu-shop');
-    if (elmShopMenu) {
-        elmShopMenu.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            document.querySelector('#home_product_list').scrollIntoView({ behavior: 'smooth', block: 'end'})
-        })
-    }
-
     const elmAboutFeedback = $('.feedback_items')
     if(elmAboutFeedback) {
         elmAboutFeedback.slick({
