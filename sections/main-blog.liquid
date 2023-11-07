@@ -55,7 +55,7 @@
       </div>
     {% endif %}
 
-    <div class="blog-articles 123 {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {% if param != blank %}
         {%- for article in blog.articles -%}
           {% if article.tags contains param %}
@@ -98,6 +98,11 @@
             -%}
           </div>
         {%- endfor -%}
+      {% endif %}
+      {% if section.settings.show_btn_shop_now %}
+          <div class="block_content_button">
+              <a href="{{ section.settings.url_button }}" class="btn btn-primary w-fit">{{ section.settings.text_button }}</a>
+          </div>
       {% endif %}
     </div>
 
@@ -186,6 +191,12 @@
       "id": "show_author",
       "default": false,
       "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_btn_shop_now",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_btn_shop_now.label"
     },
     {
       "type": "paragraph",
