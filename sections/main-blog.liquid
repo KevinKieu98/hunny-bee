@@ -100,7 +100,12 @@
         {%- endfor -%}
       {% endif %}      
     </div>
-
+    {% if section.settings.show_btn_shop_now %}
+          <div class="block_content_button">
+              <a href="{{ section.settings.url_button }}" class="btn btn-primary w-fit">{{ section.settings.text_button }}</a>
+          </div>
+      {% endif %}
+  
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
