@@ -79,17 +79,24 @@
   margin-top: 1rem;
 }
 
-.product_grid_product {
+.product_grid_product,
+.product_grid_search {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
-.product_grid_product .ratio:before {
+.product_grid_product .ratio:before,
+.product_grid_search .ratio:before {
   padding-bottom: 120%;
 }
 
+.card__information {
+  padding-top: 24px;
+}
+
 @media screen and (max-width: 768px) {
-  .product_grid_product {
+  .product_grid_product,
+  .product_grid_search {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 32px;
   }
