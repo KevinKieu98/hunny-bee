@@ -1697,6 +1697,9 @@
         "show_btn_shop_now": {
           "label": "Enable Button Shop Now?"
         },
+        "show_search_form": {
+          "label": "Enable Search Bar?"
+        },
         "paragraph": {
           "content": "Change excerpts by editing your blog posts. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/blogs\/writing-blogs#display-an-excerpt-from-a-blog-post)"
         },
