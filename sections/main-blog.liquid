@@ -51,14 +51,7 @@
         {% for item in blogTags %}
           {% assign tagHandle = item | handleize %}
           <a href="?tag={{ tagHandle }}">{{ item }}</a>
-        {% endfor %}
-
-        <a class="search-btn">
-          <input type="text" placeholder="Search" class="search" />
-          <div class="icon-search">
-            
-          </div>
-        </a>
+        {% endfor %}       
       </div>
     {% endif %}
 
