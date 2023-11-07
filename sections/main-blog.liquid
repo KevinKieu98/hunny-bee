@@ -14,6 +14,11 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  @media (max-width: 430px) {
+    .section-{{ section.id }}-padding {
+      padding-bottom: 27px;
+    }
+  }
 {%- endstyle -%}
 
 {%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
