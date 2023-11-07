@@ -55,7 +55,7 @@
       </div>
     {% endif %}
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="blog-articles 123 {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {% if param != blank %}
         {%- for article in blog.articles -%}
           {% if article.tags contains param %}
