@@ -1,26 +1,54 @@
 .collection-list {
   margin-top: 0;
   margin-bottom: 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 40px 0 80px 0;
 }
 
 .collection-list-title {
   margin: 0;
 }
 
-@media screen and (max-width: 749px) {
-  .collection-list:not(.slider) {
-    padding-left: 0;
-    padding-right: 0;
+.template-list-collections .title--primary {
+  color: var(--black);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 64px;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.collection-list .card__heading a {
+  color: var(--black);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  margin-top: 24px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .collection-list {
+    grid-template-columns: 1fr;
+    padding-bottom: 32px;
+    padding-top: 24px;
   }
 
+  .template-list-collections .title--primary {
+    padding-top: 32px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 749px) {
   .section-collection-list .page-width {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .section-collection-list .collection-list:not(.slider) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 }
 

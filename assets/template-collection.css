@@ -78,3 +78,25 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.product_grid_product {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.product_grid_product .ratio:before {
+  padding-bottom: 120%;
+}
+
+@media screen and (max-width: 768px) {
+  .product_grid_product {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+  }
+  
+  .collection-hero__title {
+    margin: 0;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
