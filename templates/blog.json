@@ -82,7 +82,7 @@
         "sub_text_menu": "We sat down with Dr D, to talk all things Sexual Health.\n\nThey have been a medical Doctor for 15 years with extensive experience in both mental and sexual health",
         "display_button": true,
         "text_button": "Shop Now",
-        "url_button": "#",
+        "url_button": "shopify:\/\/collections\/frontpage",
         "image_border": "shopify:\/\/shop_images\/Vector_59_d7b1a682-482f-467a-8034-c939a819ac5c.png"
       }
     },
