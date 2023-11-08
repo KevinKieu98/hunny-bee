@@ -218,7 +218,7 @@
     </div>
       {% if section.settings.show_btn_shop_now %}
           <div class="block_content_button">
-              <a href="{{ section.settings.url_button }}" class="btn btn-primary w-fit">{{ section.settings.text_button }}</a>
+              <a href="{{ section.settings.link_button }}" class="btn btn-primary w-fit">{{ section.settings.text_button }}</a>
           </div>
       {% endif %}
   
@@ -325,7 +325,12 @@
         "id": "text_button",
         "label": "Text Button",
         "default": "Shop Now"
-    },    
+    },
+    {
+      "type": "url",
+      "id": "link_button",
+      "label": "Link Button"
+  },    
     {
       "type": "paragraph",
       "content": "t:sections.main-blog.settings.paragraph.content"

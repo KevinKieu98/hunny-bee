@@ -98,6 +98,13 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     position: relative;
 }
 
+.home-banner .banner_text__content_logo image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
 .home-banner .banner_text {
     width: 345px;
     position: absolute;
@@ -882,7 +889,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .home-product-list .home_product_list .slick-slide {
-        padding: 0 16px;
+        padding: 0;
     }
 
     .home-product-list .home_product_list {
@@ -973,12 +980,30 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 
     .home-banner .banner_text__content a {
         margin-top: 16px;
+        width: 100%;
     }
 
     .home-banner .banner_text {
         max-width: 228px;
         top: 40px;
-        left: 49%;
+        left: 50%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .banner_text__content_logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .banner_text__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
     }
 
     .home-banner .banner_text_image {

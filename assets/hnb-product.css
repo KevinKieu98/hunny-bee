@@ -528,7 +528,7 @@ quantity-input .quantity__button svg {
 
 .slick_product_image_mobile .item_image {
     position: relative;
-    padding-bottom: 20%;
+    padding-bottom: 100%;
 }
 
 .slick_product_image_mobile .item_image img {
