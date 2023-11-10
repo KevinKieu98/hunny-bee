@@ -5,4 +5,8 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  #home_product_list .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
