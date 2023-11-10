@@ -1,7 +1,7 @@
 /* ren change
 */
 @mdeia (max-width: 1440px) and (min-width: 768px){
-  .shopify-section.home-banner .container {
+  .home-banner .container {
     padding: 0 !important;
   }
 }
