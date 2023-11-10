@@ -1,6 +1,6 @@
 /* ren change
 */
-@mdeia (max-width: 1440px) and (min-width: 768px){
+@media (max-width: 1440px) and (min-width: 768px){
   .home-banner .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
