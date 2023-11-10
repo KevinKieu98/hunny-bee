@@ -4,8 +4,7 @@
             height="{{ section.settings.image_bg_section.height }}" class="block w-full h-full image_bg_section">
     {% endif %}
     <div class="container">
-        <!-- <div class="home_about_us grid"> -->
-        <div class="home_about_us">
+        <div class="home_about_us grid">
             <div class="left">
                 {% if section.settings.image_left != blank %}
                     <img src="{{ section.settings.image_left | img_url: 'master' }}" alt="" loading="lazy" width="{{ section.settings.image_left.width }}"
