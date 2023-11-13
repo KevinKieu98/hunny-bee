@@ -1,7 +1,7 @@
 /* ren change
 */
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px)  {
   .home-banner .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
