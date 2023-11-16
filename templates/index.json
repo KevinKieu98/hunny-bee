@@ -104,7 +104,7 @@
         "d17eb50c-a33c-46ac-bf19-e9dcfbade398"
       ],
       "settings": {
-        "enable_section_love_by": false,
+        "enable_section_love_by": true,
         "title": "Loved by"
       }
     },
