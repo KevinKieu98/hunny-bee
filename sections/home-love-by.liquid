@@ -1,3 +1,4 @@
+{%  if section.settings.enable_section_love_by %}
 <div class="{{ section.class }}">
     <div class="container">
         <div class="home_loved_by">
@@ -33,6 +34,7 @@
     </div>
 </div>
 
+{% endif %}
 {% schema %}
     {
         "name": "Home Loved",
