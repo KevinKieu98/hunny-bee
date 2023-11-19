@@ -195,7 +195,7 @@
                         </div>
                     </h4>
                     <div class="details animation_common overflow-hidden ">
-                        {% if product.metafields.accentuate.returns_policy %}
+                      {% comment %}  {% if product.metafields.accentuate.returns_policy %}
                             <div>
                                 {% if product.metafields.accentuate.title_return_policy %}
                                     <h5>{{ product.metafields.accentuate.title_return_policy }}</h5>
@@ -219,7 +219,38 @@
                                 
                                 {{ product.metafields.accentuate.shipping }}
                             </div>
+                        {% endif %}{% endcomment %}
+
+                          {% if section.blocks.size > 0 %}
+                            {% for block in section.blocks %}
+                            {% if block.settings.enable_shipping %}
+                                <div>
+                                    {% if block.settings.title_return_policy %}
+                                        <h5>{{ block.settings.title_return_policy }}</h5>
+                                    {% endif %}
+                                    
+                                   {{ block.settings.content_return_policy }}
+                                </div>
+        
+                                <div>
+                                    {% if block.settings.title_warranty %}
+                                        <h5>{{ block.settings.title_warranty }}</h5>
+                                    {% endif %}
+                                    
+                                    {{ block.settings.content_warranty }}
+                                </div>
+        
+                                <div>
+                                    {% if block.settings.title_shipping %}
+                                        <h5>{{ block.settings.title_shipping }}</h5>
+                                    {% endif %}
+                                    
+                                    {{block.settings.content_shipping }}
+                                </div>
+                            {% endif %}
+                          {% endfor %}
                         {% endif %}
+                        
                     </div>
                 </accordion-controller>
 
