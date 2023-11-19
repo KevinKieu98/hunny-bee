@@ -98,4 +98,7 @@
     height: auto;
     padding-left: 10px;
   }
+  .banner_text__content_logo {
+    align-items: flex-start;
+  }
 }
