@@ -73,10 +73,16 @@
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
   }
+  .banner_text__content_logo {
+    align-items: flex-start;
+  }
 }
 @media (max-width: 1024px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
+  }
+  .banner_text__content_logo {
+    align-items: flex-start;
   }
   
 }
@@ -98,7 +104,5 @@
     height: auto;
     padding-left: 10px;
   }
-  .banner_text__content_logo {
-    align-items: flex-start;
-  }
+  
 }
