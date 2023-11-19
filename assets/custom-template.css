@@ -49,7 +49,9 @@
 
 /* layout mobile*/
 @media (max-width: 320px){
-  
+  .home-banner .container{
+    padding: 0;
+  }
 }
 @media (max-width: 480px){ 
   
