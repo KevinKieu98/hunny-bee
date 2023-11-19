@@ -113,5 +113,8 @@
     height: auto;
     padding-left: 10px;
   }
+  .footer-home-indicator-mobile{
+    display: none;
+  }
   
 }
