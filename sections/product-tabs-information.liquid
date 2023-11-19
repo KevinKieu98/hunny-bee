@@ -86,33 +86,39 @@
                     </div> {% endcomment %}
 
                     <div class="tab_content_item box_product_shipping 1213122131">
-                        {% if product.metafields.accentuate.returns_policy %}
+                        {% if section.blocks.size > 0 %}
+                        {% for block in section.blocks %}
+                        {% if block.settings.enable_shipping %}
                             <div>
-                                {% if product.metafields.accentuate.title_return_policy %}
-                                    <h5>{{ product.metafields.accentuate.title_return_policy }}</h5>
+                                {% if block.settings.title_return_policy %}
+                                    <h5>{{ block.settings.title_return_policy }}</h5>
                                 {% endif %}
                                 
-                                {{ product.metafields.accentuate.returns_policy }}  
+                               {{ block.settings.content_return_policy }}
                             </div>
     
                             <div>
-                                {% if product.metafields.accentuate.title_warranty %}
-                                    <h5>{{ product.metafields.accentuate.title_warranty }}</h5>
+                                {% if block.settings.title_warranty %}
+                                    <h5>{{ block.settings.title_warranty }}</h5>
                                 {% endif %}
                                 
-                                {{ product.metafields.accentuate.warranty }}
+                                {{ block.settings.content_warranty }}
                             </div>
     
                             <div>
-                                {% if product.metafields.accentuate.title_shipping %}
-                                    <h5>{{ product.metafields.accentuate.title_shipping }}</h5>
+                                {% if block.settings.title_shipping %}
+                                    <h5>{{ block.settings.title_shipping }}</h5>
                                 {% endif %}
                                 
-                                {{ product.metafields.accentuate.shipping }}
+                                {{block.settings.content_shipping }}
                             </div>
                         {% endif %}
+                      {% endfor %}
+                    {% endif %}
+
                     </div>
     
+                    
                     <div class="tab_content_item box_product_reviews">
                         {% if section.blocks.size > 0 %}
                             {% for block in section.blocks %}
@@ -318,15 +324,15 @@
               "name": "Shipping & return",
               "settings": [
                   {
-                      "type": "header",
-                      "content": "Returns Policy"
-                  },
-                  {
                     "type": "checkbox",
                     "id": "enable_shipping",
                     "label": "Enable Shipping & Return Content All Pages?",
                     "default": true
                   },
+                  {
+                      "type": "header",
+                      "content": "Returns Policy"
+                  },                  
                   {
                       "type": "text",
                       "id": "title_return_policy",
