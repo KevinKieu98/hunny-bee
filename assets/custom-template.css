@@ -72,6 +72,7 @@
     margin: 0 auto;
     height: 34px;    
     text-align: center;
+    padding-top: 30px;
   }
   .home-indicator{
     display: inline-block; 
