@@ -67,6 +67,9 @@
       display: block;
       padding-bottom: 24px;
   }
+  .shopify-section-group-footer-group .footer {
+    padding-bottom: 40px;
+  }
   .footer-home-indicator-mobile{
     display: block;
     margin: 0 auto;
