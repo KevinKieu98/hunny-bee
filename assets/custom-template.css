@@ -64,7 +64,10 @@
     align-items: flex-start;
   }
   .footer-home-indicator-mobile{
-    display: none;
+    display: block;
+    margin: 0 auto;
+    height: 34px;    
+    text-align: center;
   }
 }
 @media (max-width: 600px){
