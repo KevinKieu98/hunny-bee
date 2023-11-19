@@ -63,6 +63,10 @@
   .banner_text__content_logo {
     align-items: flex-start;
   }
+  .footer__content-bottom .footer__content-bottom-wrapper {
+      display: block;
+      padding-bottom: 24px;
+  }
   .footer-home-indicator-mobile{
     display: block;
     margin: 0 auto;
