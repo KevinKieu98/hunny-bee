@@ -49,12 +49,12 @@
 
 /* layout mobile*/
 @media (max-width: 320px){
-  .home-banner .container,.home_sexual_health_res {
+  .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
   }
 }
 @media (max-width: 480px){ 
-  .home-banner .container, .home_sexual_health_res {
+  .home-banner .container, .home_sexual_health_res , .home-slide .container {
      padding: 0 !important;
   }
 }
