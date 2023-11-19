@@ -63,6 +63,9 @@
   .banner_text__content_logo {
     align-items: flex-start;
   }
+  .footer-home-indicator-mobile{
+    display: none;
+  }
 }
 @media (max-width: 600px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
