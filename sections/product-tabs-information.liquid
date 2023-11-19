@@ -57,6 +57,34 @@
                         </div>
                     </div>
     
+                    {% comment %} <div class="tab_content_item box_product_shipping 1213122131">
+                        {% if product.metafields.accentuate.returns_policy %}
+                            <div>
+                                {% if product.metafields.accentuate.title_return_policy %}
+                                    <h5>{{ product.metafields.accentuate.title_return_policy }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.returns_policy }}  
+                            </div>
+    
+                            <div>
+                                {% if product.metafields.accentuate.title_warranty %}
+                                    <h5>{{ product.metafields.accentuate.title_warranty }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.warranty }}
+                            </div>
+    
+                            <div>
+                                {% if product.metafields.accentuate.title_shipping %}
+                                    <h5>{{ product.metafields.accentuate.title_shipping }}</h5>
+                                {% endif %}
+                                
+                                {{ product.metafields.accentuate.shipping }}
+                            </div>
+                        {% endif %}
+                    </div> {% endcomment %}
+
                     <div class="tab_content_item box_product_shipping 1213122131">
                         {% if product.metafields.accentuate.returns_policy %}
                             <div>
@@ -292,6 +320,12 @@
                   {
                       "type": "header",
                       "content": "Returns Policy"
+                  },
+                  {
+                    "type": "checkbox",
+                    "id": "enable_shipping",
+                    "label": "Enable Shipping & Return Content All Pages?",
+                    "default": true
                   },
                   {
                       "type": "text",
