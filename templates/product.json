@@ -82,6 +82,18 @@
             "content_specifications": "<ul><li>Function Modes - 10 Levels of suction<\/li><li>Run time - 80 Mins<\/li><li>Charge Time - 120 Mins<\/li><li>Charging method - Aux<\/li><li>Waterproof Rating - IPX6<\/li><li>Charging - 5v<\/li><li>Product weight - 68.5g<\/li><li>Product Size - 110*39*38mm<\/li><li>Charging cable included<\/li><\/ul>"
           }
         },
+        "07245576-df5b-4de3-9b4d-eebfa4860d66": {
+          "type": "product_shipping_return",
+          "settings": {
+            "enable_shipping": true,
+            "title_return_policy": "Returns Policy",
+            "content_return_policy": "<p>We offer a 60 day returns policy, if you change your mind on the item purchased. We will provide a store credit. Simply follow the instructions below to get your return request actioned. Note for a store credit to be eligible, all sexual wellness items must be returned un opened, undamaged and all seals intact. (This is inclusive and not limited to vibrators, clit stimulators ).<\/p>",
+            "title_warranty": "Warranty",
+            "content_warranty": "<p>All of our products are backed by a 1 year warranty. If something goes wrong we will replace the item up to 12 months from purchase date. Simply follow the instructions below to get your warranty request actioned. Please email your returns request to help@hunnybee.net.au along with your invoice number. If item is faulty please send some photos or and videos of the faulty product with a short description so our team can assess.<\/p>",
+            "title_shipping": "Shipping",
+            "content_shipping": "<p>Fast dispatch from our Sydney distribution centre.&lt;br\/&gt;<\/p><p>Free standard shipping Australia wide&lt;br\/&gt;<\/p><p>Worldwide shipping<\/p>"
+          }
+        },
         "7215579f-2ebf-46f2-bf02-c67cedc72473": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
@@ -90,6 +102,7 @@
       },
       "block_order": [
         "d9224ce6-d7da-4956-bf08-12ae5618aa24",
+        "07245576-df5b-4de3-9b4d-eebfa4860d66",
         "7215579f-2ebf-46f2-bf02-c67cedc72473"
       ],
       "settings": {
