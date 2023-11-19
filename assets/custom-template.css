@@ -67,6 +67,23 @@
       display: block;
       padding-bottom: 24px;
   }
+  
+}
+@media (max-width: 600px){
+  .home-banner .container,.home_sexual_health_res,  .home-slide .container {
+    padding: 0 !important;
+  }
+  .banner_text__content_logo {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768px){
+  .home-banner .container,.home_sexual_health_res,  .home-slide .container {
+    padding: 0 !important;
+  }
+  .banner_text__content_logo {
+    align-items: flex-start;
+  }
   .shopify-section-group-footer-group .footer {
     padding-bottom: 40px;
   }
@@ -85,22 +102,6 @@
     background: #ffffff;
     border-radius: 10px;
     margin-top: 21px;
-  }
-}
-@media (max-width: 600px){
-  .home-banner .container,.home_sexual_health_res,  .home-slide .container {
-    padding: 0 !important;
-  }
-  .banner_text__content_logo {
-    align-items: flex-start;
-  }
-}
-@media (max-width: 768px){
-  .home-banner .container,.home_sexual_health_res,  .home-slide .container {
-    padding: 0 !important;
-  }
-  .banner_text__content_logo {
-    align-items: flex-start;
   }
 }
 @media (max-width: 800px){
