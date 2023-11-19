@@ -116,6 +116,20 @@
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
   }
+   .home_about_us {
+    display: flex;
+  }
+  .home_about_us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .home_about_us .left {
+    width: inherit !important;
+    height: auto;
+    padding-left: 10px;
+  }
   
   
 }
