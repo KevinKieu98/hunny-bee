@@ -130,7 +130,10 @@
     height: auto;
     padding-left: 10px;
   }
-  
+  .page-contact .section-template--21480173863223__main-padding {
+    padding-top: 27px !important;
+    padding-bottom: 27px !important;
+  }
   
 }
 @media (min-width: 1025px){
