@@ -50,12 +50,12 @@
 /* layout mobile*/
 @media (max-width: 320px){
   .home-banner .container{
-    padding: 0;
+    padding: 0 !important;
   }
 }
 @media (max-width: 480px){ 
   .home-banner .container{
-    padding: 0;
+     padding: 0 !important;
   }
 }
 @media (max-width: 600px){
