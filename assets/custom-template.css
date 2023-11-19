@@ -76,7 +76,7 @@
     color: #ffffff;
     background: #ffffff;
     border-radius: 10px;
-    padding-top: 21px;
+    margin-top: 21px;
   }
 }
 @media (max-width: 600px){
