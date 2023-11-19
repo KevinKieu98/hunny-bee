@@ -52,21 +52,32 @@
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
   }
-  .
+  .banner_text__content_logo {
+    align-items: flex-start;
+  }
 }
 @media (max-width: 480px){ 
   .home-banner .container, .home_sexual_health_res , .home-slide .container {
      padding: 0 !important;
+  }
+  .banner_text__content_logo {
+    align-items: flex-start;
   }
 }
 @media (max-width: 600px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
   }
+  .banner_text__content_logo {
+    align-items: flex-start;
+  }
 }
 @media (max-width: 768px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
+  }
+  .banner_text__content_logo {
+    align-items: flex-start;
   }
 }
 @media (max-width: 800px){
@@ -81,9 +92,7 @@
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
   }
-  .banner_text__content_logo {
-    align-items: flex-start;
-  }
+  
   
 }
 @media (min-width: 1025px){
