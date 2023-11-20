@@ -10,7 +10,7 @@
                                     <div class="left">
                                         {% if block.settings.block_image_bg_left != blank %}
                                             <img src="{{ block.settings.block_image_bg_left | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_left.width }}"
-                                                height="{{ block.settings.block_image_bg_left.height }}" class="block w-full h-full block_image_bg 789">
+                                                height="{{ block.settings.block_image_bg_left.height }}" class="block w-full h-full block_image_bg desktop 789">
                                         {% endif %}
 
                                         {% if block.settings.block_image != blank %}
@@ -23,12 +23,12 @@
                                         {% if block.settings.image_position %}
                                             {% if block.settings.block_image_bg_right_default != blank %}
                                                 <img src="{{ block.settings.block_image_bg_right_default | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right_default.width }}"
-                                                    height="{{ block.settings.block_image_bg_right_default.height }}" class="block w-full h-full block_image_bg 789">
+                                                    height="{{ block.settings.block_image_bg_right_default.height }}" class="block w-full h-full block_image_bg desktop 789">
                                             {% endif %}
                                         {% else %}
                                             {% if block.settings.block_image_bg_right != blank %}
                                                 <img src="{{ block.settings.block_image_bg_right | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right.width }}"
-                                                    height="{{ block.settings.block_image_bg_right.height }}" class="block w-full h-full block_image_bg 789">
+                                                    height="{{ block.settings.block_image_bg_right.height }}" class="block w-full h-full block_image_bg desktop 789">
                                             {% endif %}
                                         {% endif %}
 
