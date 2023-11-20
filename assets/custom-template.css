@@ -175,8 +175,8 @@
 /* product */
   .section-header .header-wrapper .header--middle-left{
     padding: 16px 80px;
-}
-  .section-header .header__heading-link{
+  }
+  .section-header .header__heading-logo img{
     height: 33px;
   }
 }
