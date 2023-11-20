@@ -90,7 +90,7 @@
   .header__heading-logo {
     height: 34px;
   }
-  .section_about_text_image .sub_text,  .section_about_text_image .right img, {
+  .section_about_text_image .sub_text,  .section_about_text_image .right {
     padding-right: 16px;
   }
   .shopify-section-group-footer-group .footer {
