@@ -87,6 +87,9 @@
   .section-header .header-wrapper .header--middle-left {
     padding: 16px;
   }
+  .header__heading-logo {
+    height: 34px;
+  }
   .shopify-section-group-footer-group .footer {
     padding-bottom: 40px;
   }
