@@ -184,5 +184,8 @@
   .page-sitemap .template_page_banner img {
     height: 212px;
   }
+  .template_page_banner img {
+    height: 324px;
+  }
   
 }
