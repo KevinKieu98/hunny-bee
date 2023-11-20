@@ -187,5 +187,8 @@
   .template_page_banner img {
     height: 324px;
   }
+  .page-term-and-conditions.template_page_banner .main-page-title {
+    text-transform: inherit;    
+  }
   
 }
