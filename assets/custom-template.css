@@ -190,5 +190,8 @@
   .page-term-and-conditions .template_page_banner .main-page-title {
     text-transform: inherit;    
   }
+  .term-conditions-content .container{
+    margin: 0;
+  }
   
 }
