@@ -172,5 +172,11 @@
   .footer-home-indicator-mobile{
     display: none;
   }
-  
+/* product */
+  .section-header .header-wrapper .header--middle-left{
+    padding: 16px 80px;
+}
+  .section-header .header__heading-link{
+    height: 33px;
+  }
 }
