@@ -93,6 +93,9 @@
   .section_about_text_image .sub_text,  .section_about_text_image .right {
     padding-right: 16px;
   }
+  .section_about_text_image .sub_text p {
+    font-size: 18px;
+  }
   .shopify-section-group-footer-group .footer {
     padding-bottom: 40px;
   }
