@@ -180,5 +180,9 @@
   .header__heading-logo {
     height: 33px;
   }
+  /* **** */
+  .template_page_banner img {
+    height: 212px;
+  }
   
 }
