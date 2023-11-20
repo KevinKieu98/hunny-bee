@@ -196,5 +196,8 @@
   .blog-articles {
     column-gap: 24px;
   }
+  .article-template__content.page-width.page-width--narrow.rte.scroll-trigger.animate--slide-in img {
+    padding-bottom: 40px;
+  }
   
 }
