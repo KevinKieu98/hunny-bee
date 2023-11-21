@@ -126,7 +126,10 @@
   }
   .slick_product_image_mobile .item_image img {
     height: 430px;
-}
+  }
+  .product.product--thumbnail{
+    padding: 0;    
+  }
   
 }
 @media (max-width: 800px){
