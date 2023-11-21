@@ -138,11 +138,10 @@
      border-bottom: none;
   }
   .box_section_product_tabs .mobile .accordion.active .animation_common {
-    border-bottom: 1px solid var(--grey);   
+    border-bottom: 1px solid var(--grey); 
+    margin-bottom: 16px;
   }
-  .box_section_product_tabs .mobile .accordion.active .box_description_items{
-     padding-bottom: 16px;
-  }
+  
   
 }
 @media (max-width: 800px){
