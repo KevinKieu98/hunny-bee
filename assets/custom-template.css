@@ -283,8 +283,8 @@
     display: none;
   }
 }
-/* @media(min-width: 1440px){
+@media(min-width: 1440px){
   .home-banner .container{
-    width: 100%;
+    max-width: 100%;
   }
-} */
+}
