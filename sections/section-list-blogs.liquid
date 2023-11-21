@@ -231,12 +231,12 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-blog-list.name",
-  "class": "section",
+  "name": "Main Blog List",
+  "class": "main-blog-list",
   "settings": [
     {
       "type": "header",
-      "content": "t:sections.main-blog-list.settings.header.content"
+      "content": "Blog post card"
     },
     {
       "type": "select",
@@ -244,16 +244,16 @@
       "options": [
         {
           "value": "grid",
-          "label": "t:sections.main-blog-list.settings.layout.options__1.label"
+          "label": "Grid"
         },
         {
           "value": "collage",
-          "label": "t:sections.main-blog-list.settings.layout.options__2.label"
+          "label": "Collage"
         }
       ],
       "default": "collage",
-      "label": "t:sections.main-blog-list.settings.layout.label",
-      "info": "t:sections.main-blog-list.settings.layout.info"
+      "label": "Desktop layout",
+      "info": "Posts are stacked on mobile."
     },
     {
       "type": "range",
@@ -317,7 +317,7 @@
       "type": "checkbox",
       "id": "show_btn_shop_now",
       "default": true,
-      "label": "t:sections.main-blog-list.settings.show_btn_shop_now.label"
+      "label": "Enable Button Shop Now?"
     },
     {
         "type": "text",
