@@ -82,7 +82,8 @@
 .product_grid_product,
 .product_grid_search {
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  column-gap: 32px;
+  row-gap: 40px;
 }
 
 .product_grid_product .ratio:before,

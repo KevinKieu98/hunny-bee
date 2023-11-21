@@ -292,6 +292,14 @@
     text-decoration: unset;
     border-radius: 300px;
     min-width: fit-content;
+    text-decoration: unset;
+}
+
+.blog_tags a.active,
+.blog_tags a:hover {
+    background: var(--black);
+    color: var(--secondary-3);
+    text-decoration: unset;
 }
 
 .blog_banner_left__logo img {
@@ -475,6 +483,29 @@
 
 .blog_search .reset__button {
     min-width: unset;
+}
+
+.main-blog .title--primary {
+    margin: 0;
+    font-family: 'FontspringDemoTheseasons';
+    text-align: center;
+    color: var(--black);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 28px 0 40px 0;
+}
+
+.template-search__header .search_page_title {
+    margin: 0;
+    font-family: 'FontspringDemoTheseasons';
+    text-align: center;
+    color: var(--black);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 @media screen and (max-width: 989px) {
