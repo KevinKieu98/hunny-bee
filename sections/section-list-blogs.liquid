@@ -92,7 +92,6 @@
   {%- endfor -%}
 {%- endfor -%}
 
-{%- paginate blog.articles by section.settings.post_limit -%}
 <div style="background-image:url('{{ image_bg_blog }}')">
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} hidden">
@@ -227,7 +226,6 @@
     {%- endif -%}
   </div>
 </div>
-{%- endpaginate -%}
 
 {% schema %}
 {
