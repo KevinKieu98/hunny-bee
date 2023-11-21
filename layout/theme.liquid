@@ -277,7 +277,7 @@
       }
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
   </head>
 
   <body class="gradient template-{{ request.page_type | handle }} {% if request.page_type == 'page' %} {{ template | replace: '.', '-' }} {% endif %} {{ page_class }} {% if template.name == "cart" %} template-cart {% endif %} {{ page.handle | prepend: "page-" }}">
