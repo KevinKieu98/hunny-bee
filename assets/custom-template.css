@@ -151,6 +151,12 @@
     gap: 40px;
     padding: 50px 0;
   }
+  .blog_banner_left__text h4 .hide-mb{
+    display: none;
+  }
+  .blog_banner_left__text h4 .hide-desktop{
+    display: none;
+  }
   
 }
 @media (max-width: 800px){
