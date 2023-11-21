@@ -55,6 +55,9 @@
   .banner_text__content_logo {
     align-items: flex-start;
   }
+  .newsletter_box .box_email {
+    flex-flow: wrap;
+  }
 }
 @media (max-width: 480px){ 
   .home-banner .container, .home_sexual_health_res , .home-slide .container {
