@@ -130,6 +130,10 @@
   .product.product--thumbnail{
     padding: 0 !important;  
   }
+  .product__info-wrapper{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   
 }
 @media (max-width: 800px){
