@@ -128,9 +128,9 @@
     height: 430px;
   }
   .product.product--thumbnail{
-    padding: 0 !important;  
+    padding: 0;  
   }
-  .product__info-wrapper{
+   .product.product--thumbnail .product__info-wrapper{
     padding-left: 16px;
     padding-right: 16px;
   }
