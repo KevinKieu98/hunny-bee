@@ -148,8 +148,9 @@
     border-bottom: none !important;
   }
   .blog_banner {
-   gap: 40px;
-}
+    gap: 40px;
+    padding: 50px 0;
+  }
   
 }
 @media (max-width: 800px){
