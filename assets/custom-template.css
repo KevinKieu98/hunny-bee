@@ -283,7 +283,7 @@
     display: none;
   }
 }
-@media(min-width: 1440px){
+/* @media(min-width: 1440px){
   .page-width, .container {
     max-width: 100%;
   }
@@ -293,4 +293,4 @@
    .home-about-us .left{ 
      width: 50%;
    }
-}
+} */
