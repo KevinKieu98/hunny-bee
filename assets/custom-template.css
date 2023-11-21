@@ -284,11 +284,10 @@
   }
 }
 @media(min-width: 1440px){
-  .container{
+  .page-width, .container {
     max-width: 100%;
   }
-  .product-card-wrapper .card .card__inner .card__media .media, .product-card-wrapper .card .card__inner .card__media {
-    
+  .product-card-wrapper .card .card__inner .card__media .media, .product-card-wrapper .card .card__inner .card__media {    
     min-height: 608px;
   }
    
