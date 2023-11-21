@@ -1,14 +1,104 @@
 {
-    "sections": {
-        "main": {
-            "type": "main-page",
-            "settings": {
-                "padding_top": 28,
-                "padding_bottom": 28
-            }
-        }
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "heading_title": ""
+      }
     },
-    "order": [
-        "main"
-    ]
+    "b3155226-062b-41e5-894b-2fb72283d328": {
+      "type": "section-blog-banner",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/image_32_1.png",
+        "image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_2_de2f4fda-dcb2-4377-b7e2-f5d61bb7c72d.png",
+        "text_1": "Sex",
+        "text_2": "is self-care",
+        "image_right": "shopify:\/\/shop_images\/Group_35593_1.png"
+      }
+    },
+    "bc41016f-e080-4852-a7e8-2d2e63e04ace": {
+      "type": "section-blog-content",
+      "blocks": {
+        "98a6d06d-2ba4-4018-9b6f-d92622b5fc80": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS.png",
+            "block_title": "What are the most common Stis in Australia?",
+            "block_description": "<p>Chlamydia is statistically the most common STI in Australia, particularly in young people between 15 and 25 years of age. Chlamydia infection can lead to pelvis inflammatory disease, a common cause of infertility, ectopic pregnancy, and Pelvic pain. It is therefore they have an STD as soon as possible as well as encouraging the practice of safe sex to reduce the risk of infection in the first place<\/p>"
+          }
+        },
+        "cae4f321-fc4a-4d78-80d5-623dd924045f": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_1.png",
+            "block_title": "Are there any Sti’s that aren’t as well known but are common?",
+            "block_description": "<p>Another STI which is currently being studied to understand more about its significance is Mycoplasma genitalium.<\/p><p>The symptoms are similar to chlamydia however it is much less common and only tested for if patients remains symptomatic when the standard STI screen is negative.<\/p>"
+          }
+        },
+        "daab1c07-387d-4c48-80e3-cb1038abe761": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_2.png",
+            "block_title": "What advice would you give someone who may have symptoms, but is nervous embarrassed about seeing a GP or Sexual Health specialist?",
+            "block_description": "<p>You should never feel embarrassed about asking a doctor for a sexual health cheek up. We definitely see it as a positive when people proactively look after their health! It is also worth knowing that dedicated sexual health clinics are completely separate from your GP and any record of discussions, testing and treatment is kept confidential within the sexual health clinic records. It does not enter your regular GP health records.<\/p>"
+          }
+        },
+        "ad06f7f8-4af5-4dad-94d4-5dcf100c2bdc": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/Layer_1.png",
+            "block_title": "What are common symptoms of an STI?",
+            "block_description": "<p>Some of many symptoms can include vaginal or penile discharge, burning when urinating, ulcers or rashes, bleeding after intercourse or irregular bleeding (bleeding outside of your body period), worsening pelvic pain or pain on intercourse and testicular pain. Less commonly known symptoms include rectal pain or disturbance, conjuncticitis and joint pains.<\/p>"
+          }
+        },
+        "46e23485-b7e2-442b-ae8f-ef438afce8c5": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/Layer_1_1.png",
+            "block_title": "When seeing a GP for a “full” Sti check what isn’t covered that the patient isnt aware of?",
+            "block_description": "<p>A full standard STI check currently consists of a blood test to check for HIV, syphilis and hepatitis C&B (if not already known to be immune from vaccination) In addition a urine sample sometimes called an FVU (first void urine) or a vaginal swab is also needed to test for chlamydia and gonorrhoea.<\/p>"
+          }
+        },
+        "bc5de04b-929f-4c04-902e-e253c764384b": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_3.png",
+            "block_title": "What about herpes and the stigma around it?",
+            "block_description": "<p>Doctors do not routinely screen for herpes in patients without symptoms. This is due to a number of reasons. Past exposure to the herpes type (HSV1) and type 2 (HSV 2) and the presence of antibodies is fairly common in the general population. The presence of antibodies to HSV does not mean a person is infectious at will not develop a single ulcer in their entire lifetime. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "98a6d06d-2ba4-4018-9b6f-d92622b5fc80",
+        "cae4f321-fc4a-4d78-80d5-623dd924045f",
+        "daab1c07-387d-4c48-80e3-cb1038abe761",
+        "ad06f7f8-4af5-4dad-94d4-5dcf100c2bdc",
+        "46e23485-b7e2-442b-ae8f-ef438afce8c5",
+        "bc5de04b-929f-4c04-902e-e253c764384b"
+      ],
+      "settings": {
+        "display_menu": true,
+        "menu": "blog-menu",
+        "sub_text_menu": "We sat down with Dr D, to talk all things Sexual Health.<br>\n\nThey have been a medical Doctor for 15 years with extensive experience in both mental and sexual health",
+        "display_button": true,
+        "text_button": "Shop Now",
+        "url_button": "shopify:\/\/collections\/frontpage",
+        "image_border": "shopify:\/\/shop_images\/Vector_59_d7b1a682-482f-467a-8034-c939a819ac5c.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b3155226-062b-41e5-894b-2fb72283d328",
+    "bc41016f-e080-4852-a7e8-2d2e63e04ace"
+  ]
 }

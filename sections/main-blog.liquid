@@ -95,7 +95,7 @@
 {%- paginate blog.articles by section.settings.post_limit -%}
 <div style="background-image:url('{{ image_bg_blog }}')">
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} hidden">
+    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ blog.title | escape }}
     </h1>
 
@@ -104,7 +104,7 @@
       <div class="blog_tags">
         {% for item in blogTags %}
           {% assign tagHandle = item | handleize %}
-          <a href="?tag={{ tagHandle }}">{{ item }}</a>
+          <a href="?tag={{ tagHandle }}" class="{% if tagHandle == param %}active{% endif %}">{{ item }}</a>
         {% endfor %}       
       </div>
     {% endif %}
@@ -139,6 +139,8 @@
                     >
                     <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
                     <input name="options[prefix]" type="hidden" value="last">
+                    <input type="hidden" name="type" value="article">
+                    <input type="hidden" name="blog" value="Blog">
 
                     {%- if settings.predictive_search_enabled -%}
                       <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
