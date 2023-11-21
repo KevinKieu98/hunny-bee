@@ -214,5 +214,8 @@
     padding-left: 160px;
     padding-right: 160px;
   }
+  .product-card-wrapper .card .card__inner .card__media .media {
+    height: 420px;
+  }
   
 }
