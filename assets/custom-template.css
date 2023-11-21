@@ -118,9 +118,9 @@
     border-radius: 10px;
     margin-top: 21px;
   }
-  .main-blog.page-width{
+  /* .main-blog.page-width{
     display: block !important;
-  }
+  } */
   
 }
 @media (max-width: 800px){
