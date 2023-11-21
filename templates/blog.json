@@ -5,8 +5,8 @@
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/image_32_1.png",
         "image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3_ed6124fc-0b3d-43e8-a682-c5113bcf521f.png",
-        "text_1": "Sex",
-        "text_2": "<span>is<\/span> self-care",
+        "text_1": "Sex <span class=\"hide-desktop\">is<\/span>",
+        "text_2": "<span class=\"hide-mb\">is<\/span> self-care",
         "image_right": "shopify:\/\/shop_images\/Group_35593_1.png"
       }
     },
