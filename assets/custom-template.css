@@ -197,15 +197,7 @@
   }
   .main-blog.page-width{
     display: none;
-  }
-  .blog_banner_left__text h4 .hide-mb{
-    display: none;
-  }
-  .blog_banner_left__text h3 .hide-desktop{    
-    text-transform: lowercase !important;
-  }
-  
-  
+  } 
 }
 @media (min-width: 1025px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
