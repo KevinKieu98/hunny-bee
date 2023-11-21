@@ -1,18 +1,8 @@
 {
   "sections": {
     "main": {
-      "type": "main-blog",
+      "type": "main-page",
       "settings": {
-        "layout": "grid",
-        "post_limit": 9,
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": true,
-        "show_search_form": true,
-        "show_btn_shop_now": true,
-        "text_button": "Shop Now",
-        "link_button": "shopify:\/\/collections\/frontpage",
         "padding_top": 0,
         "padding_bottom": 36
       }
