@@ -287,5 +287,8 @@
   .container{
     max-width: 100%;
   }
+  .product-card-wrapper .card .card__inner .card__media .media, .product-card-wrapper .card .card__inner .card__media {
+    min-height: 420px;
+  }
    
 }
