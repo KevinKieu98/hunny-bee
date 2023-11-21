@@ -141,7 +141,8 @@
     padding-bottom: 16px !important;
   }
   accordion-controller.accordion.block.w-full.active {
-    border-bottom: 1px solid var(--grey);     
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 16px !important;    
   }
   
 }
