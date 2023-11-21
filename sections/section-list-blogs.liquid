@@ -93,8 +93,8 @@
 {%- endfor -%}
 
 {%- paginate blog.articles by section.settings.post_limit -%}
-<div style="background-image:url('{{ image_bg_blog }}')">
-  <div class="main-blog main-blog-list page-width section-{{ section.id }}-padding">
+<div style="main-blog-list background-image:url('{{ image_bg_blog }}')">
+  <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} hidden">
       {{ blog.title | escape }}
     </h1>
@@ -233,7 +233,7 @@
 {
   "name": "t:sections.main-blog-list.name",
   "tag": "section",
-  "class": "section",
+  "class": "main-blog-list",
   "settings": [
     {
       "type": "header",
