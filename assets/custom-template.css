@@ -134,6 +134,9 @@
     padding-left: 16px!important;
     padding-right: 16px !important;
   }
+  .box_section_product_tabs .mobile .accordion.active .summary{
+     border-bottom: none;
+  }
   
 }
 @media (max-width: 800px){
