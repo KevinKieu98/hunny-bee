@@ -128,7 +128,7 @@
     height: 430px;
   }
   .product.product--thumbnail{
-    padding: 0;    
+    padding: 0 !important;  
   }
   
 }
