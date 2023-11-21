@@ -1,73 +1,15 @@
 <div class="{{ section.class }}">
     <div class="container">
-        <div class="about_list_block">
-            <div class="block_items">
-                {% if section.blocks.size > 0 %}
-                    {% for block in section.blocks %}
-                        {% case block.type %}
-                            {% when 'image-text' %}
-                                <div class="block_item{% if block.settings.image_position %} row-reverse{% endif %}">
-                                    <div class="left">
-                                        {% if block.settings.block_image_bg_left != blank %}
-                                            <img src="{{ block.settings.block_image_bg_left | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_left.width }}"
-                                                height="{{ block.settings.block_image_bg_left.height }}" class="block w-full h-full block_image_bg">
-                                        {% endif %}
-
-                                        {% if block.settings.block_image != blank %}
-                                            <img src="{{ block.settings.block_image | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image.width }}"
-                                                height="{{ block.settings.block_image.height }}" class="block w-full h-full">
-                                        {% endif %}
-                                    </div>
-
-                                    <div class="right">
-                                        {% if block.settings.image_position %}
-                                            {% if block.settings.block_image_bg_right_default != blank %}
-                                                <img src="{{ block.settings.block_image_bg_right_default | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right_default.width }}"
-                                                    height="{{ block.settings.block_image_bg_right_default.height }}" class="block w-full h-full block_image_bg">
-                                            {% endif %}
-                                        {% else %}
-                                            {% if block.settings.block_image_bg_right != blank %}
-                                                <img src="{{ block.settings.block_image_bg_right | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right.width }}"
-                                                    height="{{ block.settings.block_image_bg_right.height }}" class="block w-full h-full block_image_bg">
-                                            {% endif %}
-                                        {% endif %}
-
-                                        {% if block.settings.block_image_logo != blank %}
-                                            <img src="{{ block.settings.block_image_logo | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_logo.width }}"
-                                                height="{{ block.settings.block_image_logo.height }}" style="width: 64px; height: 59px" class="block w-full h-full">
-                                        {% endif %}
-
-                                        {% if block.settings.block_title != blank %}
-                                            <h3>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
-                                                    <path d="M10.999 0L13.2908 8.03049L21.3913 6L15.5826 12L21.3913 18L13.2908 15.9695L10.999 24L8.70723 15.9695L0.606719 18L6.41543 12L0.606719 6L8.70723 8.03049L10.999 0Z" fill="#E6AC44"/>
-                                                </svg>
-                                                {{ block.settings.block_title }}
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
-                                                    <path d="M10.999 0L13.2908 8.03049L21.3913 6L15.5826 12L21.3913 18L13.2908 15.9695L10.999 24L8.70723 15.9695L0.606719 18L6.41543 12L0.606719 6L8.70723 8.03049L10.999 0Z" fill="#E6AC44"/>
-                                                </svg>
-                                            </h3>
-                                        {% endif %}
-
-                                        {% if block.settings.block_description != blank %}
-                                            <div class="block_description">
-                                                {{ block.settings.block_description }}
-                                            </div>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                        {% endcase %}
-                    {% endfor %}
-                {% endif %}
-            </div>
+        <div class="main-blog-list">
         </div>
+            
     </div>
 </div>
 
 {% schema %}
     {
-        "name": "About List Block",
-        "class": "about-list-block",
+        "name": "Main Blogs List",
+        "class": "main-blog-list",
         "settings": [
             {
                 "type": "header",
