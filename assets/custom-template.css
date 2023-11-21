@@ -139,7 +139,7 @@
   }
   .box_section_product_tabs .mobile .accordion.active .animation_common {
     border-bottom: 1px solid var(--grey); 
-    margin-bottom: 16px;
+    padding-bottom: 16px !important;
   }
   
   
