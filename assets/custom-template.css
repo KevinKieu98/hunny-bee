@@ -217,5 +217,8 @@
   .product-card-wrapper .card .card__inner .card__media .media {
     height: 420px;
   }
+  .product-card-wrapper .card .card__inner .card__media {
+    height: 420px;
+  }
   
 }
