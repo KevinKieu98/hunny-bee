@@ -70,6 +70,7 @@
   }
 {%- endstyle -%}
 
+{%- assign page_url = content_for_header | split:'"pageurl":"' | last | split:'"' | first | split: request.host | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&'  -%}
 {% assign image_bg_blog = 'image_bg_blogpost.png' | asset_url %}
 {% assign param = blank %}
 
@@ -91,6 +92,7 @@
   {%- endfor -%}
 {%- endfor -%}
 
+{%- paginate blog.articles by section.settings.post_limit -%}
 <div style="background-image:url('{{ image_bg_blog }}')">
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} hidden">
@@ -220,9 +222,12 @@
           </div>
       {% endif %}
   
-    
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
   </div>
 </div>
+{%- endpaginate -%}
 
 {% schema %}
 {
