@@ -1668,7 +1668,7 @@
         }
       },
       "presets": {
-        "name": "main-blog-list"
+        "name": "Blog list posts"
       }
     },
     "main-account": {
