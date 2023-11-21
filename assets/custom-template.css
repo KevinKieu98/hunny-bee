@@ -137,12 +137,11 @@
   .box_section_product_tabs .mobile .accordion.active .summary{
      border-bottom: none;
   }
-  /* .box_section_product_tabs .mobile .accordion.active .animation_common {
-    
-  } */
-  accordion-controller.accordion.block.w-full.active {
-    border-bottom: 1px solid var(--grey); 
+  .box_section_product_tabs .mobile .accordion.active .animation_common {
     padding-bottom: 16px !important;
+  }
+  accordion-controller.accordion.block.w-full.active {
+    border-bottom: 1px solid var(--grey);     
   }
   
 }
