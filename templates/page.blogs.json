@@ -16,27 +16,9 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
-    },
-    "723bcd5d-e1db-47c8-a4e4-907ca12fa667": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
-        "blog": "sexual-health",
-        "post_limit": 4,
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
-    "main",
-    "723bcd5d-e1db-47c8-a4e4-907ca12fa667"
+    "main"
   ]
 }
