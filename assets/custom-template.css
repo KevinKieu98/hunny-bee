@@ -147,7 +147,9 @@
   accordion-controller.accordion.box_product_reviews.active {
     border-bottom: none !important;
   }
-  
+  .blog_banner_left__text h3 {
+    display: inline-block;
+  }
 }
 @media (max-width: 800px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
