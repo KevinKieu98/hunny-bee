@@ -618,6 +618,7 @@
 
     .article_next_prev_article .link {
         width: 50%;
+        font-size: 14px;
     }
 }
 
