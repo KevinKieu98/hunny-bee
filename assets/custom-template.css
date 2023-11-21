@@ -154,7 +154,7 @@
   .blog_banner_left__text h4 .hide-mb{
     display: none;
   }
-  .blog_banner_left__text h4 .hide-desktop{    
+  .blog_banner_left__text h3 .hide-desktop{    
     text-transform: lowercase !important;
   }
   
