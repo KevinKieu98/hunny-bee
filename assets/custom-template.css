@@ -144,6 +144,9 @@
     border-bottom: 1px solid var(--grey);
     padding-bottom: 16px !important;    
   }
+  accordion-controller.accordion.box_product_reviews.active {
+    border-bottom: none !important;
+  }
   
 }
 @media (max-width: 800px){
