@@ -141,7 +141,9 @@
     border-bottom: 1px solid var(--grey); 
     padding-bottom: 16px !important;
   }
-  
+  .box_section_product_tabs .mobile .accordion.active .animation_common .box_description_items{
+     padding-bottom: 16px !important;
+  }
   
 }
 @media (max-width: 800px){
