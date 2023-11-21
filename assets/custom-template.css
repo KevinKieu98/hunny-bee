@@ -154,8 +154,8 @@
   .blog_banner_left__text h4 .hide-mb{
     display: none;
   }
-  .blog_banner_left__text h4 .hide-desktop{
-    display: none;
+  .blog_banner_left__text h4 .hide-desktop{    
+    text-transform: lowercase;
   }
   
 }
