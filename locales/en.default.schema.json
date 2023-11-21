@@ -1731,58 +1731,6 @@
         }
       }
     },
-    "main-blog-list": {
-      "name": "Blog posts list",
-      "settings": {
-        "header": {
-          "content": "Blog post card"
-        },
-        "show_image": {
-          "label": "Show featured image"
-        },
-        "show_date": {
-          "label": "Show date"
-        },
-        "show_author": {
-          "label": "Show author"
-        },
-        "show_btn_shop_now": {
-          "label": "Enable Button Shop Now?"
-        },
-        "show_search_form": {
-          "label": "Enable Search Bar?"
-        },
-        "paragraph": {
-          "content": "Change excerpts by editing your blog posts. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/blogs\/writing-blogs#display-an-excerpt-from-a-blog-post)"
-        },
-        "layout": {
-          "label": "Desktop layout",
-          "options__1": {
-            "label": "Grid"
-          },
-          "options__2": {
-            "label": "Collage"
-          },
-          "info": "Posts are stacked on mobile."
-        },
-        "image_height": {
-          "label": "Featured image height",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        }
-      }
-    },
     "main-cart-footer": {
       "name": "Subtotal",
       "blocks": {
