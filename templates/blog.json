@@ -79,7 +79,7 @@
       "settings": {
         "display_menu": true,
         "menu": "blog-menu",
-        "sub_text_menu": "We sat down with Dr D, to talk all things Sexual Health.\n\nThey have been a medical Doctor for 15 years with extensive experience in both mental and sexual health",
+        "sub_text_menu": "We sat down with Dr D, to talk all things Sexual Health.<br>\n\nThey have been a medical Doctor for 15 years with extensive experience in both mental and sexual health",
         "display_button": true,
         "text_button": "Shop Now",
         "url_button": "shopify:\/\/collections\/frontpage",
