@@ -155,7 +155,7 @@
     display: none;
   }
   .blog_banner_left__text h4 .hide-desktop{    
-    text-transform: lowercase;
+    text-transform: lowercase !important;
   }
   
 }
