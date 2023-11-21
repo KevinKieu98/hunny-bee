@@ -260,5 +260,7 @@
     padding-left: 120px;
     padding-right: 120px;
   }
-  
+   .blog_banner_left__text h3 .hide-desktop{    
+    display: none;
+  }
 }
