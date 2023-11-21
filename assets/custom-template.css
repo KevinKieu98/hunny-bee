@@ -58,6 +58,10 @@
   .newsletter_box .box_email {
     flex-flow: wrap;
   }
+  .block_content_menu .menu {
+    gap: 16px;
+    text-align: center;
+}
 }
 @media (max-width: 480px){ 
   .home-banner .container, .home_sexual_health_res , .home-slide .container {
