@@ -485,7 +485,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 }
 
 .footer_content {
-    margin-top: 40px;
+    margin-top: 37px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -576,7 +576,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 }
 
 .footer .footer__content-top {
-    padding-bottom: 80px;
+    padding-bottom: 62px;
 }
 
 .newsletter_box .box_email {
@@ -623,7 +623,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 
 .footer-block--newsletter .newsletter-form__field-wrapper {
     max-width: 100%;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .footer-block--newsletter .field__input {
