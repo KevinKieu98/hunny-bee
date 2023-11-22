@@ -121,7 +121,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Trigger open search
     $('.menu_box_search_account .box_search').click(function() {
-        console.log($('details-modal summary'))
         $('details-modal summary').trigger('click');
     });
 
