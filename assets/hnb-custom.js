@@ -260,4 +260,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
             dots: true
         })
     }
+
+    const btnScrollToTop = document.querySelector('.btn_scroll_top');
+    if(btnScrollToTop) {
+        btnScrollToTop.classList.add('hidden')
+
+        btnScrollToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+    }
+
+    document.addEventListener("scroll", (event) => {
+        if(window.scrollY !== 0) {
+            btnScrollToTop.classList.remove('hidden')
+        } else {
+            btnScrollToTop.classList.add('hidden')
+        }
+    })
+
+    
 })
