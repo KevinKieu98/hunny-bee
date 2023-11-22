@@ -23,11 +23,11 @@
   }
   .home_about_us .left {
     width: 50%;
-    padding: 0 40px 0 0;
+    padding: 0 25px 0 0;
     margin: 0;
   }
   .home_about_us .right {
-    padding: 40px 0 40px 40px;
+    padding: 40px 0 40px 85px;
     width: 50%;
     margin: 0;
   }
@@ -35,17 +35,14 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  
 }
+
 @media (min-width: 1441px)  {
   .home-banner .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  
 }
-
-
 
 /* layout mobile*/
 @media (max-width: 320px){
@@ -61,8 +58,9 @@
   .block_content_menu .menu {
     gap: 16px;
     text-align: center;
+  }
 }
-}
+
 @media (max-width: 480px){ 
   .home-banner .container, .home_sexual_health_res , .home-slide .container {
      padding: 0 !important;
@@ -76,6 +74,7 @@
   }
   
 }
+
 @media (max-width: 600px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
@@ -84,6 +83,7 @@
     align-items: flex-start;
   }
 }
+
 @media (max-width: 768px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
@@ -91,9 +91,9 @@
   .banner_text__content_logo {
     align-items: flex-start;
   }
-  .section-header .header-wrapper .header--middle-left {
+  /* .section-header .header-wrapper .header--middle-left {
     padding: 16px;
-  }
+  } */
   .header__heading-logo {
     height: 34px;
   }
@@ -163,9 +163,9 @@
   }
   .blog_banner_left__text h3 .hide-desktop{    
     text-transform: lowercase !important;
-  }
-  
+  }  
 }
+
 @media (max-width: 800px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
@@ -180,6 +180,7 @@
     text-transform: lowercase !important;
   }
 }
+
 @media (max-width: 1024px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
@@ -193,11 +194,11 @@
     justify-content: center;
     align-items: flex-end;
   }
-  .home_about_us .left {
+  /* .home_about_us .left {
     width: inherit !important;
     height: auto;
     padding-left: 10px;
-  }
+  } */
   .page-contact .section-template--21480173863223__main-padding {
     padding-top: 27px !important;
     padding-bottom: 27px !important;
@@ -211,9 +212,8 @@
   .blog_banner_left__text h3 .hide-desktop{    
     text-transform: lowercase !important;
   }
-  
-  
 }
+
 @media (min-width: 1025px){
   .home-banner .container,.home_sexual_health_res,  .home-slide .container {
     padding: 0 !important;
@@ -227,17 +227,17 @@
     justify-content: center;
     align-items: flex-end;
   }
-  .home_about_us .left {
+  /* .home_about_us .left {
     width: inherit !important;
     height: auto;
     padding-left: 10px;
-  }
+  } */
   .footer-home-indicator-mobile{
     display: none;
   }
     /* header logo*/
   .section-header .header-wrapper .header--middle-left {
-    padding: 15px 80px;
+    /* padding: 15px 80px; */
     border-bottom: solid 1px #fff;
   }
   .header__heading-logo {
@@ -269,12 +269,12 @@
     padding-left: 160px;
     padding-right: 160px;
   }
-  .product-card-wrapper .card .card__inner .card__media .media {
+  /* .product-card-wrapper .card .card__inner .card__media .media {
     height: 420px;
-  }
-  .product-card-wrapper .card .card__inner .card__media {
+  } */
+  /* .product-card-wrapper .card .card__inner .card__media {
     height: 420px;
-  }
+  } */
   .why-hunnybee .container{
     padding-left: 120px;
     padding-right: 120px;
@@ -287,9 +287,9 @@
   .page-width, .container {
     max-width: 100%;
   }
-  .product-card-wrapper .card .card__inner .card__media .media, .product-card-wrapper .card .card__inner .card__media {    
+  /* .product-card-wrapper .card .card__inner .card__media .media, .product-card-wrapper .card .card__inner .card__media {    
     min-height: 608px;
-  }
+  } */
    .home-about-us .left{ 
      width: 50%;
    }
