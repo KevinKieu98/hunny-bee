@@ -852,6 +852,19 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     height: 44px;
 }
 
+.btn_scroll_top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 80px;
+    right: 64px;
+    min-width: unset;
+    max-width: unset;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
 @media screen and (max-width: 1200px) {
     body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
         padding-left: 24px;
