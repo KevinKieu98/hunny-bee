@@ -277,6 +277,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
+    const elmPopupService = document.querySelector('.popup_hunny_service')
+    if(elmPopupService) {
+        const btnClosePopup = elmPopupService.querySelector('.btn_close_popup_hunny')
+        const overlay = document.querySelector('.popup_hunny_service_overlay')
+        if(!elmPopupService.classList.contains('hidden')) {
+            document.body.classList.add('open_popup')
+            overlay.classList.remove('hidden')
+            elmPopupService.classList.remove('hidden')
+        } else {
+            document.body.classList.remove('open_popup')
+            overlay.classList.add('hidden')
+            elmPopupService.classList.add('hidden')
+        }
+
+        btnClosePopup.addEventListener('click', function() {
+            document.body.classList.remove('open_popup')
+            overlay.classList.add('hidden')
+            elmPopupService.classList.add('hidden')
+        })
+    }
+
     if($('.image-zoom')) {
         $('.image-zoom')
         .wrap('<span style="display:inline-block"></span>')
