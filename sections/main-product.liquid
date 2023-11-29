@@ -65,7 +65,7 @@
 
   <div class="product flex product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      <div class="desktop">
+      <div class="desktop relative">
         {% render 'product-media-gallery', variant_images: variant_images %}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if product.available == false -%}

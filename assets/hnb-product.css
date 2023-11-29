@@ -43,6 +43,12 @@
     padding-top: 100%;
 }
 
+.product__media-item .product-media-container.constrain-height .media img {
+    width: 100%;
+    z-index: 3;
+    cursor: crosshair;
+}
+
 .slider_mobile_gutter_custom .product__media-item {
     width: 100%;
     max-width: 100%;

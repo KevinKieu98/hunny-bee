@@ -41,7 +41,7 @@
   endif
 
   if media.media_type == 'image'
-    assign image_class = 'image-magnify-' | append: section.settings.image_zoom
+    assign image_class = 'image-zoom image-magnify-' | append: section.settings.image_zoom
   endif
 -%}
 
@@ -102,12 +102,21 @@
       </svg>
     </div>
     <div class="product__media media media--transparent">
-      {{ media.preview_image | image_url: width: 1946 | image_tag:
+      <img 
+        class="{{ image_class }}" 
+        src="{{ media.preview_image | image_url: width: 1946 }}"
+        width=""
+        height=""
+        alt="{{ image.alt | escape }}"
+        data-zoom="{{ media.preview_image | image_url: width: 1024 }}"
+      >
+
+      {% comment %} {{ media.preview_image | image_url: width: 1946 | image_tag:
         class: image_class,
         loading: lazy,
         sizes: sizes,
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      }} {% endcomment %}
     </div>
     <button class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
       <span class="visually-hidden">
