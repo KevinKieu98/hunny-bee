@@ -949,6 +949,23 @@ quantity-input .quantity__button svg {
     display: none !important;
 }
 
+.grid__item.product__media-wrapper .card__badge span {
+    z-index: 2;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: var(--secondary-2);
+    width: 100px;
+    height: 54px;
+    border-radius: 200px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
 @media screen and (min-width: 1441px) {
     .product {
         padding: 0 80px;

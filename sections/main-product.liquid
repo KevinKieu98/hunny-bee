@@ -67,6 +67,23 @@
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       <div class="desktop">
         {% render 'product-media-gallery', variant_images: variant_images %}
+        <div class="card__badge {{ settings.badge_position }}">
+          {%- if product.available == false -%}
+            <span
+              id="Badge-{{ section_id }}-{{ product.id }}"
+              class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+            >
+              {{- 'products.product.sold_out' | t -}}
+            </span>
+          {%- elsif product.compare_at_price > product.price and product.available -%}
+            <span
+              id="Badge-{{ section_id }}-{{ product.id }}"
+              class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+            >
+              {{- 'products.product.on_sale' | t -}}
+            </span>
+          {%- endif -%}
+        </div>
       </div>
 
       <div class="mobile">
