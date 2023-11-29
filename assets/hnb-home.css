@@ -654,9 +654,11 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     font-weight: 400;
     line-height: normal;
     border: 0;
-    border-bottom: 1px solid var(--white);
+    border: 1px solid var(--white);
     box-shadow: none;
-    height: 52px;
+    height: 62px;
+    border-radius: 300px;
+    padding: 8px 150px 8px 16px !important;
 }
 
 .footer-block--newsletter .field__input::placeholder,
@@ -666,10 +668,16 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     letter-spacing: 0;
+}
+
+.footer-block--newsletter .field__input::placeholder {
+    opacity: 1;
+    color: var(--white);
+}
+
+.footer-block--newsletter .field__label {
+    display: none;
 }
 
 .footer-block--newsletter .field::before,
@@ -679,16 +687,24 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 }
 
 .footer-block--newsletter .newsletter-form__button {
-    color: var(--white);
-    justify-content: end;
+    color: var(--black);
+    background: var(--white) !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     min-height: unset;
-    height: auto;
     top: 50%;
     transform: translateY(-50%);
+    text-align: center;
+    height: 48px;
+    border-radius: 300px;
+    align-items: center;
+    justify-content: center;
+    right: 8px;
+    max-width: 129px;
+    width: 100%;
+    min-width: unset;
 }
 
 .newsletter_box .your_seft {
@@ -1200,24 +1216,22 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     }
 
     .footer-block--newsletter .field__input {
-        height: 49px;
+        height: 62px;
     }
 
     .footer-block--newsletter .field__input::placeholder,
     .footer-block--newsletter .field__label {
         top: 45%;
+        top: 50%;
     }
 
     .footer-block--newsletter .newsletter-form__button {
         top: 45%;
+        top: 50%;
     }
 
     .newsletter_box .your_seft {
         margin-top: 21px;
-    }
-
-    .footer-block--newsletter .newsletter-form__field-wrapper {
-        padding-right: 10px;
     }
 
     .footer__content-bottom-wrapper h4 {
