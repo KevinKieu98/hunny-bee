@@ -1459,5 +1459,54 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       }
     ]
+  },
+  {
+    "name": "Popup Hunny Service",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_popup_hunny",
+        "label": "Display Popup Hunny?",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image_popup_hunny",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_mobile_popup_hunny",
+        "label": "Image Mobile"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_bg_popup_hunny",
+        "label": "Image Background"
+      },
+      {
+        "type": "text",
+        "id": "title_popup_hunny",
+        "label": "Title Popup Hunny",
+        "default": "Royal Yacht Service"
+      },
+      {
+        "type": "textarea",
+        "id": "description_popup_hunny",
+        "label": "Description Popup Hunny",
+        "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "type": "text",
+        "id": "text_link",
+        "label": "Text Link",
+        "default": "ENQUIRE HERE"
+      },
+      {
+        "type": "url",
+        "id": "url_link",
+        "label": "Url Link"
+      }
+    ]
   }
 ]

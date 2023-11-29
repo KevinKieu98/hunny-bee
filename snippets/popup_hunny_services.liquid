@@ -1,0 +1,347 @@
+{% if settings.enable_popup_hunny == true and template.name == "index" %}
+    <div class="popup_hunny_service hidden">
+        {% if settings.image_bg_popup_hunny != blank %}
+            <img
+                width="{{ settings.image_bg_popup_hunny.width }}"
+                height="{{ settings.image_bg_popup_hunny.height }}"
+                src="{{ settings.image_bg_popup_hunny | image_url: width: 1920 }}"
+                alt="{{ settings.image_bg_popup_hunny.alt }}"
+                loading="lazy"
+                class="image_popup_bg"
+            /> 
+        {% endif %}
+
+        <button class="btn_close_popup_hunny">
+            {% render 'icon-close' %}
+        </button>
+
+        <div class="box_container">
+            <div class="left">
+                {% if settings.description_popup_hunny != blank %}
+                    <p class="popup_hunny_description">{{ settings.description_popup_hunny }}</p>
+                {% endif %}
+
+                {% if settings.title_popup_hunny != blank %}
+                    <h2 class="popup_hunny_title">{{ settings.title_popup_hunny }}</h2>
+                {% endif %}
+
+                <form action="#" method="post" class="form_popup_service" id="" enctype="multipart/form-data">
+                    <div class="box_popup_input">
+                        <input type="text" name="email" value="" placeholder="Enter your email" />
+                        <button type="submit" class="btn btn_popup_submit" title="SEND">SEND</button>
+                    </div>
+                    
+                    <div class="box_popup_checkbox">
+                        <input
+                            id="popup-checkbox-show-again"
+                            type="checkbox"
+                            name="showPopupAgain"
+                        >
+                        <label>Do not show this popup again</label>
+                    </div>
+                    
+                </form>
+            </div>
+    
+            <div class="right">
+                {% if settings.image_popup_hunny != blank %}
+                    <img
+                        width="{{ settings.image_popup_hunny.width }}"
+                        height="{{ settings.image_popup_hunny.height }}"
+                        src="{{ settings.image_popup_hunny | image_url: width: 1920 }}"
+                        alt="{{ settings.image_popup_hunny.alt }}"
+                        loading="lazy"
+                        class="desktop block"
+                    /> 
+                {% else %}
+                    {{ 'product-1' | placeholder_svg_tag }}
+                {% endif %}
+
+                {% if settings.image_mobile_popup_hunny != blank %}
+                    <img
+                        width="{{ settings.image_mobile_popup_hunny.width }}"
+                        height="{{ settings.image_mobile_popup_hunny.height }}"
+                        src="{{ settings.image_mobile_popup_hunny | image_url: width: 1920 }}"
+                        alt="{{ settings.image_mobile_popup_hunny.alt }}"
+                        loading="lazy"
+                        class="mobile block"
+                    /> 
+                {% else %}
+                    {{ 'product-1' | placeholder_svg_tag }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="popup_hunny_service_overlay hidden"></div>
+{% endif %}
+
+<style>
+    .image_popup_bg {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    body.open_popup {
+        overflow: hidden;
+    }
+
+    .popup_hunny_service_overlay {
+        position: fixed;
+        background-color: rgba(35, 35, 35, 0.8);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        z-index: 4;
+    }
+
+    .popup_hunny_service_overlay.hidden {
+        display: none;
+    }
+
+    .popup_hunny_service {
+        width: 95%;
+        max-width: 900px;
+        margin: 0 auto;
+        position: fixed;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+
+    .popup_hunny_service.hidden {
+        display: none;
+    }
+
+    .popup_hunny_service .box_container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 105px;
+        padding: 0 68px;
+    }
+
+    .popup_hunny_service .left {
+        width: 290px;
+        flex-shrink: 0;
+        padding: 30px 0;
+    }
+
+    .popup_hunny_service .left p {
+        margin: 0;
+        color: var(--black);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+        margin-bottom: 60px;
+    }
+
+    .popup_hunny_title {
+        margin: 0;
+        color: var(--black);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1.6px;
+        text-transform: uppercase;
+    }
+    
+    .popup_hunny_service .right h2 {
+        color: #343C49;
+        font-family: Alokary;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 46px;
+        letter-spacing: 0.64px;
+        margin: 0;
+    }
+
+    .popup_hunny_service .right p {
+        color: #000;
+        font-family: Avenir LT Pro;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin-top: 17px;
+    }
+
+    .popup_hunny_service .right img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup_hunny_service .popup_hunny_link {
+        width: 100%;
+        background: #329EC7;
+        padding: 20px 47px;
+        text-align: center;
+        margin-top: 32px;
+    }
+
+    .popup_hunny_service .popup_hunny_link a {
+        color: #FFF;
+        font-family: Avenir LT Pro;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .btn_close_popup_hunny {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        border: 0;
+        background: unset;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        min-width: unset;
+        z-index: 1;
+    }
+
+    .box_popup_input {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .box_popup_input input[type="text"] {
+        width: 100%;
+        height: 48px;
+        border: 0;
+        border-bottom: 1px solid var(--black);
+        outline: none;
+        box-shadow: none;
+        background: inherit;
+        padding: 0;
+        padding-right: 60px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .box_popup_input input[type="text"]::placeholder {
+        color: var(--black);
+        opacity: 1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .box_popup_input button[type="submit"] {
+        padding: 0;
+        background: unset;
+        border: 0;
+        outline: none;
+        box-shadow: none;
+        color: var(--black);
+        min-width: unset;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .box_popup_input button[type="submit"]:hover {
+        background: unset;
+    }
+
+    .box_popup_checkbox {
+        margin-top: 24px;
+    }
+
+    .box_popup_checkbox {
+        display: flex;
+        align-items: center;
+    }
+
+    .box_popup_checkbox #popup-checkbox-show-again {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+
+    .box_popup_checkbox label {
+        color: var(--black);
+        margin-left: 16px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .form_popup_service {
+        margin-top: 32px;
+    }
+
+    @media (max-width: 768px) {
+        .popup_hunny_service {
+            width: 95%;
+            max-width: 398px;  
+        }
+
+        .popup_hunny_service .box_container {
+            flex-wrap: wrap;
+            padding: 0 54px;
+            padding-top: 58px;
+            gap: 14px;
+        }
+
+        .popup_hunny_service .left {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .popup_hunny_service .left img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .popup_hunny_service .right h2 {
+            text-align: center;
+        }
+
+        .popup_hunny_title {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .popup_hunny_service .left p {
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .popup_hunny_service .left {
+            padding: 0;
+        }
+    }
+</style>
