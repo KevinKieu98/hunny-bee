@@ -1,3 +1,5 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
 <div id="home_product_list" class="{{ section.class }}">
     <div class="container">
         {% if section.settings.show_box_heading %}
@@ -30,7 +32,8 @@
                             card_product: product,
                             section_id: section.id,
                             current_page: 'home_page',
-                            show_regular_price: true
+                            show_regular_price: true,
+                            show_secondary_image: true
                         %}
                     {% endfor %}
                 </div>

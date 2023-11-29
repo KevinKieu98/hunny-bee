@@ -56,78 +56,43 @@
                             {% endif %}
                         </div>
                     </div>
-    
-                    {% comment %} <div class="tab_content_item box_product_shipping 1213122131">
-                        {% if product.metafields.accentuate.returns_policy %}
-                            <div>
-                                {% if product.metafields.accentuate.title_return_policy %}
-                                    <h5>{{ product.metafields.accentuate.title_return_policy }}</h5>
-                                {% endif %}
-                                
-                                {{ product.metafields.accentuate.returns_policy }}  
-                            </div>
-    
-                            <div>
-                                {% if product.metafields.accentuate.title_warranty %}
-                                    <h5>{{ product.metafields.accentuate.title_warranty }}</h5>
-                                {% endif %}
-                                
-                                {{ product.metafields.accentuate.warranty }}
-                            </div>
-    
-                            <div>
-                                {% if product.metafields.accentuate.title_shipping %}
-                                    <h5>{{ product.metafields.accentuate.title_shipping }}</h5>
-                                {% endif %}
-                                
-                                {{ product.metafields.accentuate.shipping }}
-                            </div>
-                        {% endif %}
-                    </div> {% endcomment %}
 
-                    <div class="tab_content_item box_product_shipping 1213122131">
-                        {% if section.blocks.size > 0 %}
-                        {% for block in section.blocks %}
-                        {% if block.settings.enable_shipping %}
-                            <div>
-                                {% if block.settings.title_return_policy %}
-                                    <h5>{{ block.settings.title_return_policy }}</h5>
-                                {% endif %}
-                                
-                               {{ block.settings.content_return_policy }}
-                            </div>
-    
-                            <div>
-                                {% if block.settings.title_warranty %}
-                                    <h5>{{ block.settings.title_warranty }}</h5>
-                                {% endif %}
-                                
-                                {{ block.settings.content_warranty }}
-                            </div>
-    
-                            <div>
-                                {% if block.settings.title_shipping %}
-                                    <h5>{{ block.settings.title_shipping }}</h5>
-                                {% endif %}
-                                
-                                {{block.settings.content_shipping }}
-                            </div>
-                        {% endif %}
-                      {% endfor %}
-                    {% endif %}
+                    <div class="tab_content_item box_product_shipping">
+                        <div>
+                            {% if product.metafields.custom.title_returns_policy %}
+                                <h5>{{ product.metafields.custom.title_returns_policy }}</h5>
+                            {% endif %}
+                            
+                           {{ product.metafields.custom.returns_policy }}
+                        </div>
 
+                        <div>
+                            {% if product.metafields.custom.title_warranty %}
+                                <h5>{{ product.metafields.custom.title_warranty }}</h5>
+                            {% endif %}
+                            
+                            {{ product.metafields.custom.product_warranty }}
+                        </div>
+
+                        <div>
+                            {% if product.metafields.custom.title_product_shipping %}
+                                <h5>{{ product.metafields.custom.title_product_shipping }}</h5>
+                            {% endif %}
+                            
+                            {{ product.metafields.custom.product_shipping }}
+                        </div>
                     </div>
-    
                     
                     <div class="tab_content_item box_product_reviews">
-                        {% if section.blocks.size > 0 %}
-                            {% for block in section.blocks %}
-                                {% case block.type %}
-                                    {% when '@app' %}
-                                        {% render block %}
-                                {% endcase %}
-                            {% endfor %}
-                        {% endif %}
+                        <div class="yotpo yotpo-main-widget"
+                            data-product-id="{{ product.id }}"
+                            data-name="{{ product.title | escape }}"
+                            data-url="{{ shop.url }}{{ product.url }}"
+                            data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                            data-price="{{ variant.price | money_without_currency }}"
+                            data-currency="{{ shop.currency }}"
+                            data-description="{{ product.description | escape }}">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,31 +115,27 @@
                     <div class="details animation_common overflow-hidden ">
                         <div class="">
                             <div class="box_description_items">
-                                {% if section.blocks.size > 0 %}
-                                    {% for block in section.blocks %}
-                                        <div class="content_item description">
-                                            <div class="content_item_description">
-                                                {{ block.settings.content_description }}
-                                            </div>
-                                        </div>
-        
-                                        <div class="content_item features">
-                                            <h5>{{ block.settings.title_features }}</h5>
-            
-                                            <div class="content_item_description">
-                                                {{ block.settings.content_features }}
-                                            </div>
-                                        </div>
-        
-                                        <div class="content_item specifications">
-                                            <h5>{{ block.settings.title_specifications }}</h5>
-            
-                                            <div class="content_item_description">
-                                                {{ block.settings.content_specifications }}
-                                            </div>
-                                        </div>
-                                    {% endfor %}
-                                {% endif %}
+                                <div class="content_item description">
+                                    <div class="content_item_description">
+                                        {{ product.custom.title_product_description }}
+                                    </div>
+                                </div>
+
+                                <div class="content_item features">
+                                    <h5>{{ product.custom.title_product_specifications }}</h5>
+    
+                                    <div class="content_item_description">
+                                        {{ product.custom.product_features }}
+                                    </div>
+                                </div>
+
+                                <div class="content_item specifications">
+                                    <h5>{{ block.settings.title_specifications }}</h5>
+    
+                                    <div class="content_item_description">
+                                        {{ product.custom.product_specifications }}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -269,14 +230,15 @@
                         </div>
                     </h4>
                     <div class="details animation_common overflow-hidden">
-                        {% if section.blocks.size > 0 %}
-                            {% for block in section.blocks %}
-                                {% case block.type %}
-                                    {% when '@app' %}
-                                        {% render block %}
-                                {% endcase %}
-                            {% endfor %}
-                        {% endif %}
+                        <div class="yotpo yotpo-main-widget"
+                            data-product-id="{{ product.id }}"
+                            data-name="{{ product.title | escape }}"
+                            data-url="{{ shop.url }}{{ product.url }}"
+                            data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                            data-price="{{ variant.price | money_without_currency }}"
+                            data-currency="{{ shop.currency }}"
+                            data-description="{{ product.description | escape }}">
+                        </div>
                     </div>
                 </accordion-controller>
             </div>
