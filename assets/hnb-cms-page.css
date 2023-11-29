@@ -783,6 +783,7 @@
 @media screen and (max-width: 767px) {
     .about_us_client {
         padding: 32px 0;
+        padding-top: 24px;
     }
 
     .feedback_items .slick-list {
@@ -813,6 +814,75 @@
 
     .page-about-us .home_loved_by h2 {
         margin-bottom: 24px;
+    }
+}
+
+/* Our Story */
+.section-about-our-story .container {
+    padding-left: 0;
+}
+
+.section_about_our_story {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+}
+
+.section_about_our_story .left h2 {
+    color: var(--black);
+    font-family: FontspringDemoTheseasons;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 32px;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.section_about_our_story .sub_text p {
+    color: var(--black);
+    text-align: left;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.section_about_our_story .sub_text p:last-child {
+    margin-bottom: 0;
+}
+
+.section_about_our_story .left {
+    max-width: 709px;
+    width: 100%;
+}
+
+@media screen and (max-width: 989px) {
+    .section-about-our-story .container {
+        padding-left: 16px;
+    }
+
+    .section_about_our_story {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .section_about_our_story .left {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section_about_our_story .left h2 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 16px;
+    }
+
+    .section_about_our_story .sub_text p {
+        font-size: 18px;
     }
 }
 
