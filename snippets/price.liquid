@@ -58,7 +58,7 @@
     {%- endcomment -%}
 
     {% if currentPage == 'product_page' %}
-      <div class="price__regular 213123131">
+      <div class="price__regular">
         {%- if product.quantity_price_breaks_configured? -%}
           {%- if show_compare_at_price -%}
             {%- unless product.price_varies == false and product.compare_at_price_varies %}

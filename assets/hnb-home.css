@@ -237,11 +237,11 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
 .product-card-wrapper .card__badge span {
     z-index: 1;
     position: absolute;
-    top: 36px;
-    right: 40px;
+    top: 32px;
+    right: 32px;
     background: var(--secondary-2);
-    width: 100px;
-    height: 54px;
+    width: 68px;
+    height: 32px;
     border-radius: 200px;
     color: var(--white);
     display: flex;
