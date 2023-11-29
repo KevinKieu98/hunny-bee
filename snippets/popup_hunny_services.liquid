@@ -1,5 +1,5 @@
 {% if settings.enable_popup_hunny == true and template.name == "index" %}
-    <div class="popup_hunny_service hidden">
+    <div class="popup_hunny_service">
         {% if settings.image_bg_popup_hunny != blank %}
             <img
                 width="{{ settings.image_bg_popup_hunny.width }}"
@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div class="popup_hunny_service_overlay hidden"></div>
+    <div class="popup_hunny_service_overlay"></div>
 {% endif %}
 
 <style>
@@ -215,6 +215,10 @@
         padding: 0;
         min-width: unset;
         z-index: 1;
+    }
+
+    .btn_close_popup_hunny:hover svg path {
+        stroke: var(--white);
     }
 
     .box_popup_input {
