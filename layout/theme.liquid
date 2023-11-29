@@ -278,6 +278,9 @@
     </script>
 
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+    <script type="text/javascript">
+      (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/ihZBcuP146NdKrr9foTvwTh7d8woswHUkS7k45DG/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
   </head>
 
   <body class="gradient template-{{ request.page_type | handle }} {% if request.page_type == 'page' %} {{ template | replace: '.', '-' }} {% endif %} {{ page_class }} {% if template.name == "cart" %} template-cart {% endif %} {{ page.handle | prepend: "page-" }}">
