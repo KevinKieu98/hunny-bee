@@ -21,41 +21,42 @@
             <div class="box_content">
                 {% if section.blocks.size > 0 %}
                     <div class="feedback_items">
-                    {% for block in section.blocks %}
-                        {% case block.type %}
-                            {% when 'feedback' %}
-                                <div class="feedback_item">
-                                    {% if block.settings.title != blank %}
-                                        <h3>{{ block.settings.title }}</h3>
-                                    {% endif %}
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {% when 'feedback' %}
+                                    <div class="feedback_item">
+                                        {% if block.settings.title != blank %}
+                                            <h3>{{ block.settings.title }}</h3>
+                                        {% endif %}
 
-                                    {% if block.settings.description != blank %}
-                                        <div class="feedback_item__description">
-                                            {{ block.settings.description }}
-                                        </div>
-                                    {% endif %}
+                                        {% if block.settings.description != blank %}
+                                            <div class="feedback_item__description">
+                                                {{ block.settings.description }}
+                                            </div>
+                                        {% endif %}
 
-                                    <div class="feedback_item_person">
-                                        <div class="feedback_item_person__avatar">
-                                            {% if block.settings.person_avatar != blank %}
-                                                <img src="{{ block.settings.person_avatar | image_url }}" alt="" loading="lazy" width="{{ block.settings.person_avatar.width }}"
-                                                    height="{{ block.settings.person_avatar.height }}" style="width: 40px; height: 40px" class="block w-full h-full">
-                                            {% endif %}
-                                        </div>
-                                        
-                                        <div class="feedback_item_person__info">
-                                            {% if block.settings.person_name %}
-                                                <h4>{{ block.settings.person_name }}</h4>
-                                            {% endif %}
+                                        <div class="feedback_item_person">
+                                            <div class="feedback_item_person__avatar">
+                                                {% if block.settings.person_avatar != blank %}
+                                                    <img src="{{ block.settings.person_avatar | image_url }}" alt="" loading="lazy" width="{{ block.settings.person_avatar.width }}"
+                                                        height="{{ block.settings.person_avatar.height }}" style="width: 40px; height: 40px" class="block w-full h-full">
+                                                {% endif %}
+                                            </div>
+                                            
+                                            <div class="feedback_item_person__info">
+                                                {% if block.settings.person_name %}
+                                                    <h4>{{ block.settings.person_name }}</h4>
+                                                {% endif %}
 
-                                            {% if block.settings.person_type != blank %}
-                                                <p>{{ block.settings.person_type }}</p>
-                                            {% endif %}
+                                                {% if block.settings.person_type != blank %}
+                                                    <p>{{ block.settings.person_type }}</p>
+                                                {% endif %}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                        {% endcase %}
-                    {% endfor %}
+                            {% endcase %}
+                        {% endfor %}
+                    </div>
                 {% endif %}
             </div>
         </div>
