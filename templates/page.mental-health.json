@@ -2,13 +2,83 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "heading_title": ""
+      }
+    },
+    "7539dc4c-ec54-47f8-a17f-67635201c671": {
+      "type": "section-blog-banner",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/image_32_1.png",
+        "image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_2_de2f4fda-dcb2-4377-b7e2-f5d61bb7c72d.png",
+        "text_1": "Sex",
+        "text_2": "is self-care",
+        "image_right": "shopify:\/\/shop_images\/Group_35593_1.png"
+      }
+    },
+    "c29ac505-9736-47c3-a3f0-bc9b9e8b851b": {
+      "type": "section-blog-content",
+      "blocks": {
+        "5b6b591b-f14b-45a3-bc41-cb6b7d1c0ad6": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS_f3332bb2-5c23-44a8-aae5-c828264f1b76.png",
+            "block_title": "What are common causes of mental health issues both socially & relationally?",
+            "block_description": "<p>Many internal and external factor contribute to mental health issues. Common causes include negative experiences, previous insecure or detached parenting as well as traumatic experiences in adulthood. Workplace stress, financial and relationship difficulties can also play a significant part. mental health issues can manifest in a myriad of ways from minor inconvenience to severe intrusive and incapacitating symptoms.<\/p>"
+          }
+        },
+        "6079e8b4-e1b9-4587-81c0-0b62769dc5f3": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS-2.png",
+            "block_title": "What effects can anti depressants have on a sex life and can things like adult toys (personal intimacy aids) assist with some of the related issues?",
+            "block_description": "<p>Some antidepressants have been known to cause slightly delayed ejaculation or decreased sex drive. In some cases this is beneficial. One particular medication Trilofy, is very closely related to traditional antidepressant and licensed for treatment of premature ejaculation.<\/p>"
+          }
+        },
+        "c8960913-0138-467c-b328-09cdd7f5bd2d": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/OBJECTS-3.png",
+            "block_title": "How important can it be to communicate issues with antidepressant use with your parter on the grounds of intimacy challenges?",
+            "block_description": "<p>It is up to the individual to decide how much information about their own health to share with their partner. being open and honest about mental health understand and support you. For more specific difficulties or uncertainty, it can be worthwhile jointly attending an appointment with your GP to discuss any mutual concerns.<\/p>"
+          }
+        },
+        "cf625914-dfc5-4193-894d-ea5f3163c117": {
+          "type": "image-text",
+          "settings": {
+            "block_text_top": "Dr D \/ MBBS",
+            "block_image": "shopify:\/\/shop_images\/IOE_1.png",
+            "block_title": "Are there avenues for help that aren’t your normal mental health charity? Medicare or seeing your GP?",
+            "block_description": "<p>Your GP should be able to signpost you to the right help depending on what problems become apparent during a consultation. If in doubt, see your GP or local sexual health clinic who will be able to provide useful information and answer all your questions about mental health, sexual health and wellbeing.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5b6b591b-f14b-45a3-bc41-cb6b7d1c0ad6",
+        "6079e8b4-e1b9-4587-81c0-0b62769dc5f3",
+        "c8960913-0138-467c-b328-09cdd7f5bd2d",
+        "cf625914-dfc5-4193-894d-ea5f3163c117"
+      ],
+      "settings": {
+        "display_menu": true,
+        "menu": "the-conversations-menu",
+        "sub_text_menu": "We sat down with Dr D, to talk all things Sexual Health.\nThey have been a medical Doctor for 15 years with extensive experience in both mental and sexual health",
+        "display_button": true,
+        "text_button": "Shop Now",
+        "url_button": "shopify:\/\/collections\/frontpage",
+        "image_border": "shopify:\/\/shop_images\/Vector_59_d7b1a682-482f-467a-8034-c939a819ac5c.png"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "7539dc4c-ec54-47f8-a17f-67635201c671",
+    "c29ac505-9736-47c3-a3f0-bc9b9e8b851b"
   ]
 }
