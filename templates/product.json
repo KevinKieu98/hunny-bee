@@ -13,6 +13,12 @@
           "settings": {
           }
         },
+        "5ab0f6ea-7235-44de-87f2-f514734d99ff": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -38,12 +44,6 @@
             "text_style": "body",
             "inventory_threshold": 10,
             "show_inventory_quantity": false
-          }
-        },
-        "5ab0f6ea-7235-44de-87f2-f514734d99ff": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
           }
         }
       },
@@ -107,6 +107,23 @@
         "07245576-df5b-4de3-9b4d-eebfa4860d66"
       ],
       "settings": {
+      }
+    },
+    "9453bbddd45b1b73fcfb": {
+      "type": "apps",
+      "blocks": {
+        "c45b9b11-b90c-4cab-a3ae-87e151b0e483": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "c45b9b11-b90c-4cab-a3ae-87e151b0e483"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "7dd791e3-a4a6-48f6-892b-d6da8137fdbc": {
@@ -180,29 +197,12 @@
         "space_top_mobile": 20,
         "space_bot_mobile": 40
       }
-    },
-    "9453bbddd45b1b73fcfb": {
-      "type": "apps",
-      "blocks": {
-        "c45b9b11-b90c-4cab-a3ae-87e151b0e483": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "c45b9b11-b90c-4cab-a3ae-87e151b0e483"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "9453bbddd45b1b73fcfb",
     "d77227ba-9689-4a8c-95c5-23efed7e400b",
+    "9453bbddd45b1b73fcfb",
     "7dd791e3-a4a6-48f6-892b-d6da8137fdbc",
     "related-products",
     "abd5f8f3-9b60-4f93-a8f3-90fd6aafa51d"
