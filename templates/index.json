@@ -175,6 +175,60 @@
       ],
       "settings": {
       }
+    },
+    "6ef9da07-dbc2-456c-b7f2-483a3f904aa9": {
+      "type": "section-about-clients",
+      "blocks": {
+        "1f019cf2-ec94-47ef-88cf-4677a5b1c07a": {
+          "type": "feedback",
+          "settings": {
+            "title": "“Time of your life”",
+            "description": "This product is absolutely incredible. I've never ever cum like that in my life and to continually cum that many times one after another was unreal. You have to take the little sucker off for you to stop coming. It was the best feeling I've ever had in my life. You literally nailed that product",
+            "person_avatar": "shopify:\/\/shop_images\/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction-removebg_1.png",
+            "person_name": "Sophia Moore",
+            "person_type": "Verified Reviewer"
+          }
+        },
+        "4a65c4a2-8a4b-4c01-8936-38f5105f778f": {
+          "type": "feedback",
+          "settings": {
+            "title": "“Great quality”",
+            "description": "Thank you Hunnybee team!! I was very unsure on what to buy due to issues I was having. Messaged the team and they were fab, extremely caring and helpful.. Lets just say their recommendation was perfect and I'm having the best O's again",
+            "person_avatar": "shopify:\/\/shop_images\/portrait-cheerful-handsome-man-keeps-hands-together-smiles-broadly-dressed-elegant-shirt-3-removebg_1.png",
+            "person_name": "Repeat C",
+            "person_type": "Verified Reviewer"
+          }
+        },
+        "c30e8b5f-aa3f-438f-81db-9b84fec6b8e6": {
+          "type": "feedback",
+          "settings": {
+            "title": "“Product guidance was fab”",
+            "description": "repare to indulge in the luxurious delight of the softest, most delicate silicone you've ever laid hands on! This incredible clit sucker sets a new standard for quality and will leave you in utter ecstasy. It's a game-changer, my friend",
+            "person_avatar": "shopify:\/\/shop_images\/handsome-young-businessman-with-crossed-arms-smiling-confident-2-removebg_1.png",
+            "person_name": "Josh L",
+            "person_type": "Verified Reviewer"
+          }
+        },
+        "e66ac5da-ad61-40bb-a53b-19469cbba5fc": {
+          "type": "feedback",
+          "settings": {
+            "title": "Time of your life",
+            "description": "repare to indulge in the luxurious delight of the softest, most delicate silicone you've ever laid hands on! This incredible clit sucker sets a new standard for quality and will leave you in utter ecstasy. It's a game-changer, my friend",
+            "person_avatar": "shopify:\/\/shop_images\/portrait-cheerful-handsome-man-keeps-hands-together-smiles-broadly-dressed-elegant-shirt-3-removebg_1.png",
+            "person_name": "Sophia Moore",
+            "person_type": "Verified Reviewer"
+          }
+        }
+      },
+      "block_order": [
+        "1f019cf2-ec94-47ef-88cf-4677a5b1c07a",
+        "4a65c4a2-8a4b-4c01-8936-38f5105f778f",
+        "c30e8b5f-aa3f-438f-81db-9b84fec6b8e6",
+        "e66ac5da-ad61-40bb-a53b-19469cbba5fc"
+      ],
+      "settings": {
+        "section_title": "Clients about us"
+      }
     }
   },
   "order": [
@@ -183,6 +237,7 @@
     "c9b808b6-b5a7-455e-8a75-a3a6212d85a4",
     "09c7534c-08d4-42cd-b651-22f238f679e1",
     "67c3e17a-dcf0-4648-a83b-03a0da8c97b0",
-    "7e5c6b4e-c0fc-4882-8d12-54ba5aca9355"
+    "7e5c6b4e-c0fc-4882-8d12-54ba5aca9355",
+    "6ef9da07-dbc2-456c-b7f2-483a3f904aa9"
   ]
 }
