@@ -287,6 +287,8 @@
   </head>
 
   <body class="gradient template-{{ request.page_type | handle }} {% if request.page_type == 'page' %} {{ template | replace: '.', '-' }} {% endif %} {{ page_class }} {% if template.name == "cart" %} template-cart {% endif %} {{ page.handle | prepend: "page-" }}">
+    {% render 'hnb-minicart' %}
+    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
