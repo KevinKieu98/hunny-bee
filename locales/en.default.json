@@ -518,5 +518,23 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
+  },
+  "cart": {
+    "shopping_bar": "Shopping cart",
+    "title_empty": "Your shopping bag is empty",
+    "continue_shopping": "Continue shopping",
+    "back_to_home": "Back to Home",
+    "order_total": "Subtotal",
+    "order_message_shipping": "Tax included, shipping calculated at checkout",
+    "go_to_checkout": "Checkout",
+    "go_to_cart": "View cart",
+    "find_store_text": "Find Your Nearest Store",
+    "find_store_title": "Over 100 Stores Across Australia & NZ",
+    "rewards_title": "Black Pepper VIP Member-Only Rewards",
+    "rewards_text": "Sign Up Now",
+    "spend": "Just",
+    "freeship": "away from free delivery",
+    "minicart_vouchers_title": "You may have rewards to claim!",
+    "remove": "Remove"
   }
 }

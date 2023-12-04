@@ -1508,5 +1508,20 @@
         "label": "Url Link"
       }
     ]
+  },
+  {
+    "name": "Cart Settings",
+    "settings": [
+      {
+        "type": "number",
+        "id": "cart_shipping_fee",
+        "label": "Shipping Cost"
+      },
+      {
+        "type": "text",
+        "id": "message_maximum_qty",
+        "label": "Message Maximum Quantity"
+      }
+    ]
   }
 ]
