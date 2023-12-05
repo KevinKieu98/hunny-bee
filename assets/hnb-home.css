@@ -1529,4 +1529,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     height: calc(100% - 13px);
 }
 
+.mini-cart-content.no-item .list-cart-container .text-left {
+    font-size: 14px;
+    margin: 0;
+    padding-top: 24px;
+}
+
 
