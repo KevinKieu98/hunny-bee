@@ -1477,7 +1477,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .minicart-actions {
-    margin-top: auto;
+    margin-top: 0;
     padding: 16px;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.16);
 }
@@ -1535,4 +1535,82 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     padding-top: 24px;
 }
 
+.minicart-product-related {
+    margin-top: auto;
+}
 
+.minicart-product-related .slick-slide {
+    padding: 0 6px;
+}
+
+.minicart-product-related .slick-list {
+    margin: 0 6px;
+}
+
+.minicart-product-related .card-information {
+    display: none;
+}
+
+.minicart-product-related .card__information .card__heading.h5 {
+    margin: 0;
+    color: var(--black);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.minicart-product-related .card__badge span {
+    font-size: 10px;
+    top: 8px;
+    right: 8px;
+    width: 42px;
+    height: 24px;
+    padding: 0;
+}
+
+.minicart-product-related .card--standard .card__content {
+    margin-top: 16px;
+}
+
+.minicart-product-related .slick-arrow {
+    width: 32px;
+    height: 32px;
+    min-width: unset;
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+.minicart-product-related .slick-arrow:hover {
+    background: none;
+}
+
+.minicart-product-related .slick-arrow:hover svg rect {
+    fill: var(--black);
+}
+
+.minicart-product-related .slick-arrow:hover svg path {
+    stroke: var(--white);
+}
+
+.minicart_product_list {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.minicart-product-related .slick-arrow.slick-prev {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.minicart-product-related .slick-arrow.slick-next {
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+}
+
+.minicart_product_list.slick-dotted .slick-dots {
+    margin-top: 36px;
+}
