@@ -536,6 +536,7 @@
     "freeship": "away from free delivery",
     "minicart_vouchers_title": "You may have rewards to claim!",
     "remove": "Remove",
-    "desc_free_shipping": "Congrats, your order ships free!"
+    "desc_free_shipping": "Congrats, your order ships free!",
+    "title_related": "You might also like"
   }
 }

@@ -192,23 +192,26 @@
                 <div id="mini-list" class="hidden"></div>
             </div>
 
-            <div class="minicart-product-related">
-                {%- assign products = collections[settings.collection].products -%}
-                {%- assign limitProduct = settings.limit_product -%}
-                {% if products.size > 0 %}
-                    <div class="minicart_product_list">
-                        {% for product in products limit: limitProduct %}
-                            {% render 'card-product',
-                                card_product: product,
-                                section_id: section.id,
-                                current_page: 'home_page',
-                                show_regular_price: true,
-                                show_secondary_image: true
-                            %}
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
+            {% if settings.show_minicart_repated_product %}
+                <div class="minicart-product-related">
+                    <h3>{{ 'cart.title_related' | t }}</h3>
+                    {%- assign products = collections[settings.collection].products -%}
+                    {%- assign limitProduct = settings.limit_product -%}
+                    {% if products.size > 0 %}
+                        <div class="minicart_product_list">
+                            {% for product in products limit: limitProduct %}
+                                {% render 'card-product',
+                                    card_product: product,
+                                    section_id: section.id,
+                                    current_page: 'home_page',
+                                    show_regular_price: true,
+                                    show_secondary_image: true
+                                %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
 
             <div id="minicart-actions" class="minicart-actions ">
                 <div class="minicart-total ">

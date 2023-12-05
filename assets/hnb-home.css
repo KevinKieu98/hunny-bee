@@ -1390,6 +1390,24 @@ body.open-minicart {
 
 .list-cart-container {
     margin-top: 24px;
+    height: calc(100vh - 586px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.list-cart-container::-webkit-scrollbar {
+    width: 4px;
+    background: var(--grey);
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+}
+
+.list-cart-container::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: var(--black);
+    border-width: 4px;
+    border-color: var(--black);
+    border-radius: 10px;
 }
 
 .list-cart-container .cart-item {
@@ -1402,6 +1420,10 @@ body.open-minicart {
 
 .list-cart-container .cart-item:first-child {
     padding-top: 0;
+}
+
+.list-cart-container .cart-item:last-child {
+    border-bottom: 0;
 }
 
 .list-cart-container .cart_product-title {
@@ -1536,6 +1558,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .minicart-product-related {
+    padding: 0 16px;
     margin-top: auto;
 }
 
@@ -1544,7 +1567,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .minicart-product-related .slick-list {
-    margin: 0 6px;
+    margin: 0 -6px;
 }
 
 .minicart-product-related .card-information {
@@ -1602,15 +1625,25 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .minicart-product-related .slick-arrow.slick-prev {
     position: absolute;
     bottom: 0;
-    left: 16px;
+    left: 0;
 }
 
 .minicart-product-related .slick-arrow.slick-next {
     position: absolute;
     bottom: 0;
-    right: 16px;
+    right: 0;
 }
 
 .minicart_product_list.slick-dotted .slick-dots {
     margin-top: 36px;
+}
+
+.minicart-product-related h3 {
+    margin: 0;
+    color: var(--black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 16px;
 }
