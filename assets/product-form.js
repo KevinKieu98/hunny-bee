@@ -1,4 +1,3 @@
-import { refreshMiniCart } from "./hnb-product-card.js";
 if (!customElements.get('product-form')) {
   customElements.define(
     'product-form',
@@ -115,4 +114,43 @@ if (!customElements.get('product-form')) {
       }
     }
   );
+}
+
+const refreshMiniCart = () => {
+  const elmBody = document.querySelector('body')
+  const minicartLoading = document.querySelector('.mini-cart-content #mincart-loading')
+  const elmCheckShipping = document.querySelector('.check-shipping')
+
+  fetch('/cart').then((response) => {
+      // When the page is loaded convert it to text
+      return response.text()
+  }).then((html) => {
+      // Initialize the DOM parser
+      const parser = new DOMParser()
+
+      // Parse the text
+      const doc = parser.parseFromString(html, 'text/html')
+      if (elmBody.classList.contains('template-cart')) {
+          const contentCartHtml = doc.querySelector('#cart-template').innerHTML
+          const cartCount = parseInt(doc.querySelector('#minicart-count').getAttribute('data-count'))
+          const minicartTemplate = document.querySelector('#cart-template')
+
+          if (cartCount === 0) {
+              elmCheckShipping?.classList.add('hidden')
+              minicartTemplate.className = 'flex items-center justify-center'
+          } else {
+              elmCheckShipping?.classList.remove('hidden')
+              minicartTemplate.className = 'bg-white'
+          }
+
+          minicartTemplate.innerHTML = contentCartHtml
+          minicartLoading.style.display = 'none'
+      }
+
+      // getElementMiniCart(doc)
+      // miniCartChange()
+  }).catch((error) => {
+      minicartLoading.style.display = 'none'
+      console.error(error);
+  })
 }
