@@ -1523,6 +1523,12 @@
         "label": "Message Maximum Quantity"
       },
       {
+        "type": "checkbox",
+        "id": "show_minicart_repated_product",
+        "label": "Display Related Product",
+        "default": true
+      },
+      {
         "type": "range",
         "id": "limit_product",
         "min": 1,
