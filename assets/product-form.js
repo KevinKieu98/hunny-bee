@@ -1,3 +1,4 @@
+import { refreshMiniCart } from "./hnb-product-card.js";
 if (!customElements.get('product-form')) {
   customElements.define(
     'product-form',
@@ -92,6 +93,9 @@ if (!customElements.get('product-form')) {
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading-overlay__spinner').classList.add('hidden');
+
+            document.querySelector('.header__icon--cart').click()
+            refreshMiniCart()
           });
       }
 

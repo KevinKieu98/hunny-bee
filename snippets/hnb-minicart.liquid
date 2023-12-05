@@ -76,7 +76,7 @@
                         {% render 'icon_free_shipping', costPercent: cost_percent %}
                     </div>
                 </div>
-                <div id="minicart-items" class="list-cart-container">
+                <div id="minicart-items" class="list-cart-container" style="{% if settings.show_minicart_repated_product %}height: calc(100vh - 586px){% else %}height: calc(100vh - 345px); margin-bottom: 24px;{% endif %}">
                     <div class="list-items">
                         {%- for item in cart.items -%}
                         <div class="cart-item">
@@ -109,10 +109,10 @@
                                                                 <div class="cart__product-actions">
                                                                     <span class="cart__product-price block items-start">
                                                                         {% if item.variant.compare_at_price > item.price %}
-                                                                            <span class="compare-price">{{ item.original_price | money }}</span>
                                                                             <span class="price-mini-cart">
-                                                                                <span class="">{{ item.variant.compare_at_price | money }}</span>
+                                                                                <span class="price-mini-cart_sale">{{ item.variant.compare_at_price | money }}</span>
                                                                             </span>
+                                                                            <span class="compare-price">{{ item.original_price | money }}</span>
                                                                         {% else %}
                                                                             <span class="price-mini-cart">{{ item.original_price | money }}</span>
                                                                         {% endif %}
