@@ -123,6 +123,7 @@
     "title_popup_hunny": "10 % OF YOUR FIRST ORDER",
     "description_popup_hunny": "Enter your email to enjoy 10% off your first order",
     "cart_shipping_fee": 400,
+    "collection": "frontpage",
     "checkout_logo_image": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_2_de2f4fda-dcb2-4377-b7e2-f5d61bb7c72d.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
