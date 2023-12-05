@@ -2,6 +2,7 @@
 {% assign shipping_fee = settings.shipping_fee | times: 100 %}
 {% assign cart_shipping_fee = settings.cart_shipping_fee | times: 100 %}
 {% assign fee_float = settings.cart_shipping_fee | times: 1.0 %}
+{% assign max_cost_percent = 100 | times: 1.0 %}
 {% assign disable_delivery = true %}
 {%- for item in cart.items -%}
     {% assign item_url = item.product.url | remove: '/products/' | replace: '&-', '' | replace: "'", "" | replace: "--", "-"%}
@@ -38,7 +39,7 @@
             <div id="minicart-base" class="minicart-items cart-content text-centerpx-0">
                 <div id="minicart-items" class="list-cart-container">
                     <div class='text-center'>
-                        <p class="text-left">Your shopping bag is empty, click <a href="{{ routes.all_products_collection_url }}" class="link">here</a> to continue shopping.</p>
+                        <p class="text-left">Your shopping cart is empty.<br>Click <a href="/collections/frontpage" class="link">here</a> to continue shopping.</p>
                     </div>
                 </div>
                 <div id="mini-list" class="hidden"></div>
@@ -47,42 +48,34 @@
         {% else %}
             <div id="minicart-base" class="minicart-items" data-count="{{ cart.items.size }}">
                 <!-- Check price get to free shipping -->
-                {% if cart_total >= cart_shipping_fee and cart.item_count > 1 %}
-                    <div class="check-shipping">
-                        <p class="check-shipping-text">
-                            Congratulations! You’ve got free shipping!
-                        </p>
+                {% assign cost = cart_shipping_fee | minus: cart_total %}
+                {% assign cost_percent = cart_total | divided_by: fee_float %}
 
-                        <p class="check-shipping-line">
-                            
-                        </p>
-                    </div>
-                {% else %}
-                    {% assign cost = cart_shipping_fee | minus: cart_total %}
-                    {% assign cost_percent = cart_total | divided_by: fee_float %}
-                    <div class="check-shipping">
-                        <p class="check-shipping-text">
-                            Congratulations! You’ve got free shipping!
-                        </p>
-
-                        <div class="check-shipping-line">
-                            <img 
-                                src="{{ 'line_free_shipping.png' | asset_url }}"
-                                width="{{ img_thumb.width }}"
-                                height="{{ img_thumb.height }}"
-                                loading="lazy"
-                                style="width:{{ cost_percent }}%"
-                            />
-
-                            {% render 'icon_free_shipping', costPercent: cost_percent %}
-                        </div>
-
-                        {% comment %} {% assign cost = cart_shipping_fee | minus: cart_total %}
-                        {% assign cost_percent = cart_total | divided_by: fee_float %}
-                        <p class="">{% render 'icon-truck', class: 'w-5 h-5 mr-3 mb-1' %} {{ 'cart.spend' | t }} <span class=""> {{ cost | money }} </span> {{ 'cart.freeship' | t }}</p> {% endcomment %}
-                    </div>
+                {% if cost_percent >= max_cost_percent %}
+                    {% assign cost_percent = max_cost_percent %}
                 {% endif %}
 
+                <div class="check-shipping">
+                    <p class="check-shipping-text">
+                        {% if cart_total >= cart_shipping_fee %}
+                            {{ 'cart.desc_free_shipping' | t }}
+                        {% else %}
+                            {{ 'cart.spend' | t }} <span class=""> {{ cost | money }} </span> {{ 'cart.freeship' | t }}
+                        {% endif %}
+                    </p>
+
+                    <div class="check-shipping-line">
+                        <img 
+                            src="{{ 'line_free_shipping.png' | asset_url }}"
+                            width="{{ img_thumb.width }}"
+                            height="{{ img_thumb.height }}"
+                            loading="lazy"
+                            style="width:{{ cost_percent }}%"
+                        />
+
+                        {% render 'icon_free_shipping', costPercent: cost_percent %}
+                    </div>
+                </div>
                 <div id="minicart-items" class="list-cart-container">
                     <div class="list-items">
                         {%- for item in cart.items -%}
@@ -167,10 +160,10 @@
                                                         data-index="{{ item.index | plus: 1 }}" class="remove-item ">
                                                         <a href="#" class="delete link" data-cart-item="{{ item.index | plus: 1 }}" data-cart-remove
                                                             id="remove_{{ item.id }}" data-label="{{ item.title }}">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M3 6H5H21" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round"/>
                                                                 <path d="M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>
+                                                            </svg>                                                                
                                                         </a>
                                                     </div>
                                                 </div>
