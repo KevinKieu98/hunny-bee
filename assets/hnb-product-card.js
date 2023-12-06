@@ -265,8 +265,60 @@ const checkMaximumQtyProduct = (data, id, qty) => {
     refreshMiniCart()
 }
 
+const handleOptionProductCard = () => {
+    const options = document.querySelectorAll('.card_information_option')
+    if (options.length > 0) {
+        options.forEach((option) => {
+            option.addEventListener('click', function() {
+                const parentOption = option.closest('.product-card-wrapper')
+                const elmATC = parentOption.querySelector('.btn_addtocart')
+
+                options.forEach((option) => option.classList.remove('selected'))
+                option.classList.add('selected')
+
+                elmATC.setAttribute('variant-id', option.getAttribute('data-id'))
+            })
+        })
+    }
+}
+
+const handleBtnQuickAdd = () => {
+    const btnQuickAdds = document.querySelectorAll('.btn_addtocart')
+    const DEFAULT_QUANTITY = 1
+    if(btnQuickAdds.length > 0) {
+        btnQuickAdds.forEach((btnQuickAdd) => {
+            btnQuickAdd.addEventListener('click', function() {
+                const variantId = btnQuickAdd.getAttribute('variant-id')
+                let formData = {
+                    'items': [{
+                        'id': variantId,
+                        'quantity': DEFAULT_QUANTITY
+                    }]
+                }
+
+                fetch(window.Shopify.routes.root + 'cart/add.js', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                  .then(response => {
+                    refreshMiniCart()
+                    iconCartDesktop.click()
+                })
+                  .catch((error) => {
+                    console.error('Error:', error)
+                });
+            })
+        })
+    }
+}
+
 miniCartChange()
 openMiniCart()
+handleOptionProductCard()
+handleBtnQuickAdd()
 // End function minicart
 
 export { refreshMiniCart, miniCartChange, getElementMiniCart, openMiniCart }

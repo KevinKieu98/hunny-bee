@@ -126,21 +126,41 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <a
-            href="{{ card_product.url }}"
-            id="CardLink-{{ section_id }}-{{ card_product.id }}"
-            class="full-unstyled-link"
-            aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
-          >
-            <h3
-              class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
-              {% if card_product.featured_media or settings.card_style == 'card' %}
-                id="title-{{ section_id }}-{{ card_product.id }}"
-              {% endif %}
+          <div class="card_information_title">
+            <a
+              href="{{ card_product.url }}"
+              id="CardLink-{{ section_id }}-{{ card_product.id }}"
+              class="full-unstyled-link"
+              aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-              {{ card_product.title | escape }}
-            </h3>
-          </a>
+              <h3
+                class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+                {% if card_product.featured_media or settings.card_style == 'card' %}
+                  id="title-{{ section_id }}-{{ card_product.id }}"
+                {% endif %}
+              >
+                {{ card_product.title | escape }}
+              </h3>
+            </a>
+
+            <div class="card_information_title__variants">
+              {% for option in card_product.options_with_values %}
+                {% for value in option.values %}
+                  {% if value != 'Default Title' %}
+                    <div 
+                      class="card_information_option{% if option.selected_value == value %} selected{% endif %}" 
+                      style="background-image: url({{ value | downcase | append: '.png' | file_url }})"
+                      data-id="{{ card_product.variants[forloop.index0].id }}"
+                      for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                      data-value="{{ value }}"
+                    >
+                      <span style="background-image: url({{ value | downcase | append: '.png' | file_url }})"></span>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -319,6 +339,27 @@
           </div>
         {%- endif -%}
       </div>
+    </div>
+
+    <div class="card_box_quickview">
+      <button
+        class="btn btn_addtocart"
+        variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M10 10.2267V8.93334C10 5.93334 12.4133 2.98668 15.4133 2.70668C18.9867 2.36001 22 5.17334 22 8.68001V10.52" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 29.3337H20C25.36 29.3337 26.32 27.187 26.6 24.5737L27.6 16.5737C27.96 13.3203 27.0267 10.667 21.3333 10.667H10.6667C4.97335 10.667 4.04001 13.3203 4.40001 16.5737L5.40001 24.5737C5.68001 27.187 6.64001 29.3337 12 29.3337Z" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20.6606 15.9997H20.6725" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.3261 15.9997H11.3381" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <button class="btn btn_quickview">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M7.5 20C7.5 20 12.0455 10 20 10C27.9545 10 32.5 20 32.5 20C32.5 20 27.9545 30 20 30C12.0455 30 7.5 20 7.5 20Z" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20 23.75C22.0711 23.75 23.75 22.0711 23.75 20C23.75 17.9289 22.0711 16.25 20 16.25C17.9289 16.25 16.25 17.9289 16.25 20C16.25 22.0711 17.9289 23.75 20 23.75Z" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </div>
 {%- else -%}
