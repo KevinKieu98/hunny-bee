@@ -303,7 +303,7 @@ const handleBtnQuickAdd = () => {
                     },
                     body: JSON.stringify(formData)
                 })
-                  .then(response => {
+                  .then(() => {
                     refreshMiniCart()
                     iconCartDesktop.click()
                 })
