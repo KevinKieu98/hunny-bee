@@ -99,9 +99,23 @@
                                         <div class="cart__item-title">
                                             <div>
                                                 <div class="cart__item-des">
-                                                    <a href="{{ item.product.url }}" class="cart_product-title" data-cart-item-title>
-                                                        {{ item.product.title | strip }}
-                                                    </a>
+                                                    <div class="cart__item--title">
+                                                        <a href="{{ item.product.url }}" class="cart_product-title" data-cart-item-title>
+                                                            {{ item.product.title | strip }}
+                                                        </a>
+
+                                                        <div class="cart__item-variant">
+                                                            {% unless item.product.has_only_default_variant %}
+                                                                {% for option in item.product.options %}
+                                                                    <span class="cart-item--option-name cart-item--product-options">{{ item.variant.options[forloop.index0] }}</span>
+                                                                    {% unless forloop.last %}
+                                                                        <span class="inline-block">/</span>
+                                                                    {% endunless %}
+                                                                {% endfor %}
+                                                            {% endunless %}
+                                                        </div>
+                                                    </div>
+                                                    
 
                                                     <div class="cart__item-price">
                                                         <div class="">
@@ -121,17 +135,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-    
-                                                <div class="cart__item-variant">
-                                                    {% unless item.product.has_only_default_variant %}
-                                                        {% for option in item.product.options %}
-                                                            <span class="cart-item--option-name cart-item--product-options">{{ option }}: {{ item.variant.options[forloop.index0] }}</span>
-                                                            {% unless forloop.last %}
-                                                                <span class="inline-block">/</span>
-                                                            {% endunless %}
-                                                        {% endfor %}
-                                                    {% endunless %}
                                                 </div>
                                             </div>
 

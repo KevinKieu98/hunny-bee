@@ -990,6 +990,8 @@ class VariantSelects extends HTMLElement {
         })
         .includes(false);
     });
+
+    this.querySelector('.option_selected_value').innerHTML = this.currentVariant?.options[0]
   }
 
   updateMedia() {

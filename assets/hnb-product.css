@@ -972,6 +972,15 @@ quantity-input .quantity__button svg {
     font-weight: 400;
 }
 
+.product__info-container .price__container .price__sale .price-item--sale {
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+.product__info-container .price__container {
+    margin: 0;
+}
+
 @media screen and (min-width: 1441px) {
     .product {
         padding: 0 80px;
