@@ -29,7 +29,8 @@
             "block_image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
             "block_title": "The Hunnybee difference",
             "block_description": "<p>All standard Australia wide shipping is free of charge and come in a discreet black box. Our Vibrators (personal intimacy aids) come in boxes with our vibrant colours and no signs of what's inside. Our clients have told us they are the best quality intimacy aids they have ever had!<\/p><p>We aim to create awareness with all things sexual wellbeing, sexual health and mental health. We believe personally and relationally its important to have a great and fulfilling sex life, becoming the most confident version of you.<\/p><p>Helping our customers become more aware of their bodies, sexual health, mental health and improve communication with friends, in and out of the bedroom makes us, pleased with ourselves...<\/p>",
-            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png"
+            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png",
+            "block_image_bg_right_mobile": "shopify:\/\/shop_images\/Vector_59_35a94d8b-cf30-4ed0-938b-403c711d7c72.png"
           }
         },
         "e633f03b-75be-4837-8107-954a5e54e51c": {
@@ -41,6 +42,7 @@
             "block_title": "Buying vibrators online",
             "block_description": "<p>Shop for hunnybee vibrators online with confidence and convenience. Our selection of high-quality personal pleasure devices includes traditional and innovative designs, all made with body-safe materials. Browse our collection of waterproof & rechargeable vibrators and clit suckers. Never steal the batteries from your remote again. We offer discreet and reliable delivery, so you can enjoy your new toy in the privacy of your own home. Whether you're seeking solo pleasure or enhancing intimate moments with a partner, our vibrators provide the ultimate in personal satisfaction. Shop now and experience the thrill of pleasure at your fingertips.<\/p>",
             "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png",
+            "block_image_bg_right_mobile": "shopify:\/\/shop_images\/Vector_59_35a94d8b-cf30-4ed0-938b-403c711d7c72.png",
             "block_image_bg_right_default": "shopify:\/\/shop_images\/Vector_59_1.png"
           }
         },
@@ -52,7 +54,8 @@
             "block_image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_3.png",
             "block_title": "What is a vibrator?",
             "block_description": "<p>A hunnybee vibrator is a sex toy designed to provide sexual stimulation and pleasure through vibration. They come in various shapes, sizes, and types and can be used for solo play or during intimate moments with a partner. Some common styles include traditional phallic-shaped vibrators, wand vibrators, rabbit vibrators, bullet vibrators, and many others. They are powered by rechargeable batteries, and have multiple vibration modes and adjustable speed. hunnybee vibrators are made from high quality body safe silicone and can be used for external or internal stimulation.<\/p>",
-            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png"
+            "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png",
+            "block_image_bg_right_mobile": "shopify:\/\/shop_images\/Vector_59_35a94d8b-cf30-4ed0-938b-403c711d7c72.png"
           }
         },
         "ae5c16f5-3262-4333-b38d-ca8812bcfae1": {
@@ -64,6 +67,7 @@
             "block_title": "What is a clit sucker?",
             "block_description": "<p>A hunnybee clit sucker, also known as a clitoral sucker or clitoral stimulator, is a type of sex toy designed specifically for the stimulation of the clitoris. It works by creating a suction effect over the clitoris, which can provide intense sensations and even orgasm.Our clit suckers have adjustable suction and vibration levels, and can be used for solo play or during intimate moments with a partner. Our clit suckers are made from high quality body safe silicone. Our clit suckers are also waterproof and rechargeable, making them easy to use in various environments.<\/p>",
             "block_image_bg_right": "shopify:\/\/shop_images\/Vector_59.png",
+            "block_image_bg_right_mobile": "shopify:\/\/shop_images\/Vector_59_35a94d8b-cf30-4ed0-938b-403c711d7c72.png",
             "block_image_bg_right_default": "shopify:\/\/shop_images\/Vector_59_1.png"
           }
         }
@@ -212,6 +216,7 @@
         "fc0ca614-20d6-4eea-a822-38dbf0f9e7c4"
       ],
       "settings": {
+        "enable_section_love_by": true,
         "title": "Loved by"
       }
     }

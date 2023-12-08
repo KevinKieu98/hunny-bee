@@ -23,13 +23,18 @@
                                         {% if block.settings.image_position %}
                                             {% if block.settings.block_image_bg_right_default != blank %}
                                                 <img src="{{ block.settings.block_image_bg_right_default | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right_default.width }}"
-                                                    height="{{ block.settings.block_image_bg_right_default.height }}" class="block w-full h-full block_image_bg">
+                                                    height="{{ block.settings.block_image_bg_right_default.height }}" class="block w-full h-full block_image_bg desktop">
                                             {% endif %}
                                         {% else %}
                                             {% if block.settings.block_image_bg_right != blank %}
                                                 <img src="{{ block.settings.block_image_bg_right | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right.width }}"
-                                                    height="{{ block.settings.block_image_bg_right.height }}" class="block w-full h-full block_image_bg">
+                                                    height="{{ block.settings.block_image_bg_right.height }}" class="block w-full h-full block_image_bg desktop">
                                             {% endif %}
+                                        {% endif %}
+
+                                        {% if block.settings.block_image_bg_right_mobile != blank %}
+                                            <img src="{{ block.settings.block_image_bg_right_mobile | image_url }}" alt="" loading="lazy" width="{{ block.settings.block_image_bg_right_mobile.width }}"
+                                                height="{{ block.settings.block_image_bg_right_mobile.height }}" class="block w-full h-full block_image_bg mobile">
                                         {% endif %}
 
                                         {% if block.settings.block_image_logo != blank %}
@@ -124,6 +129,11 @@
                         "type": "image_picker",
                         "id": "block_image_bg_right",
                         "label": "Image Background Right"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "block_image_bg_right_mobile",
+                        "label": "Image Background Right Mobile"
                     },
                     {
                         "type": "image_picker",
