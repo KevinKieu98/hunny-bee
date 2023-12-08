@@ -354,13 +354,19 @@
         </svg>
       </button>
 
-      <button class="btn btn_quickview">
+      <button 
+        class="btn btn_quickview"
+        product-id="{{ card_product.selected_or_first_available_variant.id }}"
+        product-handle="{{ card_product.handle }}" 
+        >
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
           <path d="M7.5 20C7.5 20 12.0455 10 20 10C27.9545 10 32.5 20 32.5 20C32.5 20 27.9545 30 20 30C12.0455 30 7.5 20 7.5 20Z" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M20 23.75C22.0711 23.75 23.75 22.0711 23.75 20C23.75 17.9289 22.0711 16.25 20 16.25C17.9289 16.25 16.25 17.9289 16.25 20C16.25 22.0711 17.9289 23.75 20 23.75Z" stroke="#1B1B1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>
+
+    <!-- {% render 'hnb-form-quickview', product: %} -->
   </div>
 {%- else -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
