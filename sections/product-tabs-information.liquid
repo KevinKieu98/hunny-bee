@@ -27,33 +27,31 @@
                             {% endif %}
                         </div>
                         <div class="box_description_items">
-                            {% if section.blocks.size > 0 %}
-                                {% for block in section.blocks %}
-                                    <div class="content_item description">
-                                        <h5>{{ block.settings.title_description }}</h5>
-        
-                                        <div class="content_item_description">
-                                            {{ block.settings.content_description }}
-                                        </div>
-                                    </div>
+                            <div class="content_item description">
+                                <h5>{{ product.metafields.custom.title_product_description }}</h5>
+
+                                <div class="content_item_description">
+                                    {{ product.metafields.custom.product_description | metafield_tag }}
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div class="content_item features">
+                                    <h5>{{ product.metafields.custom.title_product_features }}</h5>
     
-                                    <div class="content_item features">
-                                        <h5>{{ block.settings.title_features }}</h5>
-        
-                                        <div class="content_item_description">
-                                            {{ block.settings.content_features }}
-                                        </div>
+                                    <div class="content_item_description">
+                                        {{ product.metafields.custom.product_features | metafield_tag }}
                                     </div>
+                                </div>
     
-                                    <div class="content_item specifications">
-                                        <h5>{{ block.settings.title_specifications }}</h5>
-        
-                                        <div class="content_item_description">
-                                            {{ block.settings.content_specifications }}
-                                        </div>
+                                <div class="content_item specifications">
+                                    <h5>{{ product.metafields.custom.title_product_specifications }}</h5>
+    
+                                    <div class="content_item_description">
+                                        {{ product.metafields.custom.product_specifications | metafield_tag }} 
                                     </div>
-                                {% endfor %}
-                            {% endif %}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -63,7 +61,7 @@
                                 <h5>{{ product.metafields.custom.title_returns_policy }}</h5>
                             {% endif %}
                             
-                           {{ product.metafields.custom.returns_policy }}
+                           {{ product.metafields.custom.returns_policy | metafield_tag }}
                         </div>
 
                         <div>
@@ -71,7 +69,7 @@
                                 <h5>{{ product.metafields.custom.title_warranty }}</h5>
                             {% endif %}
                             
-                            {{ product.metafields.custom.product_warranty }}
+                            {{ product.metafields.custom.product_warranty | metafield_tag }}
                         </div>
 
                         <div>
@@ -79,7 +77,7 @@
                                 <h5>{{ product.metafields.custom.title_product_shipping }}</h5>
                             {% endif %}
                             
-                            {{ product.metafields.custom.product_shipping }}
+                            {{ product.metafields.custom.product_shipping | metafield_tag }}
                         </div>
                     </div>
                     
@@ -117,23 +115,23 @@
                             <div class="box_description_items">
                                 <div class="content_item description">
                                     <div class="content_item_description">
-                                        {{ product.custom.title_product_description }}
+                                        {{ product.metafields.custom.product_description | metafield_tag }}
                                     </div>
                                 </div>
 
                                 <div class="content_item features">
-                                    <h5>{{ product.custom.title_product_specifications }}</h5>
+                                    <h5>{{ product.metafields.custom.title_product_features }}</h5>
     
                                     <div class="content_item_description">
-                                        {{ product.custom.product_features }}
+                                        {{ product.metafields.custom.product_features | metafield_tag }}
                                     </div>
                                 </div>
 
                                 <div class="content_item specifications">
-                                    <h5>{{ block.settings.title_specifications }}</h5>
+                                    <h5>{{ product.metafields.custom.title_product_specifications }}</h5>
     
                                     <div class="content_item_description">
-                                        {{ product.custom.product_specifications }}
+                                        {{ product.metafields.custom.product_specifications | metafield_tag }}
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +140,7 @@
                 </accordion-controller>
 
                 <accordion-controller
-                    class="accordion block w-full ">
+                    class="accordion block w-full">
                     <h4
                         class="summary">
                         <span class="heading ">

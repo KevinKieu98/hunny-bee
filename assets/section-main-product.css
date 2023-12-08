@@ -51,7 +51,7 @@
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 720px;
-    width: calc(100% - 560px);
+    width: calc(100% - 574px);
     flex-shrink: 0;
   }
 
@@ -83,7 +83,7 @@
 @media screen and (min-width: 1200px) {
   .product--large:not(.product--no-media) .product__info-wrapper {
     margin-left: 80px;
-    max-width: 456px;
+    max-width: 494px;
     width: 100%;
     padding: 0;
   }

@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const tabsContent = document.querySelectorAll('.tabs_content .tab_content_item')
         if (tabsContent.length > 0) {
             tabsContent.forEach((item) => {
+                console.log(1111);
                 item.classList.add('hidden')
                 item.classList.contains(attrTargetContent) ? item.classList.remove('hidden') : ''
             })
