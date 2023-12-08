@@ -1,8 +1,14 @@
 <div class="{{ section.class }} relative">
     {% if section.settings.bg_image != blank %}
         <img src="{{ section.settings.bg_image | image_url }}" alt="" loading="lazy" width="{{ section.settings.bg_image.width }}"
-            height="{{ section.settings.bg_image.height }}" class="block w-full h-full blog_image_bg">
+            height="{{ section.settings.bg_image.height }}" class="block w-full h-full blog_image_bg desktop">
     {% endif %}
+
+    {% if section.settings.bg_image_mobile != blank %}
+        <img src="{{ section.settings.bg_image_mobile | image_url }}" alt="" loading="lazy" width="{{ section.settings.bg_image_mobile.width }}"
+            height="{{ section.settings.bg_image_mobile.height }}" class="block w-full h-full blog_image_bg mobile">
+    {% endif %}
+
     <div class="container">
         <div class="blog_banner">
             <div class="blog_banner_left">
@@ -46,7 +52,12 @@
             {
                 "type": "image_picker",
                 "id": "bg_image",
-                "label": "Background Image"
+                "label": "Background Image Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image_mobile",
+                "label": "Background Image Mobile"
             },
             {
                 "type": "header",

@@ -13,6 +13,7 @@
       "type": "section-blog-banner",
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/image_32_1.png",
+        "bg_image_mobile": "shopify:\/\/shop_images\/Frame_427319276.png",
         "image_logo": "shopify:\/\/shop_images\/Hunnybee_Logo_BLK_300dpi_2_de2f4fda-dcb2-4377-b7e2-f5d61bb7c72d.png",
         "text_1": "Sex",
         "text_2": "is self-care",
