@@ -320,6 +320,10 @@ quantity-input .quantity__button svg {
     gap: 80px;
 }
 
+.box_product_description.hidden {
+    display: none;
+}
+
 .box_section_product_tabs {
     margin-top: 80px;
 }
@@ -343,6 +347,10 @@ quantity-input .quantity__button svg {
     justify-content: space-between;
     gap: 32px;
     width: calc(100% - 528px);
+}
+
+.box_description_items .flex {
+    gap: 40px;
 }
 
 .box_description_items h5 {
@@ -986,6 +994,11 @@ quantity-input .quantity__button svg {
         padding-left: 24px;
         padding-right: 24px;
     }
+
+    .box_description_items .flex {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -1189,7 +1202,7 @@ quantity-input .quantity__button svg {
     .box_section_product_tabs .accordion .details h5 {
         margin: 0;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 24px;
         margin-top: 24px;
     }
