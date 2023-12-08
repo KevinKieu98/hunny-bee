@@ -55,6 +55,7 @@
 }
 
 .slider_mobile_gutter_custom .product__media-item .product-media-container.constrain-height.media-fit-contain {
+    border: 0;
     width: 100%;
 }
 
@@ -673,9 +674,8 @@ quantity-input .quantity__button svg {
 }
 
 .product {
-    /* padding: 0 80px;
-    max-width: 1600px;
-    margin: 0 auto; */
+    padding: 0 80px;
+    margin: 0 auto;
 }
 
 /* Product review */
@@ -979,14 +979,6 @@ quantity-input .quantity__button svg {
 
 .product__info-container .price__container {
     margin: 0;
-}
-
-@media screen and (min-width: 1441px) {
-    .product {
-        padding: 0 80px;
-        max-width: 1600px;
-        margin: 0 auto;
-    }
 }
 
 @media screen and (max-width: 1200px) {
