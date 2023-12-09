@@ -6,6 +6,16 @@ const iconCartDesktop = document.querySelector('.header__icon--cart')
 const minicartLoading = document.querySelector('.mini-cart-content #mincart-loading')
 const elmCheckShipping = document.querySelector('.check-shipping')
 const cartOverley = document.querySelector('#bg-minicart-close')
+const DEFAULT_QUANTITY = 1
+
+if (cartOverley) {
+    cartOverley.addEventListener('click', (e) => {
+        e.preventDefault()
+        minicartWrapper.classList.remove('show')
+        elmBody.classList.remove('open-minicart')
+        cartOverley.style.display = 'none'
+    })
+}
 
 const openMiniCart = () => {
     // open minicart
@@ -15,9 +25,11 @@ const openMiniCart = () => {
             if (minicartWrapper.classList.contains('show')) {
                 elmBody.classList.remove('open-minicart')
                 minicartWrapper.classList.remove('show')
+                cartOverley.style.display = 'none'
             } else {
                 elmBody.classList.add('open-minicart')
                 minicartWrapper.classList.toggle('show')
+                cartOverley.style.display = 'block'
             }
             if (!minicartWrapper.classList.contains('added-list')) {
                 listCartChange()
@@ -43,15 +55,8 @@ const miniCartChange = () => {
             e.preventDefault();
             minicartWrapper.classList.remove('show')
             elmBody.classList.remove('open-minicart')
-        });
-    }
-
-    if (cartOverley) {
-        cartOverley.addEventListener('click', (e) => {
-            e.preventDefault();
-            minicartWrapper.classList.remove('show')
-            elmBody.classList.remove('open-minicart')
-        });
+            cartOverley.style.display = 'none'
+        })
     }
 
     const elmDeleteItem = document.querySelectorAll('.cart-details .remove-item .delete')
@@ -62,59 +67,57 @@ const miniCartChange = () => {
             const id = target.getAttribute('data-cart-item')
             if (id) {
                 minicartLoading.style.display = 'block'
-
                 removeItemById(id)
             }
         })
     })
 
     // Handle input change quantity product
-    const elmQuantityItem = document.querySelectorAll('.product-form__input.product-form__input--quantity');
+    const elmQuantityItem = document.querySelectorAll('.product-form__input.product-form__input--quantity')
     Array.from(elmQuantityItem).forEach((ele) => {
         ele.addEventListener('change', (e) => {
             e.preventDefault()
             const target = ele
             const id = target.closest('.product-form-item').getAttribute('data-id')
             const qty = target.value
-            const DEFAULT_QUANTITY = 1
-
+            
             if (id && qty) {
                 minicartLoading.style.display = 'block'
                 updateItem(id, qty);
             } else {
                 minicartLoading.style.display = 'block'
-                updateItem(id, DEFAULT_QUANTITY);
+                updateItem(id, DEFAULT_QUANTITY)
             }
         })
     })
 
     // Handle button change quantity
     // Plus
-    const elmQuantityItemPlus = document.querySelectorAll('.cart__product-info .product-plus');
+    const elmQuantityItemPlus = document.querySelectorAll('.cart__product-info .product-plus')
     Array.from(elmQuantityItemPlus).forEach((ele) => {
         ele.addEventListener('click', () => {
-            const inputQty = ele.closest('.product-form-item').querySelector('.product-form__input--quantity');
-            const qty = parseInt(inputQty.value);
-            inputQty.value = qty;
-            inputQty.dispatchEvent(new Event('change'));
+            const inputQty = ele.closest('.product-form-item').querySelector('.product-form__input--quantity')
+            const qty = parseInt(inputQty.value)
+            inputQty.value = qty
+            inputQty.dispatchEvent(new Event('change'))
         })
     })
 
     // Handle button change quantity
     // Minus
-    const elmQuantityItemMinus = document.querySelectorAll('.cart__product-info .product-minus');
+    const elmQuantityItemMinus = document.querySelectorAll('.cart__product-info .product-minus')
     Array.from(elmQuantityItemMinus).forEach((ele) => {
         ele.addEventListener('click', () => {
-            const inputQty = ele.closest('.product-form-item').querySelector('.product-form__input--quantity');
-            const qty = parseInt(inputQty.value);
-            inputQty.value = qty;
-            inputQty.dispatchEvent(new Event('change'));
+            const inputQty = ele.closest('.product-form-item').querySelector('.product-form__input--quantity')
+            const qty = parseInt(inputQty.value)
+            inputQty.value = qty
+            inputQty.dispatchEvent(new Event('change'))
         })
     })
 }
 
 const removeItemById = (id) => {
-    return removeItem({ id });
+    return removeItem({ id })
 }
 
 const removeItem = (data) => {
@@ -284,7 +287,6 @@ const handleOptionProductCard = () => {
 
 const handleBtnQuickAdd = () => {
     const btnQuickAdds = document.querySelectorAll('.btn_addtocart')
-    const DEFAULT_QUANTITY = 1
     if(btnQuickAdds.length > 0) {
         btnQuickAdds.forEach((btnQuickAdd) => {
             btnQuickAdd.addEventListener('click', function() {
@@ -309,7 +311,7 @@ const handleBtnQuickAdd = () => {
                 })
                   .catch((error) => {
                     console.error('Error:', error)
-                });
+                })
             })
         })
     }
@@ -319,9 +321,19 @@ const handleBtnQuickView = () => {
     const btnQuickViews = document.querySelectorAll('.btn_quickview')
     const elmQuickView = document.querySelector('.form_quick_view')
     const elmCloseQuickView = document.querySelector('.btn_close_quickview')
+    const quickViewLoading = document.querySelector('.quickview_loading')
+
+    if (elmCloseQuickView) {
+        elmCloseQuickView.addEventListener('click', function() {
+            elmQuickView.classList.add('hidden')
+            cartOverley.style.display = 'none'
+        })
+    }
+
     if(btnQuickViews.length > 0) {
         btnQuickViews.forEach((btnQuickView) => {
             btnQuickView.addEventListener('click', function() {
+                quickViewLoading.style.display = 'flex'
                 const productHandle = btnQuickView.getAttribute('product-handle')
                 fetch('/products/' + productHandle + '.json')
                 .then(function(response) {
@@ -331,25 +343,91 @@ const handleBtnQuickView = () => {
                     return response.json()
                 })
                 .then(function(data) {
+                    const product = data?.product
+                    const firstVariantProduct = product.variants[0]
+                    const elmTitleProduct = elmQuickView.querySelector('.title_product')
+                    const elmBtnAddToCart = elmQuickView.querySelector('.btn_quickview_ATC')
+                    const elmBuyItNow = elmQuickView.querySelector('.btn_buy_it_now')
+                    const elmPriceSale = elmQuickView.querySelector('.price_sale')
+                    const elmPriceRegular = elmQuickView.querySelector('.price_regular')
+                    const elmLinkDetail = elmQuickView.querySelector('.content_infor a')
+                    const initImageElm = `<img src="${product?.image?.src}" class="block w-full h-full" loading="lazy" width="${product?.image?.width}" height="${product?.image?.height}">`
+
+                    // fill data to popup
+                    elmTitleProduct.textContent = product.title
+                    elmQuickView.setAttribute('product-id', firstVariantProduct.id)
+                    elmPriceRegular.textContent = `$${firstVariantProduct.price}`
+                    elmLinkDetail.setAttribute('href', `/products/${product.handle}`)
+                    document.querySelector('.form_content_left').innerHTML = initImageElm
+                    if(firstVariantProduct.compare_at_price) {
+                        // have price sale
+                        elmPriceSale.textContent = `$${firstVariantProduct.compare_at_price}`
+                        elmPriceSale.classList.remove('hidden')
+                    } else {
+                        // no have price sale
+                        elmPriceSale.classList.add('hidden')
+                    }
+
+                    if(product.inventory_management === 'shopify') {
+
+                    }
+
                     elmQuickView.classList.remove('hidden')
                     cartOverley.style.display = 'block'
+                    setTimeout(() => {
+                        quickViewLoading.style.display = 'none'
+                    }, 500)
 
-                    console.log(data.product)
+                    handleBtnATCQuickView(elmBuyItNow, elmQuickView, elmCloseQuickView)
+                    handleBtnATCQuickView(elmBtnAddToCart, elmQuickView, elmCloseQuickView)
                 })
                 .catch(function(error) {
-                    console.log('Error fetching product information', error);
+                    console.log('Error fetching product information', error)
                 })
             })
         })
     }
+}
 
-    if (elmCloseQuickView) {
-        elmCloseQuickView.addEventListener('click', function() {
-            elmQuickView.classList.add('hidden')
-            cartOverley.style.display = 'none'
+const handleBtnATCQuickView = (elmBtn, elmQuickView) => {
+    const productId = elmQuickView.getAttribute('product-id')
+    elmBtn.addEventListener('click', function() {
+        let formData = {}
+        if(elmBtn.classList.contains('btn_buy_it_now')) {
+            // Buy It Now
+            formData = {
+                'items': [{
+                    'id': productId,
+                    'quantity': DEFAULT_QUANTITY
+                }]
+            }
+        } else {
+            // Add To Cart
+            const elmInputQtyVal = elmQuickView.querySelector('.product-form__input--quantity').value
+            formData = {
+                'items': [{
+                    'id': productId,
+                    'quantity': parseInt(elmInputQtyVal)
+                }]
+            }
+        }
+
+        fetch(window.Shopify.routes.root + 'cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
         })
-    }
-
+            .then(() => {
+            refreshMiniCart()
+            iconCartDesktop.click()
+            elmQuickView.classList.add('hidden')
+        })
+            .catch((error) => {
+            console.error('Error:', error)
+        })
+    })
 }
 
 miniCartChange()
