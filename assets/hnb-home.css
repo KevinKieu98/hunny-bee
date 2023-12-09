@@ -240,7 +240,7 @@ body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     top: 32px;
     right: 32px;
     background: var(--secondary-2);
-    width: 68px;
+    width: auto;
     height: 32px;
     border-radius: 200px;
     color: var(--white);
@@ -1788,7 +1788,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .form_quick_view {
     background: var(--white);
     padding: 24px;
-    width: 100%;
+    width: calc(100% - 32px);
     max-width: 812px;
     position: fixed;
     top: 50%;
@@ -1910,10 +1910,22 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     width: 100%;
 }
 
+.form_quick_view .content_quantity_atc button.btn-primary.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 .form_quick_view .btn_buy_it_now {
     border: 0;
     margin-top: 16px;
     width: 100%;
+}
+
+.form_quick_view .btn_buy_it_now.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .form_quick_view .content_infor {
@@ -1980,6 +1992,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     display: block;
     top: 0;
     left: 0;
+    z-index: 4;
 }
 
 .quickview_loading::before {
@@ -2000,3 +2013,96 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .quickview_loading .load svg path {
     stroke: var(--white);
 }
+
+.form_quick_view .content_variants {
+    margin-top: 16px;
+}
+
+.form_quick_view .content_variants .option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.form_quick_view .content_variants h4 {
+    margin: 0;
+    color: var(--black);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.form_quick_view .content_variants_options {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.content_variants_options .quickview_option {
+    padding: 0;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border: 0;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.content_variants_options .quickview_option.selected::before {
+    content: '';
+    width: 38px;
+    height: 38px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.content_variants_options .quickview_option span {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+
+@media screen and (max-width: 767px) {
+    .form_quick_view .form_content {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .form_quick_view .form_content_left,
+    .form_quick_view .form_content_right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form_quick_view .form_content_right {
+        margin-top: 16px;
+    }
+
+    .form_quick_view .form_content_left {
+        height: 268px;
+    }
+
+    .form_quick_view .form_content_left img {
+        object-fit: contain;
+    }
+}
+

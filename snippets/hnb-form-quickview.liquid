@@ -1,4 +1,5 @@
 <div id="formQuickView" class="form_quick_view hidden">
+    <div class="hidden quick_view_url" data-url-file="{{ 'key_string' | file_url }}"></div>
     <div class="quickview_loading hidden">
         <div class="load absolute ">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -27,7 +28,10 @@
                 </div>
             </div>
 
-            <div class="content_variants"></div>
+            <div class="content_variants">
+                <h4>Color: <span class="variant_text">Black</span></h4>
+                <div class="content_variants_options"></div>
+            </div>
             <div class="content_quantity">
                 <h4>Quantity</h4>
                 <div class="content_quantity_atc">
@@ -53,8 +57,8 @@
             </div>
             <button class="btn btn-primary btn_buy_it_now">Buy it now</button>
             <div class="content_infor">
-                <p>Availability: <span>In stock</span></p>
-                <p>Product Type: <span>Clit sucking vibrator</span></p>
+                <p>Availability: <span class="variant_status"></span></p>
+                <p>Product Type: <span class="variant_type"></span></p>
                 <p>
                     <a href="#">
                         View full detail
