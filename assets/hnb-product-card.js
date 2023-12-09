@@ -7,6 +7,7 @@ const minicartLoading = document.querySelector('.mini-cart-content #mincart-load
 const elmCheckShipping = document.querySelector('.check-shipping')
 const cartOverley = document.querySelector('#bg-minicart-close')
 const DEFAULT_QUANTITY = 1
+const minicartCount = iconCartDesktop.querySelector('#minicart-count')
 
 if (cartOverley) {
     cartOverley.addEventListener('click', (e) => {
@@ -14,14 +15,16 @@ if (cartOverley) {
         minicartWrapper.classList.remove('show')
         elmBody.classList.remove('open-minicart')
         cartOverley.style.display = 'none'
+        document.querySelector('.form_quick_view').classList.add('hidden')
     })
 }
 
 const openMiniCart = () => {
     // open minicart
     if (iconCartDesktop) {
-        iconCartDesktop.addEventListener('click', (e) => {
+        iconCartDesktop.addEventListener('click', function(e) {
             e.preventDefault()
+
             if (minicartWrapper.classList.contains('show')) {
                 elmBody.classList.remove('open-minicart')
                 minicartWrapper.classList.remove('show')
@@ -34,7 +37,7 @@ const openMiniCart = () => {
             if (!minicartWrapper.classList.contains('added-list')) {
                 listCartChange()
             }
-        }, false)
+        })
     }
 }
 
@@ -179,6 +182,7 @@ const getElementMiniCart = (doc) => {
 
     if (doc.getElementById('minicart-count')) {
         const cartCount = parseInt(doc.querySelector('#minicart-count').getAttribute('data-count'))
+        minicartCount.innerHTML = cartCount;
         if (cartCount === 0) {
             elmCheckShipping?.classList.add('hidden')
             minicartActions.classList.add('hidden')
@@ -335,7 +339,7 @@ const handleBtnQuickView = () => {
             btnQuickView.addEventListener('click', function() {
                 quickViewLoading.style.display = 'flex'
                 const productHandle = btnQuickView.getAttribute('product-handle')
-                fetch('/products/' + productHandle + '.json')
+                fetch('/products/' + productHandle + '.js')
                 .then(function(response) {
                     if (!response.ok) {
                         throw Error(response.statusText)
@@ -343,7 +347,7 @@ const handleBtnQuickView = () => {
                     return response.json()
                 })
                 .then(function(data) {
-                    const product = data?.product
+                    const product = data
                     const firstVariantProduct = product.variants[0]
                     const elmTitleProduct = elmQuickView.querySelector('.title_product')
                     const elmBtnAddToCart = elmQuickView.querySelector('.btn_quickview_ATC')
@@ -351,7 +355,8 @@ const handleBtnQuickView = () => {
                     const elmPriceSale = elmQuickView.querySelector('.price_sale')
                     const elmPriceRegular = elmQuickView.querySelector('.price_regular')
                     const elmLinkDetail = elmQuickView.querySelector('.content_infor a')
-                    const initImageElm = `<img src="${product?.image?.src}" class="block w-full h-full" loading="lazy" width="${product?.image?.width}" height="${product?.image?.height}">`
+                    const elmVariants = elmQuickView.querySelector('.content_variants .content_variants_options')
+                    const initImageElm = `<img src="${product?.featured_image}" class="block w-full h-full" loading="lazy" width="${product?.featured_image?.width}" height="${product?.featured_image?.height}">`
 
                     // fill data to popup
                     elmTitleProduct.textContent = product.title
@@ -368,10 +373,43 @@ const handleBtnQuickView = () => {
                         elmPriceSale.classList.add('hidden')
                     }
 
-                    if(product.inventory_management === 'shopify') {
-
+                    if(firstVariantProduct?.inventory_management === 'shopify' && firstVariantProduct?.available) {
+                        elmQuickView.querySelector('.content_infor .variant_status').textContent = 'In stock'
+                        elmBtnAddToCart.classList.remove('disabled')
+                        elmBuyItNow.classList.remove('disabled')
+                    } else {
+                        elmQuickView.querySelector('.content_infor .variant_status').textContent = 'Out stock'
+                        elmBtnAddToCart.classList.add('disabled')
+                        elmBuyItNow.classList.add('disabled')
                     }
 
+                    if(product?.type) {
+                        elmQuickView.querySelector('.content_infor .variant_type').textContent = product?.type
+                        elmQuickView.querySelector('.content_infor .variant_type').parentElement.style.display = 'block'
+                    } else {
+                        elmQuickView.querySelector('.content_infor .variant_type').parentElement.style.display = 'none'
+                    }
+
+                    if(product.variants.length > 1) {
+                        const quickViewUrlFile = elmQuickView.querySelector('.quick_view_url').getAttribute('data-url-file')
+                        let elmOptions = ''
+                        product.options.forEach((option, index) => {
+                            option.values.forEach((v, i) => {
+                                elmOptions += `
+                                    <div class="quickview_option ${firstVariantProduct.options[0].toLowerCase().toString() === v.toLowerCase().toString() ? 'selected' : ''}" style="background-image: url(${replaceFileName(quickViewUrlFile, v.toLowerCase().trim().replace(' ', '-'))})" data-id="${product.variants[i].id}" data-value="${v}">
+                                        <span style="background-image: url(${replaceFileName(quickViewUrlFile, v.toLowerCase().trim().replace(' ', '-'))})"></span>
+                                    </div>
+                                `
+                            })
+                        })
+
+                        elmVariants.innerHTML = elmOptions
+                        elmQuickView.querySelector('.variant_text').textContent = firstVariantProduct.options[0]
+                        elmQuickView.querySelector('.content_variants').classList.remove('hidden')
+                    } else {
+                        elmQuickView.querySelector('.content_variants').classList.add('hidden')
+                    }
+                    
                     elmQuickView.classList.remove('hidden')
                     cartOverley.style.display = 'block'
                     setTimeout(() => {
@@ -380,6 +418,7 @@ const handleBtnQuickView = () => {
 
                     handleBtnATCQuickView(elmBuyItNow, elmQuickView, elmCloseQuickView)
                     handleBtnATCQuickView(elmBtnAddToCart, elmQuickView, elmCloseQuickView)
+                    handleClickOptionQuickView(elmVariants, elmQuickView)
                 })
                 .catch(function(error) {
                     console.log('Error fetching product information', error)
@@ -390,8 +429,8 @@ const handleBtnQuickView = () => {
 }
 
 const handleBtnATCQuickView = (elmBtn, elmQuickView) => {
-    const productId = elmQuickView.getAttribute('product-id')
     elmBtn.addEventListener('click', function() {
+        const productId = elmQuickView.getAttribute('product-id')
         let formData = {}
         if(elmBtn.classList.contains('btn_buy_it_now')) {
             // Buy It Now
@@ -430,11 +469,25 @@ const handleBtnATCQuickView = (elmBtn, elmQuickView) => {
     })
 }
 
+const handleClickOptionQuickView = (elmVariants, elmQuickView) => {
+    const options = elmVariants.querySelectorAll('.quickview_option')
+    options.forEach((option) => {
+        option.addEventListener('click', function() {
+            const variantId = option.getAttribute('data-id')
+            elmQuickView.setAttribute('product-id', variantId)
+            options.forEach((el) => el.classList.remove('selected'))
+            option.classList.add('selected')
+        })
+    })
+}
+
+function replaceFileName(url, fileName) {
+    return url.replace('key_string', (fileName + '.png'))
+}
+
 miniCartChange()
 openMiniCart()
 handleOptionProductCard()
 handleBtnQuickAdd()
 handleBtnQuickView()
 // End function minicart
-
-export { refreshMiniCart, miniCartChange, getElementMiniCart, openMiniCart }
