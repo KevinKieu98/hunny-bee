@@ -5,6 +5,7 @@ const elmBody = document.querySelector('body')
 const iconCartDesktop = document.querySelector('.header__icon--cart')
 const minicartLoading = document.querySelector('.mini-cart-content #mincart-loading')
 const elmCheckShipping = document.querySelector('.check-shipping')
+const cartOverley = document.querySelector('#bg-minicart-close')
 
 const openMiniCart = () => {
     // open minicart
@@ -36,7 +37,6 @@ const listCartChange = () => {
 
 const miniCartChange = () => {
     const closeIcon = document.querySelector('#close-minicart')
-    const cartOverley = document.querySelector('#bg-minicart-close')
 
     if (closeIcon) {
         closeIcon.addEventListener('click', (e) => {
@@ -315,10 +315,48 @@ const handleBtnQuickAdd = () => {
     }
 }
 
+const handleBtnQuickView = () => {
+    const btnQuickViews = document.querySelectorAll('.btn_quickview')
+    const elmQuickView = document.querySelector('.form_quick_view')
+    const elmCloseQuickView = document.querySelector('.btn_close_quickview')
+    if(btnQuickViews.length > 0) {
+        btnQuickViews.forEach((btnQuickView) => {
+            btnQuickView.addEventListener('click', function() {
+                const productHandle = btnQuickView.getAttribute('product-handle')
+                fetch('/products/' + productHandle + '.json')
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw Error(response.statusText)
+                    }
+                    return response.json()
+                })
+                .then(function(data) {
+                    elmQuickView.classList.remove('hidden')
+                    cartOverley.style.display = 'block'
+
+                    console.log(data.product)
+                })
+                .catch(function(error) {
+                    console.log('Error fetching product information', error);
+                })
+            })
+        })
+    }
+
+    if (elmCloseQuickView) {
+        elmCloseQuickView.addEventListener('click', function() {
+            elmQuickView.classList.add('hidden')
+            cartOverley.style.display = 'none'
+        })
+    }
+
+}
+
 miniCartChange()
 openMiniCart()
 handleOptionProductCard()
 handleBtnQuickAdd()
+handleBtnQuickView()
 // End function minicart
 
 export { refreshMiniCart, miniCartChange, getElementMiniCart, openMiniCart }
