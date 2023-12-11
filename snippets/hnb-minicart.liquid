@@ -36,7 +36,7 @@
 
         {% if cart.items == empty %}
             {% comment %}  Cart empty {% endcomment %}
-            <div id="minicart-base" class="minicart-items cart-content text-centerpx-0">
+            <div id="minicart-base" class="minicart-items cart-content">
                 <div id="minicart-items" class="list-cart-container">
                     <div class='text-center'>
                         <p class="text-left">Your shopping cart is empty.<br>Click <a href="/collections/frontpage" class="link">here</a> to continue shopping.</p>
@@ -44,6 +44,7 @@
                 </div>
                 <div id="mini-list" class="hidden"></div>
             </div>
+            
             <div id="minicart-actions" class="minicart-actions hidden"></div>
         {% else %}
             <div id="minicart-base" class="minicart-items" data-count="{{ cart.items.size }}">
@@ -194,42 +195,42 @@
                 </div>
                 <div id="mini-list" class="hidden"></div>
             </div>
-
-            {% if settings.show_minicart_repated_product %}
-                <div class="minicart-product-related">
-                    <h3>{{ 'cart.title_related' | t }}</h3>
-                    {%- assign products = collections[settings.collection].products -%}
-                    {%- assign limitProduct = settings.limit_product -%}
-                    {% if products.size > 0 %}
-                        <div class="minicart_product_list">
-                            {% for product in products limit: limitProduct %}
-                                {% render 'card-product',
-                                    card_product: product,
-                                    section_id: section.id,
-                                    current_page: 'home_page',
-                                    show_regular_price: true,
-                                    show_secondary_image: true
-                                %}
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            {% endif %}
-
-            <div id="minicart-actions" class="minicart-actions ">
-                <div class="minicart-total ">
-                    <span class="title-total ">{{ 'cart.order_total' | t }}</span>
-                    <span class="cart-total-price ">{{ cart.total_price | money }}</span>
-                </div>
-                <div class="message_shipping">
-                    <p class="">{{ 'cart.order_message_shipping' | t }}</p>
-                </div>
-                <div class="minicart-button">
-                    <a href="/cart" class="btn btn-primary btn_view_cart">{{ 'cart.go_to_cart' | t }}</a>
-                    <a href="/checkout" class="btn btn-primary btn_go_checkout">{{ 'cart.go_to_checkout' | t }}</a>
-                </div>
+        {% endif %}
+        
+        {% if settings.show_minicart_repated_product %}
+            <div class="minicart-product-related">
+                <h3>{{ 'cart.title_related' | t }}</h3>
+                {%- assign products = collections[settings.collection].products -%}
+                {%- assign limitProduct = settings.limit_product -%}
+                {% if products.size > 0 %}
+                    <div class="minicart_product_list">
+                        {% for product in products limit: limitProduct %}
+                            {% render 'card-product',
+                                card_product: product,
+                                section_id: section.id,
+                                current_page: 'home_page',
+                                show_regular_price: true,
+                                show_secondary_image: true
+                            %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         {% endif %}
+
+        <div id="minicart-actions" class="minicart-actions ">
+            <div class="minicart-total ">
+                <span class="title-total ">{{ 'cart.order_total' | t }}</span>
+                <span class="cart-total-price ">{{ cart.total_price | money }}</span>
+            </div>
+            <div class="message_shipping">
+                <p class="">{{ 'cart.order_message_shipping' | t }}</p>
+            </div>
+            <div class="minicart-button">
+                <a href="/cart" class="btn btn-primary btn_view_cart">{{ 'cart.go_to_cart' | t }}</a>
+                <a href="/checkout" class="btn btn-primary btn_go_checkout">{{ 'cart.go_to_checkout' | t }}</a>
+            </div>
+        </div>
     </div>
 </div>
 
