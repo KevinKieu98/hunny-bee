@@ -1,16 +1,18 @@
-{% assign cart_total = cart.total_price %}
-{% assign shipping_fee = settings.shipping_fee | times: 100 %}
-{% assign cart_shipping_fee = settings.cart_shipping_fee | times: 100 %}
-{% assign fee_float = settings.cart_shipping_fee | times: 1.0 %}
-{% assign max_cost_percent = 100 | times: 1.0 %}
-{% assign disable_delivery = true %}
-{%- for item in cart.items -%}
-    {% assign item_url = item.product.url | remove: '/products/' | replace: '&-', '' | replace: "'", "" | replace: "--", "-"%}
-    {%- assign product = all_products[item_url] -%}
-    {% if product.template_suffix == blank %}
-        {% assign disable_delivery = false %}
-    {% endif %}
-{% endfor %}
+{% liquid
+    assign cart_total = cart.total_price
+    assign cart_shipping_fee = settings.cart_shipping_fee | times: 100
+    assign fee_float = settings.cart_shipping_fee | times: 1.0
+    assign max_cost_percent = 100 | times: 1.0
+    assign disable_delivery = true
+
+    for item in cart.items
+        assign item_url = item.product.url | remove: '/products/' | replace: '&-', '' | replace: "'", "" | replace: "--", "-"
+        assign product = all_products[item_url]
+        if product.template_suffix == blank
+            assign disable_delivery = false
+        endif
+    endfor
+%}
 
 <div id="mini-cart-wrapper" class="mini-cart-wrapper">
     <div id="cart-heading" class="cart-heading">
@@ -77,7 +79,7 @@
                         {% render 'icon_free_shipping', costPercent: cost_percent %}
                     </div>
                 </div>
-                <div id="minicart-items" class="list-cart-container" style="{% if settings.show_minicart_repated_product %}height: calc(100vh - 586px){% else %}height: calc(100vh - 345px); margin-bottom: 24px;{% endif %}">
+                <div id="minicart-items" class="list-cart-container" style="{% if settings.show_minicart_repated_product %}height: calc(100vh - 610px){% else %}height: calc(100vh - 320px); margin-bottom: 24px;{% endif %}">
                     <div class="list-items">
                         {%- for item in cart.items -%}
                         <div class="cart-item">
