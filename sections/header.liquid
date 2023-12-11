@@ -313,13 +313,12 @@
           endif
         -%}
         <span class="visually-hidden" data-count="{{ cart.item_count }}">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true" id="minicart-count" data-count="{{ cart.item_count }}">{{ cart.item_count }}</span>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
+
+        <div class="cart-count-bubble{% if cart == empty %} hidden{% endif %}">
+          {%- if cart.item_count < 100 -%}
+            <span aria-hidden="true" id="minicart-count" data-count="{{ cart.item_count }}">{{ cart.item_count }}</span>
+          {%- endif -%}
+        </div>
       </a>
 
       <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">

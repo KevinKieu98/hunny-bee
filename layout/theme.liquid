@@ -37,9 +37,10 @@
     <script src="{{ 'jquery-3.3.1.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'hnb-custom.js' | asset_url }}" defer="defer" type="module"></script>
-    <script src="{{ 'hnb-product-card.js' | asset_url }}" defer="defer" type="module"></script>
+    <script src="{{ 'hnb-product-card.js' | asset_url }}" defer="defer"></script>
     {% if template contains 'product' %}
       <script type="text/javascript" src="{{ 'jquery.zoom.min.js' | asset_url }}" defer="defer"></script>
+      <script type="text/javascript" src="{{ 'hnb-zoom-custom.js' | asset_url }}" defer="defer"></script>
     {% endif %}
 
     {{ content_for_header }}
