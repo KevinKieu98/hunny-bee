@@ -81,6 +81,19 @@
       "settings": {
       }
     },
+    "1cf5d947-a441-4478-90f0-a759ce18510b": {
+      "type": "section-about-our-story",
+      "settings": {
+        "section_title": "Our Story",
+        "section_sub_text": "<p>Lorem ipsum dolor sit amet consectetur. Vivamus aliquam augue vitae feugiat turpis vulputate suspendisse tempus pellentesque. Quam amet adipiscing nec nulla. Diam ultrices pulvinar nisi mauris eget et odio. Adipiscing molestie suspendisse ut et adipiscing arcu nullam enim.<\/p><p>Lorem ipsum dolor sit amet consectetur. Vivamus aliquam augue vitae feugiat turpis vulputate suspendisse tempus pellentesque. Quam amet adipiscing nec nulla. Diam ultrices pulvinar nisi mauris eget et odio. Adipiscing molestie suspendisse ut et adipiscing arcu nullam enim.<\/p>",
+        "section_image_desk": "shopify:\/\/shop_images\/Frame_427319242_1.png",
+        "section_image_mobile": "shopify:\/\/shop_images\/Frame_427319242_2_1.png",
+        "pb_top_desk": 40,
+        "pb_bot_desk": 0,
+        "pb_top_mobile": 24,
+        "pb_bot_mobile": 0
+      }
+    },
     "70754c45-d15f-41e8-9417-e1c96a87930e": {
       "type": "section-about-clients",
       "blocks": {
@@ -225,6 +238,7 @@
     "main",
     "e3a269f6-98b1-4f68-8827-43780c58f089",
     "284957b9-2787-42ce-ac80-aaba78282af9",
+    "1cf5d947-a441-4478-90f0-a759ce18510b",
     "70754c45-d15f-41e8-9417-e1c96a87930e",
     "84b3aaf5-ce14-4a82-8db3-43634649e855",
     "d7cc6c7e-d847-4bf4-889a-7ba911e36f0e"
