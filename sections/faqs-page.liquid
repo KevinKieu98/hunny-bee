@@ -533,6 +533,24 @@
       background-color: #232323;
       color: #ffffff;
       }
+      .faqs-page .panel-group .panel-title a:not(.collapsed) span:after {
+          content: attr(data-hide) "";
+          color: #fff;
+      }
+      .faqs-page .panel-group .panel-title a span:after {
+          display: inline-block;
+          font-size: var(--font_size);
+          font-weight: normal;
+          line-height: var(--font_size_plus12);
+          text-align: right;
+          content: attr(data-show) "";
+          color: var(--breadcrumb_color);
+          position: absolute;
+          right: 25px;
+          top: 0;
+          padding: 9px 0 7px;
+          text-transform: capitalize;
+      }
       .faqs-page.container{
         padding-bottom: 80px;
       }
