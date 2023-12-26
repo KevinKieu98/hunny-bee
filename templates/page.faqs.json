@@ -35,7 +35,7 @@
         "font_size_qs": "13",
         "bg_question_acitve": "#fff",
         "color_question_acitve": "#1b1b1b",
-        "icon_answer": "",
+        "icon_answer": "0",
         "bg_icon_answer": "#ffffff",
         "color_icon_answer": "#1b1b1b",
         "color_question_answer": "#000000",
