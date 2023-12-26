@@ -289,6 +289,7 @@
         padding-bottom: 40px;
     padding-top: 40px;
     display: flex;
+        position: relative;
       }
       .faqs-page .panel-group .panel-title a:not(.collapsed) span:after {
         content: attr(data-hide) "";
@@ -303,11 +304,12 @@
           text-align: right;
           content: attr(data-show) "";
           color: var(--breadcrumb_color);
-          position: relative;
+          position: absolute;
           right: 25px;
           top: 0;
           padding: 9px 0 7px;
           text-transform: capitalize;
+        
       }
       .faqs-page.container{
         padding-bottom: 80px;
