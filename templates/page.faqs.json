@@ -1,13 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28,
-        "heading_title": ""
-      }
-    },
     "c18ae84b-c9f7-4257-816a-1f30b924a55d": {
       "type": "faqs-page",
       "blocks": {
@@ -55,7 +47,6 @@
     }
   },
   "order": [
-    "main",
     "c18ae84b-c9f7-4257-816a-1f30b924a55d"
   ]
 }
