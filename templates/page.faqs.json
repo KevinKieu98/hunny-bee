@@ -33,14 +33,14 @@
         "bg_question": "#f5f5f5",
         "color_question": "#000000",
         "font_size_qs": "13",
-        "bg_question_acitve": "#ff8b21",
+        "bg_question_acitve": "#fff",
         "color_question_acitve": "#ffffff",
         "icon_answer": "",
         "bg_icon_answer": "#ffffff",
-        "color_icon_answer": "#ff8b21",
+        "color_icon_answer": "#fff",
         "color_question_answer": "#000000",
         "font_size_answer": "",
-        "color_question_link": "#ff8b21",
+        "color_question_link": "#fff",
         "icon_show": "-",
         "icon_hide": "+"
       }
