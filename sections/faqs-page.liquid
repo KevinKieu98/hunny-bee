@@ -186,11 +186,14 @@
     .panel.panel-default {
       padding: 40px 32px;
     }
-    .collapse.show {
-      display: block;
-      background: linear-gradient(0deg, var(--rose), transparent);
-    
+      .panel-collapse.collapse {
+        display: none;
     }
+   .panel-collapse.collapse.show {
+      display: block;
+      background: linear-gradient(0deg, var(--rose), transparent);    
+    }
+    
     .panel-title a{
       text-decoration: none;
     }
