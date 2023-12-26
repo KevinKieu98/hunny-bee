@@ -17,7 +17,7 @@
       {% if block.settings.question_faqs_1 != blank %}
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">
+          <h4 class="panel-title {% if forloop.first %} show{% endif %}">
             <a class="{% unless forloop.first %}collapsed{% endunless %}" data-toggle="collapse" href="#faqs-1-{{block.id}}" >
               <span data-title="{{section.settings.icon_faqs}}1" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
                 {{ block.settings.question_faqs_1 | split: '|' | first }}
