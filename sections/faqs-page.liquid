@@ -138,78 +138,78 @@
 
 
 <style>
-  .faqs-page .panel-title {
-    font-size: {{ section.settings.font_size_qs }}px;
-  }
-  
-  .faqs-page .panel-title > a {
-    color: {{ section.settings.color_question }};
-    background-color: {{ section.settings.bg_question }};
-  }
-  
-  .faqs-page .panel-title > a span:before {
-    content: attr(data-title) "";
-    background-color: {{ section.settings.bg_icon_qs }};
-    color: {{ section.settings.color_icon_qs }};
-  }  
-  
-  .faqs-page .panel-title > a:not(.collapsed) {
-    background-color: {{ section.settings.bg_question_acitve }};
-    color: {{ section.settings.color_question_acitve }};
-  }
-  
-  .faqs-page .panel-group .panel-body {
-    /* font-size: {{ section.settings.font_size_answer }}px; */
-    color: {{ section.settings.color_question_answer }};
-  }
-  
-  .faqs-page .panel-group .panel-body > div:before {
-    content: attr(data-title) "";
-    background-color: {{ section.settings.bg_icon_answer }};
-    color: {{ section.settings.color_icon_answer }};
-    border-color: {{ section.settings.color_icon_answer }};
-  }
-  
-  .faqs-page .des_faqs a,
-  .faqs-page.panel-group .panel-body a {
-    color: {{ section.settings.color_question_link }};
-  }
- 
-
-.faqs-page .panel-group .panel-title a span {
-    padding: 9px 25px 7px 12px;
-    align-items: flex-start;
-    vertical-align: top;
-    text-align: left;
-    display: flex;
-}
-  .panel.panel-default {
-    padding: 40px 32px;
-}
-  .collapse.show {
+    .faqs-page .panel-title {
+      font-size: {{ section.settings.font_size_qs }}px;
+    }
+    
+    .faqs-page .panel-title > a {
+      color: {{ section.settings.color_question }};
+      background-color: {{ section.settings.bg_question }};
+    }
+    
+    .faqs-page .panel-title > a span:before {
+      content: attr(data-title) "";
+      background-color: {{ section.settings.bg_icon_qs }};
+      color: {{ section.settings.color_icon_qs }};
+    }  
+    
+    .faqs-page .panel-title > a:not(.collapsed) {
+      background-color: {{ section.settings.bg_question_acitve }};
+      color: {{ section.settings.color_question_acitve }};
+    }
+    
+    .faqs-page .panel-group .panel-body {
+      /* font-size: {{ section.settings.font_size_answer }}px; */
+      color: {{ section.settings.color_question_answer }};
+    }
+    
+    .faqs-page .panel-group .panel-body > div:before {
+      content: attr(data-title) "";
+      background-color: {{ section.settings.bg_icon_answer }};
+      color: {{ section.settings.color_icon_answer }};
+      border-color: {{ section.settings.color_icon_answer }};
+    }
+    
+    .faqs-page .des_faqs a,
+    .faqs-page.panel-group .panel-body a {
+      color: {{ section.settings.color_question_link }};
+    }
+    
+    
+    .faqs-page .panel-group .panel-title a span {
+      padding: 9px 25px 7px 12px;
+      align-items: flex-start;
+      vertical-align: top;
+      text-align: left;
+      display: flex;
+    }
+    .panel.panel-default {
+      padding: 40px 32px;
+    }
+    .collapse.show {
       display: block;
       background: linear-gradient(0deg, var(--rose), transparent);
-
-  }
-  .panel-title a{
-        text-decoration: none;
-  }
-  .faqs-page .panel-group .panel-title a span:before {
-        position: relative;
-    top: 0;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: 400;
-    font-family: 'AvertaStdCY';
-    background: transparent;
-    display: inline;
-    margin-right: 32px;
-}
-  
+    
+    }
+    .panel-title a{
+      text-decoration: none;
+    }
+    .faqs-page .panel-group .panel-title a span:before {
+      position: relative;
+      top: 0;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 400;
+      font-family: 'AvertaStdCY';
+      background: transparent;
+      display: inline;
+      margin-right: 32px;
+    }
+    
     .faqs-page .panel-group .panel-body > div:before {
-    content: attr(data-title) "";
-    background-color: #69c69c;
-    border-color: #ffffff;
+      content: attr(data-title) "";
+      background-color: #69c69c;
+      border-color: #ffffff;
     }
     .faqs-page .panel-group .panel-body>div:before {
       position: relative;
@@ -229,35 +229,41 @@
       margin-right: 20px;
       text-align: center;
     }
-      .faqs-page .panel-title > a:not(.collapsed) {
-          display: flex;
-          position: relative;
-          text-decoration: none;
-      }
-      .faqs-page .panel-group .panel-title a:not(.collapsed) span:after {
-        content: attr(data-hide) "";
-        align-items: center;
-      }
-      .faqs-page .panel-group .panel-title a span:after {
-          display: inline-block;
-          font-size: var(--font_size);
-          font-weight: normal;
-          line-height: var(--font_size_plus12);
-          text-align: right;
-          content: attr(data-show) "";
-          color: var(--breadcrumb_color);
-          position: absolute;
-          right: 25px;
-          top: 0;
-          padding: 9px 0 7px;
-          text-transform: capitalize;
-        
-      }
-      .faqs-page.container{
-        padding-bottom: 80px;
-      }
+    .faqs-page .panel-title > a:not(.collapsed) {
+      display: flex;
+      position: relative;
+      text-decoration: none;
+    }
+    .faqs-page .panel-group .panel-title a:not(.collapsed) span:after {
+      content: attr(data-hide) "";
+      align-items: center;
+    }
+    .faqs-page .panel-group .panel-title a span:after {
+      display: inline-block;
+      font-size: var(--font_size);
+      font-weight: normal;
+      line-height: var(--font_size_plus12);
+      text-align: right;
+      content: attr(data-show) "";
+      color: var(--breadcrumb_color);
+      position: absolute;
+      right: 25px;
+      top: 0;
+      padding: 9px 0 7px;
+      text-transform: capitalize;
+      
+    }
+    .faqs-page.container{
+      padding-bottom: 80px;
+    }
+    .panel-body .data-title {
+      display: flex;
+    }
+    .faqs-page .panel-group .panel-body > div:before {
+      visibility: hidden;
+    }
 
-         @media (max-width: 767px){
+@media (max-width: 767px){
        .faqs-page .panel-group {
         margin-bottom: 30px
     }
@@ -289,10 +295,9 @@
     .faqs-page .contact-link .text {
         margin-bottom: 20px
     }
-    .panel-body .data-title {
-        display: flex;
-    }
+    
   }
+
 </style>
 
 
