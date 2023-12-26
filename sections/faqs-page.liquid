@@ -27,24 +27,11 @@
         </div>
         <div id="faqs-1-{{block.id}}" class="panel-collapse collapse{% if forloop.first %} show{% endif %}">
           <div class="panel-body">
-            {% if settings.enable_multilang %}
-            <div class="lang1" data-title="{{section.settings.icon_answer | split: '|' | first }}">
+            <div data-title="{{section.settings.icon_answer }}">
               <div class="rte">
-                {{ block.settings.answer_faqs_1 | split: '|' | first }}
+                {{ block.settings.answer_faqs_1 }}
               </div>
             </div>
-            <div class="lang2" data-title="{{section.settings.icon_answer | split: '|' | last }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_1 | split: '|' | last }}
-              </div>
-            </div>
-            {% else %}
-            <div data-title="{{section.settings.icon_answer | split: '|' | first }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_1 | split: '|' | first }}
-              </div>
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>
@@ -62,24 +49,12 @@
         </div>
         <div id="faqs-2-{{block.id}}" class="panel-collapse collapse">
           <div class="panel-body">
-            {% if settings.enable_multilang %}
-            <div class="lang1" data-title="{{section.settings.icon_answer | split: '|' | first }}">
+           
+            <div data-title="{{section.settings.icon_answer }}">
               <div class="rte">
-                {{ block.settings.answer_faqs_2 | split: '|' | first }}
+                {{ block.settings.answer_faqs_2 }}
               </div>
             </div>
-            <div class="lang2" data-title="{{section.settings.icon_answer | split: '|' | last }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_2 | split: '|' | last }}
-              </div>
-            </div>
-            {% else %}
-            <div data-title="{{section.settings.icon_answer | split: '|' | first }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_2 | split: '|' | first }}
-              </div>
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>
@@ -98,24 +73,12 @@
         </div>
         <div id="faqs-3-{{block.id}}" class="panel-collapse collapse">
           <div class="panel-body">
-            {% if settings.enable_multilang %}
-            <div class="lang1" data-title="{{section.settings.icon_answer | split: '|' | first }}">
+            
+            <div data-title="{{section.settings.icon_answer }}">
               <div class="rte">
-                {{ block.settings.answer_faqs_3 | split: '|' | first }}
+                {{ block.settings.answer_faqs_3 }}
               </div>
             </div>
-            <div class="lang2" data-title="{{section.settings.icon_answer | split: '|' | last }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_3 | split: '|' | last }}
-              </div>
-            </div>
-            {% else %}
-            <div data-title="{{section.settings.icon_answer | split: '|' | first }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_3 | split: '|' | first }}
-              </div>
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>
@@ -133,24 +96,12 @@
         </div>
         <div id="faqs-4-{{block.id}}" class="panel-collapse collapse">
           <div class="panel-body">
-            {% if settings.enable_multilang %}
-            <div class="lang1" data-title="{{section.settings.icon_answer | split: '|' | first }}">
+            
+            <div data-title="{{section.settings.icon_answer}}">
               <div class="rte">
-                {{ block.settings.answer_faqs_4 | split: '|' | first }}
+                {{ block.settings.answer_faqs_4}}
               </div>
             </div>
-            <div class="lang2" data-title="{{section.settings.icon_answer | split: '|' | last }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_4 | split: '|' | last }}
-              </div>
-            </div>
-            {% else %}
-            <div data-title="{{section.settings.icon_answer | split: '|' | first }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_4 | split: '|' | first }}
-              </div>
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>
@@ -168,24 +119,12 @@
         </div>
         <div id="faqs-5-{{block.id}}" class="panel-collapse collapse">
           <div class="panel-body">
-            {% if settings.enable_multilang %}
-            <div class="lang1" data-title="{{section.settings.icon_answer | split: '|' | first }}">
+            
+            <div data-title="{{section.settings.icon_answer }}">
               <div class="rte">
-                {{ block.settings.answer_faqs_5 | split: '|' | first }}
+                {{ block.settings.answer_faqs_5 }}
               </div>
             </div>
-            <div class="lang2" data-title="{{section.settings.icon_answer | split: '|' | last }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_5 | split: '|' | last }}
-              </div>
-            </div>
-            {% else %}
-            <div data-title="{{section.settings.icon_answer | split: '|' | first }}">
-              <div class="rte">
-                {{ block.settings.answer_faqs_5 | split: '|' | first }}
-              </div>
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>
