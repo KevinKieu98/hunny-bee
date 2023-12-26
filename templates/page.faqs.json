@@ -24,10 +24,10 @@
       ],
       "settings": {
         "des_faqs": "",
-        "contact_text": "Unable to find satisfactory answers ?",
-        "contact_link_text": "Contact Support",
+        "contact_text": "",
+        "contact_link_text": "",
         "contact_link": "",
-        "icon_faqs": "Q",
+        "icon_faqs": "0",
         "bg_icon_qs": "#000000",
         "color_icon_qs": "#ffffff",
         "bg_question": "#f5f5f5",
@@ -35,14 +35,14 @@
         "font_size_qs": "13",
         "bg_question_acitve": "#ff8b21",
         "color_question_acitve": "#ffffff",
-        "icon_answer": "A",
+        "icon_answer": "",
         "bg_icon_answer": "#ffffff",
         "color_icon_answer": "#ff8b21",
         "color_question_answer": "#000000",
-        "font_size_answer": "12",
+        "font_size_answer": "",
         "color_question_link": "#ff8b21",
-        "icon_show": "Show",
-        "icon_hide": "Hide"
+        "icon_show": "-",
+        "icon_hide": "+"
       }
     }
   },
