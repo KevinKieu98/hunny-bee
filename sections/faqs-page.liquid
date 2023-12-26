@@ -19,7 +19,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a class="{% unless forloop.first %}collapsed{% endunless %}" data-toggle="collapse" href="#faqs-1-{{block.id}}" >
-              <span data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
+              <span data-title="{{section.settings.icon_faqs}}1" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
                 {{ block.settings.question_faqs_1 | split: '|' | first }}
               </span>
             </a>
@@ -54,18 +54,9 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a class="collapsed" data-toggle="collapse" href="#faqs-2-{{block.id}}" >
-              {% if settings.enable_multilang %}
-              <span class="lang1" data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_2 | split: '|' | first | strip }}
-              </span>
-              <span class="lang2" data-title="{{section.settings.icon_faqs | split: '|' | last }}" data-show="{{ section.settings.icon_show | split: '|' | last }}" data-hide="{{ section.settings.icon_hide | split: '|' | last }}">
-                {{ block.settings.question_faqs_2 | split: '|' | last | strip }}
-              </span>
-              {% else %}
-              <span data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
+              <span data-title="{{section.settings.icon_faqs}}2" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
                 {{ block.settings.question_faqs_2 | split: '|' | first }}
               </span>
-              {% endif %}
             </a>
           </h4>    
         </div>
@@ -97,19 +88,10 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" href="#faqs-3-{{block.id}}" >
-              {% if settings.enable_multilang %}
-              <span class="lang1" data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_3 | split: '|' | first | strip }}
-              </span>
-              <span class="lang2" data-title="{{section.settings.icon_faqs | split: '|' | last }}" data-show="{{ section.settings.icon_show | split: '|' | last }}" data-hide="{{ section.settings.icon_hide | split: '|' | last }}">
-                {{ block.settings.question_faqs_3 | split: '|' | last | strip }}
-              </span>
-              {% else %}
-              <span data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
+            <a class="collapsed" data-toggle="collapse" href="#faqs-3-{{block.id}}" >              
+              <span data-title="{{section.settings.icon_faqs }}3" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
                 {{ block.settings.question_faqs_3 | split: '|' | first }}
               </span>
-              {% endif %}
             </a>
           </h4>    
         </div>
@@ -142,18 +124,9 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a class="collapsed" data-toggle="collapse" href="#faqs-4-{{block.id}}" >
-              {% if settings.enable_multilang %}
-              <span class="lang1" data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_4 | split: '|' | first | strip }}
-              </span>
-              <span class="lang2" data-title="{{section.settings.icon_faqs | split: '|' | last }}" data-show="{{ section.settings.icon_show | split: '|' | last }}" data-hide="{{ section.settings.icon_hide | split: '|' | last }}">
-                {{ block.settings.question_faqs_4 | split: '|' | last | strip }}
-              </span>
-              {% else %}
-              <span data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
+              <span data-title="{{section.settings.icon_faqs}}4" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
                 {{ block.settings.question_faqs_4 | split: '|' | first }}
               </span>
-              {% endif %}
             </a>
           </h4>    
         </div>
@@ -185,15 +158,8 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" href="#faqs-5-{{block.id}}" >
-          
-              <span class="lang1" data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_5 | split: '|' | first | strip }}
-              </span>
-              <span class="lang2" data-title="{{section.settings.icon_faqs | split: '|' | last }}" data-show="{{ section.settings.icon_show | split: '|' | last }}" data-hide="{{ section.settings.icon_hide | split: '|' | last }}">
-                {{ block.settings.question_faqs_5 | split: '|' | last | strip }}
-              </span>
-              <span data-title="{{section.settings.icon_faqs | split: '|' | first }}" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
+            <a class="collapsed" data-toggle="collapse" href="#faqs-5-{{block.id}}" >      
+              <span data-title="{{section.settings.icon_faqs }}5" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
                 {{ block.settings.question_faqs_5 | split: '|' | first }}
               </span>
             </a>
