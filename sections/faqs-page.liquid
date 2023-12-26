@@ -495,16 +495,22 @@
     border-color: var(--border_1)
 }
  -->
-.collapse.show {
-    display: block;
-}
-.panel-title a{
-      text-decoration: none;
-}
+  .collapse.show {
+      display: block;
+  }
+  .panel-title a{
+        text-decoration: none;
+  }
   .faqs-page .panel-group .panel-title a span:before {
     position: relative;
     top: 0;
   }
+    .faqs-page .panel-group .panel-body > div:before {
+    content: attr(data-title) "";
+    background-color: #69c69c;
+    color: #ffffff;
+    border-color: #ffffff;
+    }
       
 </style>
 
