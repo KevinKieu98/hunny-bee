@@ -1,217 +1,89 @@
-<div class="faqs-page container">
-  <header class="page-header">
-    <h1 class="main-page-title page-title h0 scroll-trigger animate--fade-in">
-      {{  page.title }}
-    </h1>  
-  </header>
-  
-  <section id="faqs_page">
-    {% if section.settings.des_faqs != blank %}
-    <div class="des_faqs">
-      {{ section.settings.des_faqs }}
-    </div>
-    {% endif %}
-    
-    <div class="panel-group">
-      {% for block in section.blocks %}
-      {% if block.settings.question_faqs_1 != blank %}
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title {% if forloop.first %} show{% endif %}">
-            <a class="{% unless forloop.first %}collapsed{% endunless %}" data-toggle="collapse" href="#faqs-1-{{block.id}}" >
-              <span data-title="{{section.settings.icon_faqs}}1" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_1 | split: '|' | first }}
-              </span>
-            </a>
-          </h4>    
-        </div>
-        <div id="faqs-1-{{block.id}}" class="panel-collapse collapse{% if forloop.first %} show{% endif %}">
-          <div class="panel-body">
-            <div data-title="{{section.settings.icon_answer }}1"  class="data-title">
-              <div class="rte">
-                {{ block.settings.answer_faqs_1 }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      {% if block.settings.question_faqs_2 != blank %}
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" href="#faqs-2-{{block.id}}" >
-              <span data-title="{{section.settings.icon_faqs}}2" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_2 | split: '|' | first }}
-              </span>
-            </a>
-          </h4>    
-        </div>
-        <div id="faqs-2-{{block.id}}" class="panel-collapse collapse">
-          <div class="panel-body">
-           
-            <div data-title="{{section.settings.icon_answer }}2"  class="data-title">
-              <div class="rte">
-                {{ block.settings.answer_faqs_2 }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      {% if block.settings.question_faqs_3 != blank %}
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" href="#faqs-3-{{block.id}}" >
-              
-              <span data-title="{{section.settings.icon_faqs }}3" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_3 | split: '|' | first }}
-              </span>
-            </a>
-          </h4>    
-        </div>
-        <div id="faqs-3-{{block.id}}" class="panel-collapse collapse">
-          <div class="panel-body">
-            
-            <div data-title="{{section.settings.icon_answer }}3"  class="data-title">
-              <div class="rte">
-                {{ block.settings.answer_faqs_3 }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      {% if block.settings.question_faqs_4 != blank %}
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" href="#faqs-4-{{block.id}}" >
-              <span data-title="{{section.settings.icon_faqs}}4" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_4 | split: '|' | first }}
-              </span>
-            </a>
-          </h4>    
-        </div>
-        <div id="faqs-4-{{block.id}}" class="panel-collapse collapse">
-          <div class="panel-body">
-            
-            <div data-title="{{section.settings.icon_answer}}4"  class="data-title">
-              <div class="rte">
-                {{ block.settings.answer_faqs_4}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      {% if block.settings.question_faqs_5 != blank %}
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="collapsed" data-toggle="collapse" href="#faqs-5-{{block.id}}" >      
-              <span data-title="{{section.settings.icon_faqs }}5" data-show="{{ section.settings.icon_show | split: '|' | first }}" data-hide="{{ section.settings.icon_hide | split: '|' | first }}">
-                {{ block.settings.question_faqs_5 | split: '|' | first }}
-              </span>
-            </a>
-          </h4>    
-        </div>
-        <div id="faqs-5-{{block.id}}" class="panel-collapse collapse">
-          <div class="panel-body">
-            
-            <div data-title="{{section.settings.icon_answer }}5" class="data-title">
-              <div class="rte">
-                {{ block.settings.answer_faqs_5 }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
+<div class="faq-page container">
+  <h1>FAQs</h1>
+  <div class="accordion">
+  {% for block in section.blocks %}
+  {% assign check = false %}
+  {% if forloop.first %}
+  {% assign check = true %}
+  {% endif %}
 
-      {% endfor %}
+  {% for i in (1..10) %}
+  {% capture question_faqs %}question_faqs_{{i}}{% endcapture %}
+  {% assign question = block.settings[question_faqs] %}
+  {% capture answer_faqs %}answer_faqs_{{i}}{% endcapture %}
+  {% assign answer = block.settings[answer_faqs] %}
+  
+  {% if question != blank and answer != blank%}
+    <div class="accordion-item">
+      <button id="accordion-button-{{i}}" aria-expanded="{% if question_faqs == 'question_faqs_1' and check == true %}true{% else %}false{% endif %}">
+        <span class="number-icon">0{{i}}</span>
+        <span class="accordion-title">
+          {{ question }}
+        </span>
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-content">
+        <p>
+          {{ answer }}
+        </p>
+      </div>
     </div>
-    
-  </section>
+  {% endif %}
+  
+  {% endfor %}
+  {% endfor %}
+  </div>
 </div>
 
-
 <style>
-  .faqs-page h1{
+.faqs-page h1 {
     font-family: FontspringDemoTheseasons;
-  }    
-    .faqs-page .panel-title {
-      font-size: {{ section.settings.font_size_qs }}px;
-      margin: 0;
-      position: relative;
+}
+.faq-page button{
+  background: none;
+  color: #1b1b1b;
+  text-decoration: none;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+  padding: 40px 0;
+  border-bottom: solid 1px #ccc;
+}
+.faq-page button:hover{
+  background: none;
+}
+.faq-page .accordion-item:last-child button{
+   border-bottom: none;
+}
+.accordion {
+  padding: 0 0 80px;
+  .accordion-item {    
+    padding: 0;
+    button[aria-expanded='true'] {
+      border-bottom: none;
+      padding: 40px 0 24px 32px;
     }
-    
-    .faqs-page .panel-title > a {
-      color: #1b1b1b;
-    text-decoration: none;
-    vertical-align: middle;
-    align-items: center;
+  }
+  button {
+    position: relative;
     display: flex;
-    padding: 40px 0;
-    border-bottom: solid 1px #ccc;
-    }
-    
-    .faqs-page .panel-title > a span:before {
-      content: attr(data-title) "";
-      background-color: {{ section.settings.bg_icon_qs }};
-      color: {{ section.settings.color_icon_qs }};
-    }  
-    
-    .faqs-page .panel-title > a:not(.collapsed) {
-      background-color: {{ section.settings.bg_question_acitve }};
-      color: {{ section.settings.color_question_acitve }};
-    }
-    
-    .faqs-page .panel-group .panel-body {
-      /* font-size: {{ section.settings.font_size_answer }}px; */
-      color: {{ section.settings.color_question_answer }};
-    }
-    
-    .faqs-page .panel-group .panel-body > div:before {
-      content: attr(data-title) "";
-      background-color: {{ section.settings.bg_icon_answer }};
-      color: {{ section.settings.color_icon_answer }};
-      border-color: {{ section.settings.color_icon_answer }};
-    }
-    
-    .faqs-page .des_faqs a,
-    .faqs-page.panel-group .panel-body a {
-      color: {{ section.settings.color_question_link }};
-    }
-    
-    
-    .faqs-page .panel-group .panel-title a span {
-      padding: 0px 25px 0px 12px;
-      align-items: flex-start;
-      vertical-align: center;
-      text-align: left;
-      display: flex;
-      font-size: 24px;
+    text-align: left;
+    width: 100%;
     font-weight: 400;
-    line-height: 30px;
-    font-family: 'AvertaStdCY';
+    border: none;
+    background: none;
+    border-radius: 0;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    padding: 60px 32px;
+    justify-content: flex-start;
+    &:hover, &:focus {
+      cursor: pointer;
+      &::after {
+        cursor: pointer;
+      }
     }
-    .panel.panel-default {
-      padding: 0px 32px;
-    }
-    .panel-collapse.collapse {
-      display: none;
-    }
-     .panel-collapse.collapse.show {
-      display: block;
-      background: linear-gradient(0deg, var(--rose), transparent);    
-    }
-    
-    .panel-title a{
-      text-decoration: none;
-    }
-    .faqs-page .panel-group .panel-title a span:before {
+    .number-icon{
       position: relative;
       top: 0;
       font-size: 32px;
@@ -220,306 +92,157 @@
       font-family: 'AvertaStdCY';
       background: transparent;
       display: inline;
-      margin-right: 32px;
+      /* margin-right: 32px; */
       width: 60px;
     }
-    
-    .faqs-page .panel-group .panel-body > div:before {
-      content: attr(data-title) "";
-      background-color: #69c69c;
-      border-color: #ffffff;
-    }
-    .faqs-page .panel-group .panel-body>div:before {
-      position: relative;
-      top: 3px;
-      display: inline-block;
-      vertical-align: top;
-      font-size: var(--font_size_minus2);
-      font-weight: 500;
-      line-height: 1em;
-      padding: 4px 8px 3px;
-      min-width: 63px;
-      -moz-border-radius: 1px;
-      -webkit-border-radius: 1px;
-      -ms-border-radius: 1px;
-      -o-border-radius: 1px;
-      border-radius: 1px;
-      margin-right: 20px;
-      text-align: center;
-    }
-    .faqs-page .panel-title > a:not(.collapsed) {
-      display: flex;
-      position: relative;
-      text-decoration: none;
-    }
-    .faqs-page .panel-group .panel-title a:not(.collapsed) span:after {
-      content: attr(data-hide) "";
-      align-items: center;
-      padding: 5px 30px;
-    }
-    .faqs-page .panel-group .panel-title a span:after {
-      display: inline-block;
+    .accordion-title {
+      text-align: left;
       font-size: 24px;
-      font-weight: normal;
-      line-height: var(--font_size_plus12);
-      text-align: right;
-      content: attr(data-show) "";
-      color: var(--breadcrumb_color);
+      font-weight: 400;
+      line-height: 30px;
+      font-family: 'AvertaStdCY';
+      color: #1b1b1b;
+      width: 90%;
+    }
+    .icon {
+      display: inline-block;
       position: absolute;
-      right: 25px;
-      top: 25%;
-      padding: 9px 0 7px;
-      text-transform: capitalize;
-      
-    }
-    .faqs-page.container{
-      padding-bottom: 80px;
-    }
-    .panel-body .data-title {
-      display: flex;
-      padding: 20px 32px 40px 0;
-      font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
-    font-family: 'AvertaStdCY';
-}
-    
-    .faqs-page .panel-group .panel-body > div:before {
-      visibility: hidden;
-    }
-    .faqs-page .panel-group .panel-title.show a {
-    padding: 0;
-    border: none;
-}
-      .faqs-page .panel-group .panel-title.show a span:after{
-      top: 0;
-    position: relative;
-    display: inline;
-    width: 50px;
+      /* top: 18px; */
+      right: 32px;
+      width: 22px;
+      height: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
       }
-
-  .panel.panel-default:last-child .panel-title > a {
-    border-bottom: 0;
-}
-
-@media (max-width: 767px){
-       .faqs-page .panel-group {
-        margin-bottom: 30px
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
     }
-
-    .faqs-page .panel-group .panel-title a {
-        padding: 24px 0
+  }
+  button[aria-expanded='true'] {
+    border-bottom: none;
+    .icon {
+      &::after {
+        width: 0;
+      }
     }
-
-    .faqs-page .panel-group .panel-title a span:after {
-        right: 15px;
-      top: 50%;
-    }
-
-    .faqs-page .panel-group .panel-title a:after {
-        display: none
-    }
-
-    .faqs-page .contact-link {
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center
-    }
-
-    .faqs-page .contact-link .text {
-        margin-bottom: 20px
-    }
-    .panel.panel-default {
-      padding: 0;
-    }
-    .faqs-page .panel-group .panel-body > div:before {
-      display: none;
-    }
-      .faqs-page .panel-title > a:not(.collapsed),
-      .faqs-page .panel-group .panel-title a span{
+    + .accordion-content {
+      opacity: 1;
+      max-height: 100%;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
       display: block;
-      width: 93%;
-       padding: 0 0 0 15px;
-      font-size: 20px;
-    line-height: 25px;
-    font-family: 'AvertaStdCY';
+      background: linear-gradient(0deg, var(--rose), transparent);
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      padding: 20px 96px 40px;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 400;
+      font-family: 'AvertaStdCY';
+      text-align: left;
+      margin: 0;
+    }
+  }
+}
+  
+  
+@media (max-width: 768px){
+  .faq-page h1 {
+      font-family: FontspringDemoTheseasons;
+      padding: 24px 16px !important;
+      margin: 0;
+  }
+  .accordion-item{
+    display: block;
+  }
+  .accordion-item button{
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+  }
+  .accordion-title {
+    display: inline-block;
+    font-size: 20px !important;
+    line-height: 25px !important;
+    font-weight: 400 !important;
+    padding: 0 16px 24px;
+    text-transform: initial;
+  }
+  span.number-icon {
+    display: block !important;
+    padding: 24px 16px;
+  }
+  button .icon{
+    right: 10px !important;
+  }
+  button[aria-expanded='true'] {
+      padding: 0 !important;
+  }
+  .faq-page.container{
+    padding: 0;
+  }
+  .accordion {
+    padding: 0 0 40px;
+  }
+   button[aria-expanded='true'] {
+    + .accordion-content {
+      p{
+        padding: 0 16px 24px 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        font-family: 'AvertaStdCY';
       }
-    .faqs-page .panel-group .panel-title a span:before{
-      display: block;    
-      padding-bottom: 24px;
     }
-    .faqs-page .panel-group .panel-title.show a span:after {
-      top: 50%;
-      right: 0;
-      padding: 0;
-    }
-    .panel-body .data-title {
-      display: flex;
-      padding: 20px 15px 25px 15px;
-          font-size: 16px;
-    line-height: 28px;
-    font-weight: 400;
-    font-family: 'AvertaStdCY';
-    }
-    .faqs-page.container {
-      padding: 0;
-    }
-  .faqs-page h1{
-      padding-left: 15px;
-  }  
+  }
+}
+</style>
+<script>
+ const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
 }
 
-</style>
-
-
-
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
 
 {% schema %}
   {
     "name": "FAQS Page",
     "settings": [
-      {
-       "type": "textarea",
-       "id" : "des_faqs",
-       "label" : "Description"
-      },
-    {
-        "type" : "header",
-        "content" : "Contact"
-      },
-    {
-       "type" : "textarea",
-       "id" : "contact_text",
-       "label" : "Contact Text",
-       "default" : "Unable to find satisfactory answers ?"
-      },
-    {
-       "type" : "textarea",
-       "id" : "contact_link_text",
-       "label" : "Contact Link Text",
-       "default" : "Contact Support"
-      },
-    {
-        "type" : "url",
-        "id" : "contact_link",
-        "label" : "Contact link"
-      },
-
-      {
-        "type": "header",
-        "content": "Question"
-      },
-      {
-       "type" : "text",
-       "id" : "icon_faqs",
-       "label" : "Icon Faqs",
-       "default" : "Q"
-      },
-      {
-       "type" : "color",
-       "id" : "bg_icon_qs",
-       "label" : "Background Icon",
-       "default" : "#000"
-      },
-      {
-       "type" : "color",
-       "id" : "color_icon_qs",
-       "label" : "Icon Color",
-       "default" : "#fff"
-      },
-      {
-       "type" : "color",
-       "id" : "bg_question",
-       "label" : "Background Question",
-       "default" : "#f5f5f5"
-      },
-      {
-       "type" : "color",
-       "id" : "color_question",
-       "label" : "Color Question",
-       "default" : "#000"
-      },
-    {
-       "type" : "text",
-       "id" : "font_size_qs",
-       "label" : "Font size Question",
-       "default" : "13"
-      },
-      {
-       "type" : "color",
-       "id" : "bg_question_acitve",
-       "label" : "Background Icons Question Active",
-       "default" : "#FF8B21"
-      },
-      {
-       "type" : "color",
-       "id" : "color_question_acitve",
-       "label" : "Color Question Active",
-       "default" : "#fff"
-      },
-
-      {
-        "type": "header",
-        "content": "Answer"
-      },
-      {
-       "type" : "text",
-       "id" : "icon_answer",
-       "label" : "Icon Answer",
-       "default" : "A"
-      },
-      {
-       "type" : "color",
-       "id" : "bg_icon_answer",
-       "label" : "Background Icon Answer",
-       "default" : "#fff"
-      },
-      {
-       "type" : "color",
-       "id" : "color_icon_answer",
-       "label" : "Icon Color",
-       "default" : "#FF8B21"
-      },      
-      {
-       "type" : "color",
-       "id" : "color_question_answer",
-       "label" : "Color Answer",
-       "default" : "#000"
-      },
-    {
-       "type" : "text",
-       "id" : "font_size_answer",
-       "label" : "Font size Answer",
-       "default" : "12"
-      },
-      {
-       "type" : "color",
-       "id" : "color_question_link",
-       "label" : "Color Link",
-       "default" : "#FF8B21"
-      },
-      {
-        "type": "header",
-        "content": "Show / Hide"
-      },
-      {
-       "type" : "text",
-       "id" : "icon_show",
-       "label" : "Icon Show",
-       "default" : "Show"
-      },
-      {
-       "type" : "text",
-       "id" : "icon_hide",
-       "label" : "Icon Hide",
-       "default" : "Hide"
-      }
+     
   ],
     "blocks": [
       {
@@ -578,7 +301,62 @@
           {
             "type" : "textarea",
             "id" : "answer_faqs_5",
-            "label" : "Answer 5"
+            "label" : "Answer 5",
+            "info": "=========================="
+          },
+          {
+            "type" : "textarea",
+            "id" : "question_faqs_6",
+            "label" : "Question 6"
+          },
+          {
+            "type" : "textarea",
+            "id" : "answer_faqs_6",
+            "label" : "Answer 6",
+            "info": "=========================="
+          },
+          {
+            "type" : "textarea",
+            "id" : "question_faqs_7",
+            "label" : "Question 7"
+          },
+          {
+            "type" : "textarea",
+            "id" : "answer_faqs_7",
+            "label" : "Answer 7",
+            "info": "=========================="
+          },
+          {
+            "type" : "textarea",
+            "id" : "question_faqs_8",
+            "label" : "Question 8"
+          },
+          {
+            "type" : "textarea",
+            "id" : "answer_faqs_8",
+            "label" : "Answer 8",
+            "info": "=========================="
+          },
+          {
+            "type" : "textarea",
+            "id" : "question_faqs_9",
+            "label" : "Question 9"
+          },
+          {
+            "type" : "textarea",
+            "id" : "answer_faqs_9",
+            "label" : "Answer 9",
+            "info": "=========================="
+          },        
+          {
+            "type" : "textarea",
+            "id" : "question_faqs_10",
+            "label" : "Question 10"
+          },
+          {
+            "type" : "textarea",
+            "id" : "answer_faqs_10",
+            "label" : "Answer 10"
           }
         ]
       }
