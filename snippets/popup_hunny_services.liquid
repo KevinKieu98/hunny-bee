@@ -1,5 +1,5 @@
 {% if settings.enable_popup_hunny == true and template.name == "index" %}
-    <div class="popup_hunny_service">
+    <div class="popup_hunny_service hidden">
         {% if settings.image_bg_popup_hunny != blank %}
             <img
                 width="{{ settings.image_bg_popup_hunny.width }}"
@@ -24,9 +24,6 @@
                 {% if settings.title_popup_hunny != blank %}
                     <h2 class="popup_hunny_title">{{ settings.title_popup_hunny }}</h2>
                 {% endif %}
-
-              <div class="footer-block__newsletter">
-                  
 
                 <form action="#" method="post" class="form_popup_service" id="" enctype="multipart/form-data">
                     <div class="box_popup_input">
@@ -76,7 +73,7 @@
         </div>
     </div>
 
-    <div class="popup_hunny_service_overlay"></div>
+    <div class="popup_hunny_service_overlay hidden"></div>
 {% endif %}
 
 <style>
@@ -218,10 +215,6 @@
         padding: 0;
         min-width: unset;
         z-index: 1;
-    }
-
-    .btn_close_popup_hunny:hover svg path {
-        stroke: var(--white);
     }
 
     .box_popup_input {
