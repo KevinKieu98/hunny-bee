@@ -40,6 +40,9 @@
               </h2>
               <div class="select">
                 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                {% if collection.handle == "all" %}
+                  {% assign sort_by = "best-selling" %}
+                  {% endif %}
                 <select
                   name="sort_by"
                   class="facet-filters__sort select__select caption-large"
