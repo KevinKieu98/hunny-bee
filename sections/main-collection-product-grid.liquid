@@ -41,7 +41,7 @@
               <div class="select">
                 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                 {% if collection.handle == "all" %}
-                  {% assign sort_by = "best-selling" %}
+                  {% assign sort_by = "created-ascending" %}
                   {% endif %}
                 <select
                   name="sort_by"
